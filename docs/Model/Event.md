@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | consists of source prefix and source specific identifier. These should be URIs uniquely identifying the event, and preferably also well formed http-URLs pointing to more information about the event. | [optional] 
 **location** | [**\LinkedEvents\Model\Place**](Place.md) |  | 
-**keywords** | **string[]** | array of keyword uri references | 
+**keywords** | [**\LinkedEvents\Model\IdRef[]**](IdRef.md) | array of keyword uri references | 
 **inLanguage** | [**\LinkedEvents\Model\Language[]**](Language.md) | the languages spoken or supported at the event | [optional] 
 **superEvent** | **string** | references the aggregate event containing this event | [optional] 
 **superEventType** | **string** | If the event has sub_events, describes the type of the event. Current options are &#39;null&#39; and &#39;recurring&#39;, which means a repeating event. | [optional] 

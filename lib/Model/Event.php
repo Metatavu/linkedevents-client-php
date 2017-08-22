@@ -57,7 +57,7 @@ class Event implements ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'string',
         'location' => '\LinkedEvents\Model\Place',
-        'keywords' => 'string[]',
+        'keywords' => '\LinkedEvents\Model\IdRef[]',
         'inLanguage' => '\LinkedEvents\Model\Language[]',
         'superEvent' => 'string',
         'superEventType' => 'string',
@@ -356,7 +356,7 @@ class Event implements ArrayAccess
 
     /**
      * Gets keywords
-     * @return string[]
+     * @return \LinkedEvents\Model\IdRef[]
      */
     public function getKeywords()
     {
@@ -365,7 +365,7 @@ class Event implements ArrayAccess
 
     /**
      * Sets keywords
-     * @param string[] $keywords array of keyword uri references
+     * @param \LinkedEvents\Model\IdRef[] $keywords array of keyword uri references
      * @return $this
      */
     public function setKeywords($keywords)
