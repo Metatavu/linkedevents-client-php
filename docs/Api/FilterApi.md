@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **keywordList**
-> \LinkedEvents\LinkedEvents\Model\InlineResponse2002 keywordList($page, $pageSize, $include, $showAllKeywords, $dataSource, $text, $sort)
+> \LinkedEvents\Model\InlineResponse2002 keywordList($page, $pageSize, $include, $showAllKeywords, $dataSource, $text, $sort)
 
 Returns a list of keywords used for describing events
 
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\LinkedEvents\LinkedEvents\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\LinkedEvents\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **keywordRetrieve**
-> \LinkedEvents\LinkedEvents\Model\Keyword keywordRetrieve($id)
+> \LinkedEvents\Model\Keyword keywordRetrieve($id)
 
 Return information for single keyword
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\LinkedEvents\LinkedEvents\Model\Keyword**](../Model/Keyword.md)
+[**\LinkedEvents\Model\Keyword**](../Model/Keyword.md)
 
 ### Authorization
 
@@ -113,7 +113,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **keywordSetList**
-> \LinkedEvents\LinkedEvents\Model\InlineResponse2003 keywordSetList($page, $pageSize, $include)
+> \LinkedEvents\Model\InlineResponse2003 keywordSetList($page, $pageSize, $include)
 
 Return as list of keyword_sets for grouping keywords
 
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\LinkedEvents\LinkedEvents\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
+[**\LinkedEvents\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
 
 ### Authorization
 
@@ -162,7 +162,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **keywordSetRetrieve**
-> \LinkedEvents\LinkedEvents\Model\KeywordSet keywordSetRetrieve($id)
+> \LinkedEvents\Model\KeywordSet keywordSetRetrieve($id)
 
 Return information about single keyword_set
 
@@ -191,7 +191,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\LinkedEvents\LinkedEvents\Model\KeywordSet**](../Model/KeywordSet.md)
+[**\LinkedEvents\Model\KeywordSet**](../Model/KeywordSet.md)
 
 ### Authorization
 
@@ -205,7 +205,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **placeList**
-> \LinkedEvents\LinkedEvents\Model\InlineResponse2004 placeList($page, $pageSize, $showAllPlaces, $division, $sort)
+> \LinkedEvents\Model\InlineResponse2004 placeList($page, $pageSize, $showAllPlaces, $division, $sort)
 
 Returns list of places used for describing events
 
@@ -244,7 +244,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\LinkedEvents\LinkedEvents\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
+[**\LinkedEvents\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
 
 ### Authorization
 
@@ -258,7 +258,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **placeRetrieve**
-> \LinkedEvents\LinkedEvents\Model\Place placeRetrieve($id)
+> \LinkedEvents\Model\Place placeRetrieve($id)
 
 Return information for single place
 
@@ -287,7 +287,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\LinkedEvents\LinkedEvents\Model\Place**](../Model/Place.md)
+[**\LinkedEvents\Model\Place**](../Model/Place.md)
 
 ### Authorization
 

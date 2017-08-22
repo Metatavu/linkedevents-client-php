@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace LinkedEvents\LinkedEvents\Model;
+namespace LinkedEvents\Model;
 
 use \ArrayAccess;
 

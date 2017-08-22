@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **eventCreate**
-> \LinkedEvents\LinkedEvents\Model\Event eventCreate($eventObject)
+> \LinkedEvents\Model\Event eventCreate($eventObject)
 
 Create a new event
 
@@ -21,7 +21,7 @@ Create a new event
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new LinkedEvents\Api\EventApi();
-$eventObject = new \LinkedEvents\LinkedEvents\Model\Event(); // \LinkedEvents\LinkedEvents\Model\Event | 
+$eventObject = new \LinkedEvents\Model\Event(); // \LinkedEvents\Model\Event | 
 
 try {
     $result = $api_instance->eventCreate($eventObject);
@@ -36,11 +36,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **eventObject** | [**\LinkedEvents\LinkedEvents\Model\Event**](../Model/\LinkedEvents\LinkedEvents\Model\Event.md)|  | [optional]
+ **eventObject** | [**\LinkedEvents\Model\Event**](../Model/\LinkedEvents\Model\Event.md)|  | [optional]
 
 ### Return type
 
-[**\LinkedEvents\LinkedEvents\Model\Event**](../Model/Event.md)
+[**\LinkedEvents\Model\Event**](../Model/Event.md)
 
 ### Authorization
 
@@ -54,7 +54,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **eventList**
-> \LinkedEvents\LinkedEvents\Model\InlineResponse200 eventList($include, $text, $lastModifiedSince, $start, $end, $bbox, $dataSource, $location, $division, $keyword, $recurring, $minDuration, $maxDuration, $publisher, $sort)
+> \LinkedEvents\Model\InlineResponse200 eventList($include, $text, $lastModifiedSince, $start, $end, $bbox, $dataSource, $location, $division, $keyword, $recurring, $minDuration, $maxDuration, $publisher, $sort)
 
 Return a list of events
 
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\LinkedEvents\LinkedEvents\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\LinkedEvents\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 
@@ -127,7 +127,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **eventRetrieve**
-> \LinkedEvents\LinkedEvents\Model\Event eventRetrieve($id)
+> \LinkedEvents\Model\Event eventRetrieve($id)
 
 Retrieve single event by id
 
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\LinkedEvents\LinkedEvents\Model\Event**](../Model/Event.md)
+[**\LinkedEvents\Model\Event**](../Model/Event.md)
 
 ### Authorization
 
@@ -170,7 +170,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **eventUpdate**
-> \LinkedEvents\LinkedEvents\Model\Event eventUpdate($id, $eventObject)
+> \LinkedEvents\Model\Event eventUpdate($id, $eventObject)
 
 Update an event
 
@@ -183,7 +183,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new LinkedEvents\Api\EventApi();
 $id = "id_example"; // string | Identifier for the event to be updated
-$eventObject = new \LinkedEvents\LinkedEvents\Model\Event(); // \LinkedEvents\LinkedEvents\Model\Event | Event object that should replace the existing event, note that some implementations may retain unspecified fields at their original values.
+$eventObject = new \LinkedEvents\Model\Event(); // \LinkedEvents\Model\Event | Event object that should replace the existing event, note that some implementations may retain unspecified fields at their original values.
 
 try {
     $result = $api_instance->eventUpdate($id, $eventObject);
@@ -199,11 +199,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| Identifier for the event to be updated |
- **eventObject** | [**\LinkedEvents\LinkedEvents\Model\Event**](../Model/\LinkedEvents\LinkedEvents\Model\Event.md)| Event object that should replace the existing event, note that some implementations may retain unspecified fields at their original values. | [optional]
+ **eventObject** | [**\LinkedEvents\Model\Event**](../Model/\LinkedEvents\Model\Event.md)| Event object that should replace the existing event, note that some implementations may retain unspecified fields at their original values. | [optional]
 
 ### Return type
 
-[**\LinkedEvents\LinkedEvents\Model\Event**](../Model/Event.md)
+[**\LinkedEvents\Model\Event**](../Model/Event.md)
 
 ### Authorization
 

@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace LinkedEvents\LinkedEvents\Model;
+namespace LinkedEvents\Model;
 
 use \ArrayAccess;
 
@@ -56,20 +56,20 @@ class Place implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'string',
-        'customData' => '\LinkedEvents\LinkedEvents\Model\PlaceCustomData[]',
-        'name' => '\LinkedEvents\LinkedEvents\Model\PlaceName',
-        'images' => '\LinkedEvents\LinkedEvents\Model\Image[]',
+        'customData' => '\LinkedEvents\Model\PlaceCustomData[]',
+        'name' => '\LinkedEvents\Model\PlaceName',
+        'images' => '\LinkedEvents\Model\Image[]',
         'originId' => 'string',
         'createdTime' => '\DateTime',
         'lastModifiedTime' => '\DateTime',
-        'infoUrl' => '\LinkedEvents\LinkedEvents\Model\PlaceInfoUrl',
-        'description' => '\LinkedEvents\LinkedEvents\Model\PlaceDescription',
-        'position' => '\LinkedEvents\LinkedEvents\Model\PlacePosition',
+        'infoUrl' => '\LinkedEvents\Model\PlaceInfoUrl',
+        'description' => '\LinkedEvents\Model\PlaceDescription',
+        'position' => '\LinkedEvents\Model\PlacePosition',
         'email' => 'string',
-        'telephone' => '\LinkedEvents\LinkedEvents\Model\PlaceTelephone',
+        'telephone' => '\LinkedEvents\Model\PlaceTelephone',
         'contactType' => 'string',
-        'streetAddress' => '\LinkedEvents\LinkedEvents\Model\PlaceStreetAddress',
-        'addressLocality' => '\LinkedEvents\LinkedEvents\Model\PlaceAddressLocality',
+        'streetAddress' => '\LinkedEvents\Model\PlaceStreetAddress',
+        'addressLocality' => '\LinkedEvents\Model\PlaceAddressLocality',
         'addressRegion' => 'string',
         'postalCode' => 'string',
         'postOfficeBoxNum' => 'string',
@@ -276,7 +276,7 @@ class Place implements ArrayAccess
 
     /**
      * Gets customData
-     * @return \LinkedEvents\LinkedEvents\Model\PlaceCustomData[]
+     * @return \LinkedEvents\Model\PlaceCustomData[]
      */
     public function getCustomData()
     {
@@ -285,7 +285,7 @@ class Place implements ArrayAccess
 
     /**
      * Sets customData
-     * @param \LinkedEvents\LinkedEvents\Model\PlaceCustomData[] $customData Key value field for custom data. FIXME: is there 6Aika-wide use case for this?
+     * @param \LinkedEvents\Model\PlaceCustomData[] $customData Key value field for custom data. FIXME: is there 6Aika-wide use case for this?
      * @return $this
      */
     public function setCustomData($customData)
@@ -297,7 +297,7 @@ class Place implements ArrayAccess
 
     /**
      * Gets name
-     * @return \LinkedEvents\LinkedEvents\Model\PlaceName
+     * @return \LinkedEvents\Model\PlaceName
      */
     public function getName()
     {
@@ -306,7 +306,7 @@ class Place implements ArrayAccess
 
     /**
      * Sets name
-     * @param \LinkedEvents\LinkedEvents\Model\PlaceName $name
+     * @param \LinkedEvents\Model\PlaceName $name
      * @return $this
      */
     public function setName($name)
@@ -318,7 +318,7 @@ class Place implements ArrayAccess
 
     /**
      * Gets images
-     * @return \LinkedEvents\LinkedEvents\Model\Image[]
+     * @return \LinkedEvents\Model\Image[]
      */
     public function getImages()
     {
@@ -327,7 +327,7 @@ class Place implements ArrayAccess
 
     /**
      * Sets images
-     * @param \LinkedEvents\LinkedEvents\Model\Image[] $images
+     * @param \LinkedEvents\Model\Image[] $images
      * @return $this
      */
     public function setImages($images)
@@ -402,7 +402,7 @@ class Place implements ArrayAccess
 
     /**
      * Gets infoUrl
-     * @return \LinkedEvents\LinkedEvents\Model\PlaceInfoUrl
+     * @return \LinkedEvents\Model\PlaceInfoUrl
      */
     public function getInfoUrl()
     {
@@ -411,7 +411,7 @@ class Place implements ArrayAccess
 
     /**
      * Sets infoUrl
-     * @param \LinkedEvents\LinkedEvents\Model\PlaceInfoUrl $infoUrl
+     * @param \LinkedEvents\Model\PlaceInfoUrl $infoUrl
      * @return $this
      */
     public function setInfoUrl($infoUrl)
@@ -423,7 +423,7 @@ class Place implements ArrayAccess
 
     /**
      * Gets description
-     * @return \LinkedEvents\LinkedEvents\Model\PlaceDescription
+     * @return \LinkedEvents\Model\PlaceDescription
      */
     public function getDescription()
     {
@@ -432,7 +432,7 @@ class Place implements ArrayAccess
 
     /**
      * Sets description
-     * @param \LinkedEvents\LinkedEvents\Model\PlaceDescription $description
+     * @param \LinkedEvents\Model\PlaceDescription $description
      * @return $this
      */
     public function setDescription($description)
@@ -444,7 +444,7 @@ class Place implements ArrayAccess
 
     /**
      * Gets position
-     * @return \LinkedEvents\LinkedEvents\Model\PlacePosition
+     * @return \LinkedEvents\Model\PlacePosition
      */
     public function getPosition()
     {
@@ -453,7 +453,7 @@ class Place implements ArrayAccess
 
     /**
      * Sets position
-     * @param \LinkedEvents\LinkedEvents\Model\PlacePosition $position
+     * @param \LinkedEvents\Model\PlacePosition $position
      * @return $this
      */
     public function setPosition($position)
@@ -486,7 +486,7 @@ class Place implements ArrayAccess
 
     /**
      * Gets telephone
-     * @return \LinkedEvents\LinkedEvents\Model\PlaceTelephone
+     * @return \LinkedEvents\Model\PlaceTelephone
      */
     public function getTelephone()
     {
@@ -495,7 +495,7 @@ class Place implements ArrayAccess
 
     /**
      * Sets telephone
-     * @param \LinkedEvents\LinkedEvents\Model\PlaceTelephone $telephone
+     * @param \LinkedEvents\Model\PlaceTelephone $telephone
      * @return $this
      */
     public function setTelephone($telephone)
@@ -528,7 +528,7 @@ class Place implements ArrayAccess
 
     /**
      * Gets streetAddress
-     * @return \LinkedEvents\LinkedEvents\Model\PlaceStreetAddress
+     * @return \LinkedEvents\Model\PlaceStreetAddress
      */
     public function getStreetAddress()
     {
@@ -537,7 +537,7 @@ class Place implements ArrayAccess
 
     /**
      * Sets streetAddress
-     * @param \LinkedEvents\LinkedEvents\Model\PlaceStreetAddress $streetAddress
+     * @param \LinkedEvents\Model\PlaceStreetAddress $streetAddress
      * @return $this
      */
     public function setStreetAddress($streetAddress)
@@ -549,7 +549,7 @@ class Place implements ArrayAccess
 
     /**
      * Gets addressLocality
-     * @return \LinkedEvents\LinkedEvents\Model\PlaceAddressLocality
+     * @return \LinkedEvents\Model\PlaceAddressLocality
      */
     public function getAddressLocality()
     {
@@ -558,7 +558,7 @@ class Place implements ArrayAccess
 
     /**
      * Sets addressLocality
-     * @param \LinkedEvents\LinkedEvents\Model\PlaceAddressLocality $addressLocality
+     * @param \LinkedEvents\Model\PlaceAddressLocality $addressLocality
      * @return $this
      */
     public function setAddressLocality($addressLocality)

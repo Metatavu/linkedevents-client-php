@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace LinkedEvents\LinkedEvents\Client;
+namespace LinkedEvents\Client;
 
 use \LinkedEvents\ApiClient;
 use \LinkedEvents\ApiException;
@@ -100,7 +100,7 @@ class FilterApi
      * @param string $text Search for keywords (**note**: NOT events) that contain the given string. This applies even when show_all_keywords is specified. (optional)
      * @param string $sort Sort the returned keywords in the given order. Possible sorting criteria are &#39;n_events&#39;, &#39;id&#39;, &#39;name&#39;, &#39;data_source&#39;. The default ordering is &#39;-data_source&#39;, &#39;-n_events&#39;. (optional)
      * @throws \LinkedEvents\ApiException on non-2xx response
-     * @return \LinkedEvents\LinkedEvents\Model\InlineResponse2002
+     * @return \LinkedEvents\Model\InlineResponse2002
      */
     public function keywordList($page = null, $pageSize = null, $include = null, $showAllKeywords = null, $dataSource = null, $text = null, $sort = null)
     {
@@ -121,7 +121,7 @@ class FilterApi
      * @param string $text Search for keywords (**note**: NOT events) that contain the given string. This applies even when show_all_keywords is specified. (optional)
      * @param string $sort Sort the returned keywords in the given order. Possible sorting criteria are &#39;n_events&#39;, &#39;id&#39;, &#39;name&#39;, &#39;data_source&#39;. The default ordering is &#39;-data_source&#39;, &#39;-n_events&#39;. (optional)
      * @throws \LinkedEvents\ApiException on non-2xx response
-     * @return array of \LinkedEvents\LinkedEvents\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \LinkedEvents\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
      */
     public function keywordListWithHttpInfo($page = null, $pageSize = null, $include = null, $showAllKeywords = null, $dataSource = null, $text = null, $sort = null)
     {
@@ -186,15 +186,15 @@ class FilterApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\LinkedEvents\LinkedEvents\Model\InlineResponse2002',
+                '\LinkedEvents\Model\InlineResponse2002',
                 '/keyword/'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\LinkedEvents\LinkedEvents\Model\InlineResponse2002', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\LinkedEvents\Model\InlineResponse2002', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\LinkedEvents\LinkedEvents\Model\InlineResponse2002', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\LinkedEvents\Model\InlineResponse2002', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -210,7 +210,7 @@ class FilterApi
      *
      * @param string $id Same as id in keyword schema (required)
      * @throws \LinkedEvents\ApiException on non-2xx response
-     * @return \LinkedEvents\LinkedEvents\Model\Keyword
+     * @return \LinkedEvents\Model\Keyword
      */
     public function keywordRetrieve($id)
     {
@@ -225,7 +225,7 @@ class FilterApi
      *
      * @param string $id Same as id in keyword schema (required)
      * @throws \LinkedEvents\ApiException on non-2xx response
-     * @return array of \LinkedEvents\LinkedEvents\Model\Keyword, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \LinkedEvents\Model\Keyword, HTTP status code, HTTP response headers (array of strings)
      */
     public function keywordRetrieveWithHttpInfo($id)
     {
@@ -271,15 +271,15 @@ class FilterApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\LinkedEvents\LinkedEvents\Model\Keyword',
+                '\LinkedEvents\Model\Keyword',
                 '/keyword/{id}/'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\LinkedEvents\LinkedEvents\Model\Keyword', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\LinkedEvents\Model\Keyword', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\LinkedEvents\LinkedEvents\Model\Keyword', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\LinkedEvents\Model\Keyword', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -297,7 +297,7 @@ class FilterApi
      * @param int $pageSize request that server delivers page_size results in response (optional)
      * @param string[] $include Embed given reference-type fields directly into the response, otherwise they are returned as URI references. (optional)
      * @throws \LinkedEvents\ApiException on non-2xx response
-     * @return \LinkedEvents\LinkedEvents\Model\InlineResponse2003
+     * @return \LinkedEvents\Model\InlineResponse2003
      */
     public function keywordSetList($page = null, $pageSize = null, $include = null)
     {
@@ -314,7 +314,7 @@ class FilterApi
      * @param int $pageSize request that server delivers page_size results in response (optional)
      * @param string[] $include Embed given reference-type fields directly into the response, otherwise they are returned as URI references. (optional)
      * @throws \LinkedEvents\ApiException on non-2xx response
-     * @return array of \LinkedEvents\LinkedEvents\Model\InlineResponse2003, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \LinkedEvents\Model\InlineResponse2003, HTTP status code, HTTP response headers (array of strings)
      */
     public function keywordSetListWithHttpInfo($page = null, $pageSize = null, $include = null)
     {
@@ -363,15 +363,15 @@ class FilterApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\LinkedEvents\LinkedEvents\Model\InlineResponse2003',
+                '\LinkedEvents\Model\InlineResponse2003',
                 '/keyword_set/'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\LinkedEvents\LinkedEvents\Model\InlineResponse2003', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\LinkedEvents\Model\InlineResponse2003', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\LinkedEvents\LinkedEvents\Model\InlineResponse2003', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\LinkedEvents\Model\InlineResponse2003', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -387,7 +387,7 @@ class FilterApi
      *
      * @param string $id Same as id in keyword_set schema (required)
      * @throws \LinkedEvents\ApiException on non-2xx response
-     * @return \LinkedEvents\LinkedEvents\Model\KeywordSet
+     * @return \LinkedEvents\Model\KeywordSet
      */
     public function keywordSetRetrieve($id)
     {
@@ -402,7 +402,7 @@ class FilterApi
      *
      * @param string $id Same as id in keyword_set schema (required)
      * @throws \LinkedEvents\ApiException on non-2xx response
-     * @return array of \LinkedEvents\LinkedEvents\Model\KeywordSet, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \LinkedEvents\Model\KeywordSet, HTTP status code, HTTP response headers (array of strings)
      */
     public function keywordSetRetrieveWithHttpInfo($id)
     {
@@ -448,15 +448,15 @@ class FilterApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\LinkedEvents\LinkedEvents\Model\KeywordSet',
+                '\LinkedEvents\Model\KeywordSet',
                 '/keyword_set/{id}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\LinkedEvents\LinkedEvents\Model\KeywordSet', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\LinkedEvents\Model\KeywordSet', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\LinkedEvents\LinkedEvents\Model\KeywordSet', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\LinkedEvents\Model\KeywordSet', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -476,7 +476,7 @@ class FilterApi
      * @param string $division You may filter places by specific OCD division id, or by division name. The latter query checks all divisions with the name, regardless of division type. (optional)
      * @param string $sort Sort the returned places in the given order. Possible sorting criteria are &#39;n_events&#39;, &#39;id&#39;, &#39;name&#39;, &#39;street_address&#39; and &#39;postal_code&#39;. The default ordering is &#39;-n_events&#39;. (optional)
      * @throws \LinkedEvents\ApiException on non-2xx response
-     * @return \LinkedEvents\LinkedEvents\Model\InlineResponse2004
+     * @return \LinkedEvents\Model\InlineResponse2004
      */
     public function placeList($page = null, $pageSize = null, $showAllPlaces = null, $division = null, $sort = null)
     {
@@ -495,7 +495,7 @@ class FilterApi
      * @param string $division You may filter places by specific OCD division id, or by division name. The latter query checks all divisions with the name, regardless of division type. (optional)
      * @param string $sort Sort the returned places in the given order. Possible sorting criteria are &#39;n_events&#39;, &#39;id&#39;, &#39;name&#39;, &#39;street_address&#39; and &#39;postal_code&#39;. The default ordering is &#39;-n_events&#39;. (optional)
      * @throws \LinkedEvents\ApiException on non-2xx response
-     * @return array of \LinkedEvents\LinkedEvents\Model\InlineResponse2004, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \LinkedEvents\Model\InlineResponse2004, HTTP status code, HTTP response headers (array of strings)
      */
     public function placeListWithHttpInfo($page = null, $pageSize = null, $showAllPlaces = null, $division = null, $sort = null)
     {
@@ -549,15 +549,15 @@ class FilterApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\LinkedEvents\LinkedEvents\Model\InlineResponse2004',
+                '\LinkedEvents\Model\InlineResponse2004',
                 '/place/'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\LinkedEvents\LinkedEvents\Model\InlineResponse2004', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\LinkedEvents\Model\InlineResponse2004', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\LinkedEvents\LinkedEvents\Model\InlineResponse2004', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\LinkedEvents\Model\InlineResponse2004', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -573,7 +573,7 @@ class FilterApi
      *
      * @param string $id Id as defined in place model (required)
      * @throws \LinkedEvents\ApiException on non-2xx response
-     * @return \LinkedEvents\LinkedEvents\Model\Place
+     * @return \LinkedEvents\Model\Place
      */
     public function placeRetrieve($id)
     {
@@ -588,7 +588,7 @@ class FilterApi
      *
      * @param string $id Id as defined in place model (required)
      * @throws \LinkedEvents\ApiException on non-2xx response
-     * @return array of \LinkedEvents\LinkedEvents\Model\Place, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \LinkedEvents\Model\Place, HTTP status code, HTTP response headers (array of strings)
      */
     public function placeRetrieveWithHttpInfo($id)
     {
@@ -634,15 +634,15 @@ class FilterApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\LinkedEvents\LinkedEvents\Model\Place',
+                '\LinkedEvents\Model\Place',
                 '/place/{id}/'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\LinkedEvents\LinkedEvents\Model\Place', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\LinkedEvents\Model\Place', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\LinkedEvents\LinkedEvents\Model\Place', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\LinkedEvents\Model\Place', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

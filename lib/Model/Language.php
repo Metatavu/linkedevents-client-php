@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace LinkedEvents\LinkedEvents\Model;
+namespace LinkedEvents\Model;
 
 use \ArrayAccess;
 
@@ -56,7 +56,7 @@ class Language implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'string',
-        'name' => '\LinkedEvents\LinkedEvents\Model\LanguageName'
+        'name' => '\LinkedEvents\Model\LanguageName'
     ];
 
     public static function swaggerTypes()
@@ -182,7 +182,7 @@ class Language implements ArrayAccess
 
     /**
      * Gets name
-     * @return \LinkedEvents\LinkedEvents\Model\LanguageName
+     * @return \LinkedEvents\Model\LanguageName
      */
     public function getName()
     {
@@ -191,7 +191,7 @@ class Language implements ArrayAccess
 
     /**
      * Sets name
-     * @param \LinkedEvents\LinkedEvents\Model\LanguageName $name
+     * @param \LinkedEvents\Model\LanguageName $name
      * @return $this
      */
     public function setName($name)

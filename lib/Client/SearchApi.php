@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace LinkedEvents\LinkedEvents\Client;
+namespace LinkedEvents\Client;
 
 use \LinkedEvents\ApiClient;
 use \LinkedEvents\ApiException;
@@ -100,7 +100,7 @@ class SearchApi
      * @param \DateTime $start Search for events beginning or ending after this time. Dates can be specified using ISO 8601 (\&quot;2016-01-12\&quot;) and additionally \&quot;today\&quot;. (optional)
      * @param \DateTime $end Search for events beginning or ending before this time. Dates can be specified using ISO 8601 (\&quot;2016-01-12\&quot;) and additionally \&quot;today\&quot;. (optional)
      * @throws \LinkedEvents\ApiException on non-2xx response
-     * @return \LinkedEvents\LinkedEvents\Model\InlineResponse200
+     * @return \LinkedEvents\Model\InlineResponse200
      */
     public function eventSearch($page = null, $pageSize = null, $type = null, $q = null, $input = null, $start = null, $end = null)
     {
@@ -121,7 +121,7 @@ class SearchApi
      * @param \DateTime $start Search for events beginning or ending after this time. Dates can be specified using ISO 8601 (\&quot;2016-01-12\&quot;) and additionally \&quot;today\&quot;. (optional)
      * @param \DateTime $end Search for events beginning or ending before this time. Dates can be specified using ISO 8601 (\&quot;2016-01-12\&quot;) and additionally \&quot;today\&quot;. (optional)
      * @throws \LinkedEvents\ApiException on non-2xx response
-     * @return array of \LinkedEvents\LinkedEvents\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \LinkedEvents\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      */
     public function eventSearchWithHttpInfo($page = null, $pageSize = null, $type = null, $q = null, $input = null, $start = null, $end = null)
     {
@@ -183,15 +183,15 @@ class SearchApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\LinkedEvents\LinkedEvents\Model\InlineResponse200',
+                '\LinkedEvents\Model\InlineResponse200',
                 '/search/'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\LinkedEvents\LinkedEvents\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\LinkedEvents\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\LinkedEvents\LinkedEvents\Model\InlineResponse200', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\LinkedEvents\Model\InlineResponse200', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

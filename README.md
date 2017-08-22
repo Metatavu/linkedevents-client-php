@@ -58,7 +58,7 @@ Please follow the [installation procedure](#installation--usage) and then run th
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new LinkedEvents\Api\EventApi();
-$eventObject = new \LinkedEvents\LinkedEvents\Model\Event(); // \LinkedEvents\LinkedEvents\Model\Event | 
+$eventObject = new \LinkedEvents\Model\Event(); // \LinkedEvents\Model\Event | 
 
 try {
     $result = $api_instance->eventCreate($eventObject);

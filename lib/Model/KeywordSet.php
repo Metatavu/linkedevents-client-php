@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace LinkedEvents\LinkedEvents\Model;
+namespace LinkedEvents\Model;
 
 use \ArrayAccess;
 
@@ -64,7 +64,7 @@ class KeywordSet implements ArrayAccess
         'lastModifiedBy' => 'string',
         'usage' => 'string',
         'organization' => 'string',
-        'keywords' => '\LinkedEvents\LinkedEvents\Model\Keyword[]'
+        'keywords' => '\LinkedEvents\Model\Keyword[]'
     ];
 
     public static function swaggerTypes()
@@ -431,7 +431,7 @@ class KeywordSet implements ArrayAccess
 
     /**
      * Gets keywords
-     * @return \LinkedEvents\LinkedEvents\Model\Keyword[]
+     * @return \LinkedEvents\Model\Keyword[]
      */
     public function getKeywords()
     {
@@ -440,7 +440,7 @@ class KeywordSet implements ArrayAccess
 
     /**
      * Sets keywords
-     * @param \LinkedEvents\LinkedEvents\Model\Keyword[] $keywords Keywords that belong to this keyword_set
+     * @param \LinkedEvents\Model\Keyword[] $keywords Keywords that belong to this keyword_set
      * @return $this
      */
     public function setKeywords($keywords)

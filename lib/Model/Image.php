@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace LinkedEvents\LinkedEvents\Model;
+namespace LinkedEvents\Model;
 
 use \ArrayAccess;
 
@@ -55,7 +55,7 @@ class Image implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'name' => '\LinkedEvents\LinkedEvents\Model\ImageName',
+        'name' => '\LinkedEvents\Model\ImageName',
         'publisher' => 'string',
         'createdTime' => '\DateTime',
         'lastModifiedTime' => '\DateTime',
@@ -196,7 +196,7 @@ class Image implements ArrayAccess
 
     /**
      * Gets name
-     * @return \LinkedEvents\LinkedEvents\Model\ImageName
+     * @return \LinkedEvents\Model\ImageName
      */
     public function getName()
     {
@@ -205,7 +205,7 @@ class Image implements ArrayAccess
 
     /**
      * Sets name
-     * @param \LinkedEvents\LinkedEvents\Model\ImageName $name
+     * @param \LinkedEvents\Model\ImageName $name
      * @return $this
      */
     public function setName($name)

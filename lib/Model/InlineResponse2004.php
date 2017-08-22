@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace LinkedEvents\LinkedEvents\Model;
+namespace LinkedEvents\Model;
 
 use \ArrayAccess;
 
@@ -54,8 +54,8 @@ class InlineResponse2004 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'meta' => '\LinkedEvents\LinkedEvents\Model\MetaDefinition',
-        'data' => '\LinkedEvents\LinkedEvents\Model\Place[]'
+        'meta' => '\LinkedEvents\Model\MetaDefinition',
+        'data' => '\LinkedEvents\Model\Place[]'
     ];
 
     public static function swaggerTypes()
@@ -154,7 +154,7 @@ class InlineResponse2004 implements ArrayAccess
 
     /**
      * Gets meta
-     * @return \LinkedEvents\LinkedEvents\Model\MetaDefinition
+     * @return \LinkedEvents\Model\MetaDefinition
      */
     public function getMeta()
     {
@@ -163,7 +163,7 @@ class InlineResponse2004 implements ArrayAccess
 
     /**
      * Sets meta
-     * @param \LinkedEvents\LinkedEvents\Model\MetaDefinition $meta
+     * @param \LinkedEvents\Model\MetaDefinition $meta
      * @return $this
      */
     public function setMeta($meta)
@@ -175,7 +175,7 @@ class InlineResponse2004 implements ArrayAccess
 
     /**
      * Gets data
-     * @return \LinkedEvents\LinkedEvents\Model\Place[]
+     * @return \LinkedEvents\Model\Place[]
      */
     public function getData()
     {
@@ -184,7 +184,7 @@ class InlineResponse2004 implements ArrayAccess
 
     /**
      * Sets data
-     * @param \LinkedEvents\LinkedEvents\Model\Place[] $data
+     * @param \LinkedEvents\Model\Place[] $data
      * @return $this
      */
     public function setData($data)

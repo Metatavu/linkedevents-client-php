@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **lastModifiedBy** | **string** | FIXME(verify) Which API user most recently edited this keyword | [optional] 
 **usage** | **string** | Usage type for this keyword_set. These are allow UIs to show the set in appropriate place. FIXME: set of types is not finalized by any stretch | [optional] 
 **organization** | **string** | Organization that has defined this keyword_set | [optional] 
-**keywords** | [**\LinkedEvents\LinkedEvents\Model\Keyword[]**](Keyword.md) | Keywords that belong to this keyword_set | 
+**keywords** | [**\LinkedEvents\Model\Keyword[]**](Keyword.md) | Keywords that belong to this keyword_set | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

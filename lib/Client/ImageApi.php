@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace LinkedEvents\LinkedEvents\Client;
+namespace LinkedEvents\Client;
 
 use \LinkedEvents\ApiClient;
 use \LinkedEvents\ApiException;
@@ -94,7 +94,7 @@ class ImageApi
      *
      * @param \SplFileObject $imageFile  (optional)
      * @throws \LinkedEvents\ApiException on non-2xx response
-     * @return \LinkedEvents\LinkedEvents\Model\Image
+     * @return \LinkedEvents\Model\Image
      */
     public function imageCreate($imageFile = null)
     {
@@ -109,7 +109,7 @@ class ImageApi
      *
      * @param \SplFileObject $imageFile  (optional)
      * @throws \LinkedEvents\ApiException on non-2xx response
-     * @return array of \LinkedEvents\LinkedEvents\Model\Image, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \LinkedEvents\Model\Image, HTTP status code, HTTP response headers (array of strings)
      */
     public function imageCreateWithHttpInfo($imageFile = null)
     {
@@ -153,15 +153,15 @@ class ImageApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\LinkedEvents\LinkedEvents\Model\Image',
+                '\LinkedEvents\Model\Image',
                 '/image/'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\LinkedEvents\LinkedEvents\Model\Image', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\LinkedEvents\Model\Image', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 201:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\LinkedEvents\LinkedEvents\Model\Image', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\LinkedEvents\Model\Image', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -180,7 +180,7 @@ class ImageApi
      * @param string[] $include Embed given reference-type fields directly into the response, otherwise they are returned as URI references. (optional)
      * @param string $sort return the results in ascending or descending order by the named field. sorting is only supported for some string, integer and datetime fields. (optional)
      * @throws \LinkedEvents\ApiException on non-2xx response
-     * @return \LinkedEvents\LinkedEvents\Model\InlineResponse2001
+     * @return \LinkedEvents\Model\InlineResponse2001
      */
     public function imageList($page = null, $pageSize = null, $include = null, $sort = null)
     {
@@ -198,7 +198,7 @@ class ImageApi
      * @param string[] $include Embed given reference-type fields directly into the response, otherwise they are returned as URI references. (optional)
      * @param string $sort return the results in ascending or descending order by the named field. sorting is only supported for some string, integer and datetime fields. (optional)
      * @throws \LinkedEvents\ApiException on non-2xx response
-     * @return array of \LinkedEvents\LinkedEvents\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \LinkedEvents\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
      */
     public function imageListWithHttpInfo($page = null, $pageSize = null, $include = null, $sort = null)
     {
@@ -251,15 +251,15 @@ class ImageApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\LinkedEvents\LinkedEvents\Model\InlineResponse2001',
+                '\LinkedEvents\Model\InlineResponse2001',
                 '/image/'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\LinkedEvents\LinkedEvents\Model\InlineResponse2001', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\LinkedEvents\Model\InlineResponse2001', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\LinkedEvents\LinkedEvents\Model\InlineResponse2001', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\LinkedEvents\Model\InlineResponse2001', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -275,7 +275,7 @@ class ImageApi
      *
      * @param string $id The id for the image (required)
      * @throws \LinkedEvents\ApiException on non-2xx response
-     * @return \LinkedEvents\LinkedEvents\Model\Image
+     * @return \LinkedEvents\Model\Image
      */
     public function imageRetrieve($id)
     {
@@ -290,7 +290,7 @@ class ImageApi
      *
      * @param string $id The id for the image (required)
      * @throws \LinkedEvents\ApiException on non-2xx response
-     * @return array of \LinkedEvents\LinkedEvents\Model\Image, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \LinkedEvents\Model\Image, HTTP status code, HTTP response headers (array of strings)
      */
     public function imageRetrieveWithHttpInfo($id)
     {
@@ -336,15 +336,15 @@ class ImageApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\LinkedEvents\LinkedEvents\Model\Image',
+                '\LinkedEvents\Model\Image',
                 '/image/{id}/'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\LinkedEvents\LinkedEvents\Model\Image', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\LinkedEvents\Model\Image', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\LinkedEvents\LinkedEvents\Model\Image', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\LinkedEvents\Model\Image', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -359,9 +359,9 @@ class ImageApi
      * Update an image
      *
      * @param string $id Identifier for the image to be updated (required)
-     * @param \LinkedEvents\LinkedEvents\Model\Image $imageObject Image object that should replace the existing image, note that some implementations may retain unspecified fields at their original values. (optional)
+     * @param \LinkedEvents\Model\Image $imageObject Image object that should replace the existing image, note that some implementations may retain unspecified fields at their original values. (optional)
      * @throws \LinkedEvents\ApiException on non-2xx response
-     * @return \LinkedEvents\LinkedEvents\Model\Image
+     * @return \LinkedEvents\Model\Image
      */
     public function imageUpdate($id, $imageObject = null)
     {
@@ -375,9 +375,9 @@ class ImageApi
      * Update an image
      *
      * @param string $id Identifier for the image to be updated (required)
-     * @param \LinkedEvents\LinkedEvents\Model\Image $imageObject Image object that should replace the existing image, note that some implementations may retain unspecified fields at their original values. (optional)
+     * @param \LinkedEvents\Model\Image $imageObject Image object that should replace the existing image, note that some implementations may retain unspecified fields at their original values. (optional)
      * @throws \LinkedEvents\ApiException on non-2xx response
-     * @return array of \LinkedEvents\LinkedEvents\Model\Image, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \LinkedEvents\Model\Image, HTTP status code, HTTP response headers (array of strings)
      */
     public function imageUpdateWithHttpInfo($id, $imageObject = null)
     {
@@ -428,15 +428,15 @@ class ImageApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\LinkedEvents\LinkedEvents\Model\Image',
+                '\LinkedEvents\Model\Image',
                 '/image/{id}/'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\LinkedEvents\LinkedEvents\Model\Image', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\LinkedEvents\Model\Image', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\LinkedEvents\LinkedEvents\Model\Image', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\LinkedEvents\Model\Image', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

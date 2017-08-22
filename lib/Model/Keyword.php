@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace LinkedEvents\LinkedEvents\Model;
+namespace LinkedEvents\Model;
 
 use \ArrayAccess;
 
@@ -56,8 +56,8 @@ class Keyword implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'string',
-        'name' => '\LinkedEvents\LinkedEvents\Model\KeywordName',
-        'images' => '\LinkedEvents\LinkedEvents\Model\Image[]',
+        'name' => '\LinkedEvents\Model\KeywordName',
+        'images' => '\LinkedEvents\Model\Image[]',
         'originId' => 'string',
         'createdTime' => '\DateTime',
         'lastModifiedTime' => '\DateTime',
@@ -233,7 +233,7 @@ class Keyword implements ArrayAccess
 
     /**
      * Gets name
-     * @return \LinkedEvents\LinkedEvents\Model\KeywordName
+     * @return \LinkedEvents\Model\KeywordName
      */
     public function getName()
     {
@@ -242,7 +242,7 @@ class Keyword implements ArrayAccess
 
     /**
      * Sets name
-     * @param \LinkedEvents\LinkedEvents\Model\KeywordName $name
+     * @param \LinkedEvents\Model\KeywordName $name
      * @return $this
      */
     public function setName($name)
@@ -254,7 +254,7 @@ class Keyword implements ArrayAccess
 
     /**
      * Gets images
-     * @return \LinkedEvents\LinkedEvents\Model\Image[]
+     * @return \LinkedEvents\Model\Image[]
      */
     public function getImages()
     {
@@ -263,7 +263,7 @@ class Keyword implements ArrayAccess
 
     /**
      * Sets images
-     * @param \LinkedEvents\LinkedEvents\Model\Image[] $images
+     * @param \LinkedEvents\Model\Image[] $images
      * @return $this
      */
     public function setImages($images)

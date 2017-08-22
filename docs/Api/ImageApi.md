@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **imageCreate**
-> \LinkedEvents\LinkedEvents\Model\Image imageCreate($imageFile)
+> \LinkedEvents\Model\Image imageCreate($imageFile)
 
 Create a new image
 
@@ -42,7 +42,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\LinkedEvents\LinkedEvents\Model\Image**](../Model/Image.md)
+[**\LinkedEvents\Model\Image**](../Model/Image.md)
 
 ### Authorization
 
@@ -56,7 +56,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **imageList**
-> \LinkedEvents\LinkedEvents\Model\InlineResponse2001 imageList($page, $pageSize, $include, $sort)
+> \LinkedEvents\Model\InlineResponse2001 imageList($page, $pageSize, $include, $sort)
 
 Returns a list of images
 
@@ -93,7 +93,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\LinkedEvents\LinkedEvents\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\LinkedEvents\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -107,7 +107,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **imageRetrieve**
-> \LinkedEvents\LinkedEvents\Model\Image imageRetrieve($id)
+> \LinkedEvents\Model\Image imageRetrieve($id)
 
 Return information for single image
 
@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\LinkedEvents\LinkedEvents\Model\Image**](../Model/Image.md)
+[**\LinkedEvents\Model\Image**](../Model/Image.md)
 
 ### Authorization
 
@@ -150,7 +150,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **imageUpdate**
-> \LinkedEvents\LinkedEvents\Model\Image imageUpdate($id, $imageObject)
+> \LinkedEvents\Model\Image imageUpdate($id, $imageObject)
 
 Update an image
 
@@ -163,7 +163,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new LinkedEvents\Api\ImageApi();
 $id = "id_example"; // string | Identifier for the image to be updated
-$imageObject = new \LinkedEvents\LinkedEvents\Model\Image(); // \LinkedEvents\LinkedEvents\Model\Image | Image object that should replace the existing image, note that some implementations may retain unspecified fields at their original values.
+$imageObject = new \LinkedEvents\Model\Image(); // \LinkedEvents\Model\Image | Image object that should replace the existing image, note that some implementations may retain unspecified fields at their original values.
 
 try {
     $result = $api_instance->imageUpdate($id, $imageObject);
@@ -179,11 +179,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| Identifier for the image to be updated |
- **imageObject** | [**\LinkedEvents\LinkedEvents\Model\Image**](../Model/\LinkedEvents\LinkedEvents\Model\Image.md)| Image object that should replace the existing image, note that some implementations may retain unspecified fields at their original values. | [optional]
+ **imageObject** | [**\LinkedEvents\Model\Image**](../Model/\LinkedEvents\Model\Image.md)| Image object that should replace the existing image, note that some implementations may retain unspecified fields at their original values. | [optional]
 
 ### Return type
 
-[**\LinkedEvents\LinkedEvents\Model\Image**](../Model/Image.md)
+[**\LinkedEvents\Model\Image**](../Model/Image.md)
 
 ### Authorization
 

@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace LinkedEvents\LinkedEvents\Model;
+namespace LinkedEvents\Model;
 
 use \ArrayAccess;
 
@@ -56,22 +56,22 @@ class Event implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'string',
-        'location' => '\LinkedEvents\LinkedEvents\Model\Place',
+        'location' => '\LinkedEvents\Model\Place',
         'keywords' => 'string[]',
-        'inLanguage' => '\LinkedEvents\LinkedEvents\Model\Language[]',
+        'inLanguage' => '\LinkedEvents\Model\Language[]',
         'superEvent' => 'string',
         'superEventType' => 'string',
         'eventStatus' => 'string',
         'publicationStatus' => 'string',
-        'externalLinks' => '\LinkedEvents\LinkedEvents\Model\Eventlink[]',
-        'offers' => '\LinkedEvents\LinkedEvents\Model\Offer[]',
+        'externalLinks' => '\LinkedEvents\Model\Eventlink[]',
+        'offers' => '\LinkedEvents\Model\Offer[]',
         'subEvents' => 'string[]',
         'customData' => 'string',
-        'name' => '\LinkedEvents\LinkedEvents\Model\EventName',
-        'images' => '\LinkedEvents\LinkedEvents\Model\Image[]',
+        'name' => '\LinkedEvents\Model\EventName',
+        'images' => '\LinkedEvents\Model\Image[]',
         'createdTime' => '\DateTime',
         'lastModifiedTime' => '\DateTime',
-        'infoUrl' => '\LinkedEvents\LinkedEvents\Model\EventInfoUrl',
+        'infoUrl' => '\LinkedEvents\Model\EventInfoUrl',
         'description' => 'object',
         'shortDescription' => 'object',
         'datePublished' => '\DateTime',
@@ -79,7 +79,7 @@ class Event implements ArrayAccess
         'locationExtraInfo' => 'object',
         'startTime' => '\DateTime',
         'endTime' => '\DateTime',
-        'audience' => '\LinkedEvents\LinkedEvents\Model\Keyword[]',
+        'audience' => '\LinkedEvents\Model\Keyword[]',
         'dataSource' => 'string',
         'createdBy' => 'string',
         'lastModifiedBy' => 'string',
@@ -335,7 +335,7 @@ class Event implements ArrayAccess
 
     /**
      * Gets location
-     * @return \LinkedEvents\LinkedEvents\Model\Place
+     * @return \LinkedEvents\Model\Place
      */
     public function getLocation()
     {
@@ -344,7 +344,7 @@ class Event implements ArrayAccess
 
     /**
      * Sets location
-     * @param \LinkedEvents\LinkedEvents\Model\Place $location
+     * @param \LinkedEvents\Model\Place $location
      * @return $this
      */
     public function setLocation($location)
@@ -377,7 +377,7 @@ class Event implements ArrayAccess
 
     /**
      * Gets inLanguage
-     * @return \LinkedEvents\LinkedEvents\Model\Language[]
+     * @return \LinkedEvents\Model\Language[]
      */
     public function getInLanguage()
     {
@@ -386,7 +386,7 @@ class Event implements ArrayAccess
 
     /**
      * Sets inLanguage
-     * @param \LinkedEvents\LinkedEvents\Model\Language[] $inLanguage the languages spoken or supported at the event
+     * @param \LinkedEvents\Model\Language[] $inLanguage the languages spoken or supported at the event
      * @return $this
      */
     public function setInLanguage($inLanguage)
@@ -482,7 +482,7 @@ class Event implements ArrayAccess
 
     /**
      * Gets externalLinks
-     * @return \LinkedEvents\LinkedEvents\Model\Eventlink[]
+     * @return \LinkedEvents\Model\Eventlink[]
      */
     public function getExternalLinks()
     {
@@ -491,7 +491,7 @@ class Event implements ArrayAccess
 
     /**
      * Sets externalLinks
-     * @param \LinkedEvents\LinkedEvents\Model\Eventlink[] $externalLinks See external link definition
+     * @param \LinkedEvents\Model\Eventlink[] $externalLinks See external link definition
      * @return $this
      */
     public function setExternalLinks($externalLinks)
@@ -503,7 +503,7 @@ class Event implements ArrayAccess
 
     /**
      * Gets offers
-     * @return \LinkedEvents\LinkedEvents\Model\Offer[]
+     * @return \LinkedEvents\Model\Offer[]
      */
     public function getOffers()
     {
@@ -512,7 +512,7 @@ class Event implements ArrayAccess
 
     /**
      * Sets offers
-     * @param \LinkedEvents\LinkedEvents\Model\Offer[] $offers See offer definition
+     * @param \LinkedEvents\Model\Offer[] $offers See offer definition
      * @return $this
      */
     public function setOffers($offers)
@@ -566,7 +566,7 @@ class Event implements ArrayAccess
 
     /**
      * Gets name
-     * @return \LinkedEvents\LinkedEvents\Model\EventName
+     * @return \LinkedEvents\Model\EventName
      */
     public function getName()
     {
@@ -575,7 +575,7 @@ class Event implements ArrayAccess
 
     /**
      * Sets name
-     * @param \LinkedEvents\LinkedEvents\Model\EventName $name
+     * @param \LinkedEvents\Model\EventName $name
      * @return $this
      */
     public function setName($name)
@@ -587,7 +587,7 @@ class Event implements ArrayAccess
 
     /**
      * Gets images
-     * @return \LinkedEvents\LinkedEvents\Model\Image[]
+     * @return \LinkedEvents\Model\Image[]
      */
     public function getImages()
     {
@@ -596,7 +596,7 @@ class Event implements ArrayAccess
 
     /**
      * Sets images
-     * @param \LinkedEvents\LinkedEvents\Model\Image[] $images
+     * @param \LinkedEvents\Model\Image[] $images
      * @return $this
      */
     public function setImages($images)
@@ -650,7 +650,7 @@ class Event implements ArrayAccess
 
     /**
      * Gets infoUrl
-     * @return \LinkedEvents\LinkedEvents\Model\EventInfoUrl
+     * @return \LinkedEvents\Model\EventInfoUrl
      */
     public function getInfoUrl()
     {
@@ -659,7 +659,7 @@ class Event implements ArrayAccess
 
     /**
      * Sets infoUrl
-     * @param \LinkedEvents\LinkedEvents\Model\EventInfoUrl $infoUrl
+     * @param \LinkedEvents\Model\EventInfoUrl $infoUrl
      * @return $this
      */
     public function setInfoUrl($infoUrl)
@@ -818,7 +818,7 @@ class Event implements ArrayAccess
 
     /**
      * Gets audience
-     * @return \LinkedEvents\LinkedEvents\Model\Keyword[]
+     * @return \LinkedEvents\Model\Keyword[]
      */
     public function getAudience()
     {
@@ -827,7 +827,7 @@ class Event implements ArrayAccess
 
     /**
      * Sets audience
-     * @param \LinkedEvents\LinkedEvents\Model\Keyword[] $audience
+     * @param \LinkedEvents\Model\Keyword[] $audience
      * @return $this
      */
     public function setAudience($audience)

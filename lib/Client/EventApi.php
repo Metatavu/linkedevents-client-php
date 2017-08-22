@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace LinkedEvents\LinkedEvents\Client;
+namespace LinkedEvents\Client;
 
 use \LinkedEvents\ApiClient;
 use \LinkedEvents\ApiException;
@@ -92,9 +92,9 @@ class EventApi
      *
      * Create a new event
      *
-     * @param \LinkedEvents\LinkedEvents\Model\Event $eventObject  (optional)
+     * @param \LinkedEvents\Model\Event $eventObject  (optional)
      * @throws \LinkedEvents\ApiException on non-2xx response
-     * @return \LinkedEvents\LinkedEvents\Model\Event
+     * @return \LinkedEvents\Model\Event
      */
     public function eventCreate($eventObject = null)
     {
@@ -107,9 +107,9 @@ class EventApi
      *
      * Create a new event
      *
-     * @param \LinkedEvents\LinkedEvents\Model\Event $eventObject  (optional)
+     * @param \LinkedEvents\Model\Event $eventObject  (optional)
      * @throws \LinkedEvents\ApiException on non-2xx response
-     * @return array of \LinkedEvents\LinkedEvents\Model\Event, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \LinkedEvents\Model\Event, HTTP status code, HTTP response headers (array of strings)
      */
     public function eventCreateWithHttpInfo($eventObject = null)
     {
@@ -148,15 +148,15 @@ class EventApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\LinkedEvents\LinkedEvents\Model\Event',
+                '\LinkedEvents\Model\Event',
                 '/event/'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\LinkedEvents\LinkedEvents\Model\Event', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\LinkedEvents\Model\Event', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 201:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\LinkedEvents\LinkedEvents\Model\Event', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\LinkedEvents\Model\Event', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -186,7 +186,7 @@ class EventApi
      * @param string $publisher Search for events published by the given organization (optional)
      * @param string $sort Sort the returned events in the given order. Possible sorting criteria are &#39;start_time&#39;, &#39;end_time&#39;, &#39;days_left&#39; and &#39;last_modified_time&#39;. The default ordering is &#39;-last_modified_time&#39;. (optional)
      * @throws \LinkedEvents\ApiException on non-2xx response
-     * @return \LinkedEvents\LinkedEvents\Model\InlineResponse200
+     * @return \LinkedEvents\Model\InlineResponse200
      */
     public function eventList($include = null, $text = null, $lastModifiedSince = null, $start = null, $end = null, $bbox = null, $dataSource = null, $location = null, $division = null, $keyword = null, $recurring = null, $minDuration = null, $maxDuration = null, $publisher = null, $sort = null)
     {
@@ -215,7 +215,7 @@ class EventApi
      * @param string $publisher Search for events published by the given organization (optional)
      * @param string $sort Sort the returned events in the given order. Possible sorting criteria are &#39;start_time&#39;, &#39;end_time&#39;, &#39;days_left&#39; and &#39;last_modified_time&#39;. The default ordering is &#39;-last_modified_time&#39;. (optional)
      * @throws \LinkedEvents\ApiException on non-2xx response
-     * @return array of \LinkedEvents\LinkedEvents\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \LinkedEvents\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      */
     public function eventListWithHttpInfo($include = null, $text = null, $lastModifiedSince = null, $start = null, $end = null, $bbox = null, $dataSource = null, $location = null, $division = null, $keyword = null, $recurring = null, $minDuration = null, $maxDuration = null, $publisher = null, $sort = null)
     {
@@ -325,15 +325,15 @@ class EventApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\LinkedEvents\LinkedEvents\Model\InlineResponse200',
+                '\LinkedEvents\Model\InlineResponse200',
                 '/event/'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\LinkedEvents\LinkedEvents\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\LinkedEvents\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\LinkedEvents\LinkedEvents\Model\InlineResponse200', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\LinkedEvents\Model\InlineResponse200', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -349,7 +349,7 @@ class EventApi
      *
      * @param string $id Event identifier as defined in event schema (required)
      * @throws \LinkedEvents\ApiException on non-2xx response
-     * @return \LinkedEvents\LinkedEvents\Model\Event
+     * @return \LinkedEvents\Model\Event
      */
     public function eventRetrieve($id)
     {
@@ -364,7 +364,7 @@ class EventApi
      *
      * @param string $id Event identifier as defined in event schema (required)
      * @throws \LinkedEvents\ApiException on non-2xx response
-     * @return array of \LinkedEvents\LinkedEvents\Model\Event, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \LinkedEvents\Model\Event, HTTP status code, HTTP response headers (array of strings)
      */
     public function eventRetrieveWithHttpInfo($id)
     {
@@ -410,15 +410,15 @@ class EventApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\LinkedEvents\LinkedEvents\Model\Event',
+                '\LinkedEvents\Model\Event',
                 '/event/{id}/'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\LinkedEvents\LinkedEvents\Model\Event', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\LinkedEvents\Model\Event', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\LinkedEvents\LinkedEvents\Model\Event', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\LinkedEvents\Model\Event', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -433,9 +433,9 @@ class EventApi
      * Update an event
      *
      * @param string $id Identifier for the event to be updated (required)
-     * @param \LinkedEvents\LinkedEvents\Model\Event $eventObject Event object that should replace the existing event, note that some implementations may retain unspecified fields at their original values. (optional)
+     * @param \LinkedEvents\Model\Event $eventObject Event object that should replace the existing event, note that some implementations may retain unspecified fields at their original values. (optional)
      * @throws \LinkedEvents\ApiException on non-2xx response
-     * @return \LinkedEvents\LinkedEvents\Model\Event
+     * @return \LinkedEvents\Model\Event
      */
     public function eventUpdate($id, $eventObject = null)
     {
@@ -449,9 +449,9 @@ class EventApi
      * Update an event
      *
      * @param string $id Identifier for the event to be updated (required)
-     * @param \LinkedEvents\LinkedEvents\Model\Event $eventObject Event object that should replace the existing event, note that some implementations may retain unspecified fields at their original values. (optional)
+     * @param \LinkedEvents\Model\Event $eventObject Event object that should replace the existing event, note that some implementations may retain unspecified fields at their original values. (optional)
      * @throws \LinkedEvents\ApiException on non-2xx response
-     * @return array of \LinkedEvents\LinkedEvents\Model\Event, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \LinkedEvents\Model\Event, HTTP status code, HTTP response headers (array of strings)
      */
     public function eventUpdateWithHttpInfo($id, $eventObject = null)
     {
@@ -502,15 +502,15 @@ class EventApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\LinkedEvents\LinkedEvents\Model\Event',
+                '\LinkedEvents\Model\Event',
                 '/event/{id}/'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\LinkedEvents\LinkedEvents\Model\Event', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\LinkedEvents\Model\Event', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\LinkedEvents\LinkedEvents\Model\Event', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\LinkedEvents\Model\Event', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

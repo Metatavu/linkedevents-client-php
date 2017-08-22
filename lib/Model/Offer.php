@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace LinkedEvents\LinkedEvents\Model;
+namespace LinkedEvents\Model;
 
 use \ArrayAccess;
 
@@ -55,9 +55,9 @@ class Offer implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'price' => '\LinkedEvents\LinkedEvents\Model\OfferPrice',
-        'infoUrl' => '\LinkedEvents\LinkedEvents\Model\OfferInfoUrl',
-        'description' => '\LinkedEvents\LinkedEvents\Model\OfferDescription',
+        'price' => '\LinkedEvents\Model\OfferPrice',
+        'infoUrl' => '\LinkedEvents\Model\OfferInfoUrl',
+        'description' => '\LinkedEvents\Model\OfferDescription',
         'isFree' => 'bool'
     ];
 
@@ -165,7 +165,7 @@ class Offer implements ArrayAccess
 
     /**
      * Gets price
-     * @return \LinkedEvents\LinkedEvents\Model\OfferPrice
+     * @return \LinkedEvents\Model\OfferPrice
      */
     public function getPrice()
     {
@@ -174,7 +174,7 @@ class Offer implements ArrayAccess
 
     /**
      * Sets price
-     * @param \LinkedEvents\LinkedEvents\Model\OfferPrice $price
+     * @param \LinkedEvents\Model\OfferPrice $price
      * @return $this
      */
     public function setPrice($price)
@@ -186,7 +186,7 @@ class Offer implements ArrayAccess
 
     /**
      * Gets infoUrl
-     * @return \LinkedEvents\LinkedEvents\Model\OfferInfoUrl
+     * @return \LinkedEvents\Model\OfferInfoUrl
      */
     public function getInfoUrl()
     {
@@ -195,7 +195,7 @@ class Offer implements ArrayAccess
 
     /**
      * Sets infoUrl
-     * @param \LinkedEvents\LinkedEvents\Model\OfferInfoUrl $infoUrl
+     * @param \LinkedEvents\Model\OfferInfoUrl $infoUrl
      * @return $this
      */
     public function setInfoUrl($infoUrl)
@@ -207,7 +207,7 @@ class Offer implements ArrayAccess
 
     /**
      * Gets description
-     * @return \LinkedEvents\LinkedEvents\Model\OfferDescription
+     * @return \LinkedEvents\Model\OfferDescription
      */
     public function getDescription()
     {
@@ -216,7 +216,7 @@ class Offer implements ArrayAccess
 
     /**
      * Sets description
-     * @param \LinkedEvents\LinkedEvents\Model\OfferDescription $description
+     * @param \LinkedEvents\Model\OfferDescription $description
      * @return $this
      */
     public function setDescription($description)

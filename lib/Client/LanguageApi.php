@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace LinkedEvents\LinkedEvents\Client;
+namespace LinkedEvents\Client;
 
 use \LinkedEvents\ApiClient;
 use \LinkedEvents\ApiException;
@@ -93,7 +93,7 @@ class LanguageApi
      * Return a list of languages used for describing events
      *
      * @throws \LinkedEvents\ApiException on non-2xx response
-     * @return \LinkedEvents\LinkedEvents\Model\InlineResponse2005
+     * @return \LinkedEvents\Model\InlineResponse2005
      */
     public function languageList()
     {
@@ -107,7 +107,7 @@ class LanguageApi
      * Return a list of languages used for describing events
      *
      * @throws \LinkedEvents\ApiException on non-2xx response
-     * @return array of \LinkedEvents\LinkedEvents\Model\InlineResponse2005, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \LinkedEvents\Model\InlineResponse2005, HTTP status code, HTTP response headers (array of strings)
      */
     public function languageListWithHttpInfo()
     {
@@ -141,15 +141,15 @@ class LanguageApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\LinkedEvents\LinkedEvents\Model\InlineResponse2005',
+                '\LinkedEvents\Model\InlineResponse2005',
                 '/language/'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\LinkedEvents\LinkedEvents\Model\InlineResponse2005', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\LinkedEvents\Model\InlineResponse2005', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\LinkedEvents\LinkedEvents\Model\InlineResponse2005', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\LinkedEvents\Model\InlineResponse2005', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -165,7 +165,7 @@ class LanguageApi
      *
      * @param string $id  (required)
      * @throws \LinkedEvents\ApiException on non-2xx response
-     * @return \LinkedEvents\LinkedEvents\Model\Language
+     * @return \LinkedEvents\Model\Language
      */
     public function languageRetrieve($id)
     {
@@ -180,7 +180,7 @@ class LanguageApi
      *
      * @param string $id  (required)
      * @throws \LinkedEvents\ApiException on non-2xx response
-     * @return array of \LinkedEvents\LinkedEvents\Model\Language, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \LinkedEvents\Model\Language, HTTP status code, HTTP response headers (array of strings)
      */
     public function languageRetrieveWithHttpInfo($id)
     {
@@ -226,15 +226,15 @@ class LanguageApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\LinkedEvents\LinkedEvents\Model\Language',
+                '\LinkedEvents\Model\Language',
                 '/language/{id}/'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\LinkedEvents\LinkedEvents\Model\Language', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\LinkedEvents\Model\Language', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\LinkedEvents\LinkedEvents\Model\Language', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\LinkedEvents\Model\Language', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

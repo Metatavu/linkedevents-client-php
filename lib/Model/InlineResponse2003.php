@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace LinkedEvents\LinkedEvents\Model;
+namespace LinkedEvents\Model;
 
 use \ArrayAccess;
 
@@ -54,8 +54,8 @@ class InlineResponse2003 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'meta' => '\LinkedEvents\LinkedEvents\Model\Keyword',
-        'data' => '\LinkedEvents\LinkedEvents\Model\KeywordSet[]'
+        'meta' => '\LinkedEvents\Model\Keyword',
+        'data' => '\LinkedEvents\Model\KeywordSet[]'
     ];
 
     public static function swaggerTypes()
@@ -154,7 +154,7 @@ class InlineResponse2003 implements ArrayAccess
 
     /**
      * Gets meta
-     * @return \LinkedEvents\LinkedEvents\Model\Keyword
+     * @return \LinkedEvents\Model\Keyword
      */
     public function getMeta()
     {
@@ -163,7 +163,7 @@ class InlineResponse2003 implements ArrayAccess
 
     /**
      * Sets meta
-     * @param \LinkedEvents\LinkedEvents\Model\Keyword $meta
+     * @param \LinkedEvents\Model\Keyword $meta
      * @return $this
      */
     public function setMeta($meta)
@@ -175,7 +175,7 @@ class InlineResponse2003 implements ArrayAccess
 
     /**
      * Gets data
-     * @return \LinkedEvents\LinkedEvents\Model\KeywordSet[]
+     * @return \LinkedEvents\Model\KeywordSet[]
      */
     public function getData()
     {
@@ -184,7 +184,7 @@ class InlineResponse2003 implements ArrayAccess
 
     /**
      * Sets data
-     * @param \LinkedEvents\LinkedEvents\Model\KeywordSet[] $data
+     * @param \LinkedEvents\Model\KeywordSet[] $data
      * @return $this
      */
     public function setData($data)
