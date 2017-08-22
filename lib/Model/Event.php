@@ -74,7 +74,6 @@ class Event implements ArrayAccess
         'infoUrl' => '\LinkedEvents\Model\EventInfoUrl',
         'description' => 'object',
         'shortDescription' => 'object',
-        'id' => 'string',
         'context' => 'string',
         'type' => 'string',
         'datePublished' => '\DateTime',
@@ -118,7 +117,6 @@ class Event implements ArrayAccess
         'infoUrl' => 'info_url',
         'description' => 'description',
         'shortDescription' => 'short_description',
-        'id' => '@id',
         'context' => '@context',
         'type' => '@type',
         'datePublished' => 'date_published',
@@ -158,7 +156,6 @@ class Event implements ArrayAccess
         'infoUrl' => 'setInfoUrl',
         'description' => 'setDescription',
         'shortDescription' => 'setShortDescription',
-        'id' => 'setId',
         'context' => 'setContext',
         'type' => 'setType',
         'datePublished' => 'setDatePublished',
@@ -198,7 +195,6 @@ class Event implements ArrayAccess
         'infoUrl' => 'getInfoUrl',
         'description' => 'getDescription',
         'shortDescription' => 'getShortDescription',
-        'id' => 'getId',
         'context' => 'getContext',
         'type' => 'getType',
         'datePublished' => 'getDatePublished',
@@ -263,7 +259,6 @@ class Event implements ArrayAccess
         $this->container['infoUrl'] = isset($data['infoUrl']) ? $data['infoUrl'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['shortDescription'] = isset($data['shortDescription']) ? $data['shortDescription'] : null;
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['context'] = isset($data['context']) ? $data['context'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['datePublished'] = isset($data['datePublished']) ? $data['datePublished'] : null;
@@ -722,27 +717,6 @@ class Event implements ArrayAccess
     public function setShortDescription($shortDescription)
     {
         $this->container['shortDescription'] = $shortDescription;
-
-        return $this;
-    }
-
-    /**
-     * Gets id
-     * @return string
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     * @param string $id
-     * @return $this
-     */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
 
         return $this;
     }

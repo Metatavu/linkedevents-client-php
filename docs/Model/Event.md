@@ -22,7 +22,6 @@ Name | Type | Description | Notes
 **infoUrl** | [**\LinkedEvents\Model\EventInfoUrl**](EventInfoUrl.md) |  | [optional] 
 **description** | **object** | Description for the event, several chapters(FIXME, verify) | [optional] 
 **shortDescription** | **object** | Short description for the event, recommended limit 140 characters | [optional] 
-**id** | **string** |  | [optional] 
 **context** | **string** |  | [optional] 
 **type** | **string** |  | [optional] 
 **datePublished** | [**\DateTime**](\DateTime.md) | Date this event is free to be published | [optional] 
