@@ -101,6 +101,7 @@ Class | Method | HTTP request | Description
  - [EventInfoUrl](docs/Model/EventInfoUrl.md)
  - [EventName](docs/Model/EventName.md)
  - [Eventlink](docs/Model/Eventlink.md)
+ - [IdRef](docs/Model/IdRef.md)
  - [Image](docs/Model/Image.md)
  - [ImageName](docs/Model/ImageName.md)
  - [InlineResponse200](docs/Model/InlineResponse200.md)
