@@ -185,12 +185,14 @@ class EventApi
      * @param int $maxDuration Search for events that are shorter than given time in seconds (optional)
      * @param string $publisher Search for events published by the given organization (optional)
      * @param string $sort Sort the returned events in the given order. Possible sorting criteria are &#39;start_time&#39;, &#39;end_time&#39;, &#39;days_left&#39; and &#39;last_modified_time&#39;. The default ordering is &#39;-last_modified_time&#39;. (optional)
+     * @param int $page request particular page in paginated results (optional)
+     * @param int $pageSize request that server delivers page_size results in response (optional)
      * @throws \LinkedEvents\ApiException on non-2xx response
      * @return \LinkedEvents\Model\InlineResponse200
      */
-    public function eventList($include = null, $text = null, $lastModifiedSince = null, $start = null, $end = null, $bbox = null, $dataSource = null, $location = null, $division = null, $keyword = null, $recurring = null, $minDuration = null, $maxDuration = null, $publisher = null, $sort = null)
+    public function eventList($include = null, $text = null, $lastModifiedSince = null, $start = null, $end = null, $bbox = null, $dataSource = null, $location = null, $division = null, $keyword = null, $recurring = null, $minDuration = null, $maxDuration = null, $publisher = null, $sort = null, $page = null, $pageSize = null)
     {
-        list($response) = $this->eventListWithHttpInfo($include, $text, $lastModifiedSince, $start, $end, $bbox, $dataSource, $location, $division, $keyword, $recurring, $minDuration, $maxDuration, $publisher, $sort);
+        list($response) = $this->eventListWithHttpInfo($include, $text, $lastModifiedSince, $start, $end, $bbox, $dataSource, $location, $division, $keyword, $recurring, $minDuration, $maxDuration, $publisher, $sort, $page, $pageSize);
         return $response;
     }
 
@@ -214,10 +216,12 @@ class EventApi
      * @param int $maxDuration Search for events that are shorter than given time in seconds (optional)
      * @param string $publisher Search for events published by the given organization (optional)
      * @param string $sort Sort the returned events in the given order. Possible sorting criteria are &#39;start_time&#39;, &#39;end_time&#39;, &#39;days_left&#39; and &#39;last_modified_time&#39;. The default ordering is &#39;-last_modified_time&#39;. (optional)
+     * @param int $page request particular page in paginated results (optional)
+     * @param int $pageSize request that server delivers page_size results in response (optional)
      * @throws \LinkedEvents\ApiException on non-2xx response
      * @return array of \LinkedEvents\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      */
-    public function eventListWithHttpInfo($include = null, $text = null, $lastModifiedSince = null, $start = null, $end = null, $bbox = null, $dataSource = null, $location = null, $division = null, $keyword = null, $recurring = null, $minDuration = null, $maxDuration = null, $publisher = null, $sort = null)
+    public function eventListWithHttpInfo($include = null, $text = null, $lastModifiedSince = null, $start = null, $end = null, $bbox = null, $dataSource = null, $location = null, $division = null, $keyword = null, $recurring = null, $minDuration = null, $maxDuration = null, $publisher = null, $sort = null, $page = null, $pageSize = null)
     {
         if (!is_null($bbox) && (count($bbox) > 4)) {
             throw new \InvalidArgumentException('invalid value for "$bbox" when calling EventApi.eventList, number of items must be less than or equal to 4.');
@@ -306,6 +310,14 @@ class EventApi
         // query params
         if ($sort !== null) {
             $queryParams['sort'] = $this->apiClient->getSerializer()->toQueryValue($sort);
+        }
+        // query params
+        if ($page !== null) {
+            $queryParams['page'] = $this->apiClient->getSerializer()->toQueryValue($page);
+        }
+        // query params
+        if ($pageSize !== null) {
+            $queryParams['page_size'] = $this->apiClient->getSerializer()->toQueryValue($pageSize);
         }
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);

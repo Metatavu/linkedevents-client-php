@@ -54,7 +54,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **eventList**
-> \LinkedEvents\Model\InlineResponse200 eventList($include, $text, $lastModifiedSince, $start, $end, $bbox, $dataSource, $location, $division, $keyword, $recurring, $minDuration, $maxDuration, $publisher, $sort)
+> \LinkedEvents\Model\InlineResponse200 eventList($include, $text, $lastModifiedSince, $start, $end, $bbox, $dataSource, $location, $division, $keyword, $recurring, $minDuration, $maxDuration, $publisher, $sort, $page, $pageSize)
 
 Return a list of events
 
@@ -81,9 +81,11 @@ $minDuration = 56; // int | Search for events that are longer than given time in
 $maxDuration = 56; // int | Search for events that are shorter than given time in seconds
 $publisher = "publisher_example"; // string | Search for events published by the given organization
 $sort = "sort_example"; // string | Sort the returned events in the given order. Possible sorting criteria are 'start_time', 'end_time', 'days_left' and 'last_modified_time'. The default ordering is '-last_modified_time'.
+$page = 56; // int | request particular page in paginated results
+$pageSize = 56; // int | request that server delivers page_size results in response
 
 try {
-    $result = $api_instance->eventList($include, $text, $lastModifiedSince, $start, $end, $bbox, $dataSource, $location, $division, $keyword, $recurring, $minDuration, $maxDuration, $publisher, $sort);
+    $result = $api_instance->eventList($include, $text, $lastModifiedSince, $start, $end, $bbox, $dataSource, $location, $division, $keyword, $recurring, $minDuration, $maxDuration, $publisher, $sort, $page, $pageSize);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EventApi->eventList: ', $e->getMessage(), PHP_EOL;
@@ -110,6 +112,8 @@ Name | Type | Description  | Notes
  **maxDuration** | **int**| Search for events that are shorter than given time in seconds | [optional]
  **publisher** | **string**| Search for events published by the given organization | [optional]
  **sort** | **string**| Sort the returned events in the given order. Possible sorting criteria are &#39;start_time&#39;, &#39;end_time&#39;, &#39;days_left&#39; and &#39;last_modified_time&#39;. The default ordering is &#39;-last_modified_time&#39;. | [optional]
+ **page** | **int**| request particular page in paginated results | [optional]
+ **pageSize** | **int**| request that server delivers page_size results in response | [optional]
 
 ### Return type
 
