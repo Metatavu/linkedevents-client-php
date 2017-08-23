@@ -205,7 +205,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **placeList**
-> \LinkedEvents\Model\InlineResponse2004 placeList($page, $pageSize, $showAllPlaces, $division, $sort)
+> \LinkedEvents\Model\InlineResponse2004 placeList($page, $pageSize, $showAllPlaces, $division, $text, $sort)
 
 Returns list of places used for describing events
 
@@ -221,10 +221,11 @@ $page = 56; // int | request particular page in paginated results
 $pageSize = 56; // int | request that server delivers page_size results in response
 $showAllPlaces = true; // bool | Show all places, including those that are not hosting any events. Otherwise such places are hidden. When show_all_places is specified, no other filter is applied.
 $division = "division_example"; // string | You may filter places by specific OCD division id, or by division name. The latter query checks all divisions with the name, regardless of division type.
+$text = "text_example"; // string | 
 $sort = "sort_example"; // string | Sort the returned places in the given order. Possible sorting criteria are 'n_events', 'id', 'name', 'street_address' and 'postal_code'. The default ordering is '-n_events'.
 
 try {
-    $result = $api_instance->placeList($page, $pageSize, $showAllPlaces, $division, $sort);
+    $result = $api_instance->placeList($page, $pageSize, $showAllPlaces, $division, $text, $sort);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FilterApi->placeList: ', $e->getMessage(), PHP_EOL;
@@ -240,6 +241,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**| request that server delivers page_size results in response | [optional]
  **showAllPlaces** | **bool**| Show all places, including those that are not hosting any events. Otherwise such places are hidden. When show_all_places is specified, no other filter is applied. | [optional]
  **division** | **string**| You may filter places by specific OCD division id, or by division name. The latter query checks all divisions with the name, regardless of division type. | [optional]
+ **text** | **string**|  | [optional]
  **sort** | **string**| Sort the returned places in the given order. Possible sorting criteria are &#39;n_events&#39;, &#39;id&#39;, &#39;name&#39;, &#39;street_address&#39; and &#39;postal_code&#39;. The default ordering is &#39;-n_events&#39;. | [optional]
 
 ### Return type
