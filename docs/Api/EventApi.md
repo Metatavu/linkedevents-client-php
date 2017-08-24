@@ -55,7 +55,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **eventDelete**
-> eventDelete()
+> eventDelete($id)
 
 Delete an event
 
@@ -67,9 +67,10 @@ Deletes an event
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Metatavu\LinkedEvents\Api\EventApi();
+$id = "id_example"; // string | Identifier for the event to be deleted
 
 try {
-    $api_instance->eventDelete();
+    $api_instance->eventDelete($id);
 } catch (Exception $e) {
     echo 'Exception when calling EventApi->eventDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -77,7 +78,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Identifier for the event to be deleted |
 
 ### Return type
 

@@ -170,12 +170,13 @@ class EventApi
      *
      * Delete an event
      *
+     * @param string $id Identifier for the event to be deleted (required)
      * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
      * @return void
      */
-    public function eventDelete()
+    public function eventDelete($id)
     {
-        list($response) = $this->eventDeleteWithHttpInfo();
+        list($response) = $this->eventDeleteWithHttpInfo($id);
         return $response;
     }
 
@@ -184,11 +185,16 @@ class EventApi
      *
      * Delete an event
      *
+     * @param string $id Identifier for the event to be deleted (required)
      * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function eventDeleteWithHttpInfo()
+    public function eventDeleteWithHttpInfo($id)
     {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling eventDelete');
+        }
         // parse inputs
         $resourcePath = "/event/{id}/";
         $httpBody = '';
@@ -201,6 +207,14 @@ class EventApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
