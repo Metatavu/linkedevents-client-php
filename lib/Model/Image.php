@@ -55,6 +55,7 @@ class Image implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'id' => 'int',
         'name' => '\Metatavu\LinkedEvents\Model\ImageName',
         'publisher' => 'string',
         'createdTime' => '\DateTime',
@@ -76,6 +77,7 @@ class Image implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'id' => 'id',
         'name' => 'name',
         'publisher' => 'publisher',
         'createdTime' => 'created_time',
@@ -93,6 +95,7 @@ class Image implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'id' => 'setId',
         'name' => 'setName',
         'publisher' => 'setPublisher',
         'createdTime' => 'setCreatedTime',
@@ -110,6 +113,7 @@ class Image implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'id' => 'getId',
         'name' => 'getName',
         'publisher' => 'getPublisher',
         'createdTime' => 'getCreatedTime',
@@ -152,6 +156,7 @@ class Image implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['publisher'] = isset($data['publisher']) ? $data['publisher'] : null;
         $this->container['createdTime'] = isset($data['createdTime']) ? $data['createdTime'] : null;
@@ -193,6 +198,27 @@ class Image implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets id
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     * @param int $id image id
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+
+        return $this;
+    }
 
     /**
      * Gets name
