@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **keywordList**
-> \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\InlineResponse2002 keywordList($page, $pageSize, $include, $showAllKeywords, $dataSource, $text, $sort)
+> \Metatavu\LinkedEvents\Model\InlineResponse2002 keywordList($page, $pageSize, $include, $showAllKeywords, $dataSource, $text, $sort)
 
 Returns a list of keywords used for describing events
 
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Metatavu\LinkedEvents\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **keywordRetrieve**
-> \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Keyword keywordRetrieve($id)
+> \Metatavu\LinkedEvents\Model\Keyword keywordRetrieve($id)
 
 Return information for single keyword
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Keyword**](../Model/Keyword.md)
+[**\Metatavu\LinkedEvents\Model\Keyword**](../Model/Keyword.md)
 
 ### Authorization
 
@@ -113,7 +113,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **keywordSetList**
-> \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\InlineResponse2003 keywordSetList($page, $pageSize, $include)
+> \Metatavu\LinkedEvents\Model\InlineResponse2003 keywordSetList($page, $pageSize, $include)
 
 Return as list of keyword_sets for grouping keywords
 
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
+[**\Metatavu\LinkedEvents\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
 
 ### Authorization
 
@@ -162,7 +162,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **keywordSetRetrieve**
-> \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\KeywordSet keywordSetRetrieve($id)
+> \Metatavu\LinkedEvents\Model\KeywordSet keywordSetRetrieve($id)
 
 Return information about single keyword_set
 
@@ -191,7 +191,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\KeywordSet**](../Model/KeywordSet.md)
+[**\Metatavu\LinkedEvents\Model\KeywordSet**](../Model/KeywordSet.md)
 
 ### Authorization
 
@@ -205,7 +205,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **placeList**
-> \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\InlineResponse2004 placeList($page, $pageSize, $showAllPlaces, $division, $text, $sort)
+> \Metatavu\LinkedEvents\Model\InlineResponse2004 placeList($page, $pageSize, $showAllPlaces, $division, $text, $sort)
 
 Returns list of places used for describing events
 
@@ -246,7 +246,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
+[**\Metatavu\LinkedEvents\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
 
 ### Authorization
 
@@ -260,7 +260,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **placeRetrieve**
-> \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Place placeRetrieve($id)
+> \Metatavu\LinkedEvents\Model\Place placeRetrieve($id)
 
 Return information for single place
 
@@ -289,7 +289,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Place**](../Model/Place.md)
+[**\Metatavu\LinkedEvents\Model\Place**](../Model/Place.md)
 
 ### Authorization
 

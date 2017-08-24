@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **languageList**
-> \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\InlineResponse2005 languageList()
+> \Metatavu\LinkedEvents\Model\InlineResponse2005 languageList()
 
 Return a list of languages used for describing events
 
@@ -36,7 +36,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
+[**\Metatavu\LinkedEvents\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
 
 ### Authorization
 
@@ -50,7 +50,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **languageRetrieve**
-> \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Language languageRetrieve($id)
+> \Metatavu\LinkedEvents\Model\Language languageRetrieve($id)
 
 Return information for single language
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Language**](../Model/Language.md)
+[**\Metatavu\LinkedEvents\Model\Language**](../Model/Language.md)
 
 ### Authorization
 

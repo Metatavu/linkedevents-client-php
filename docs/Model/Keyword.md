@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | Consists of source prefix and source specific identifier. These should be URIs uniquely identifying the keyword, and preferably also well formed http-URLs pointing to more information about the keyword. | 
-**name** | [**\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\KeywordName**](KeywordName.md) |  | [optional] 
-**images** | [**\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Image[]**](Image.md) |  | [optional] 
+**name** | [**\Metatavu\LinkedEvents\Model\KeywordName**](KeywordName.md) |  | [optional] 
+**images** | [**\Metatavu\LinkedEvents\Model\Image[]**](Image.md) |  | [optional] 
 **originId** | **string** | Identifier for the keyword in the organization using this keyword. For standardized namespaces this will be a shared identifier. | [optional] 
 **createdTime** | [**\DateTime**](\DateTime.md) | Creation time for the keyword entry. | [optional] 
 **lastModifiedTime** | [**\DateTime**](\DateTime.md) | Time this place was modified in the datastore behind the API (not necessarily in the originating system) | [optional] 

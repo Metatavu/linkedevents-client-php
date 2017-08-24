@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **eventSearch**
-> \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\InlineResponse200 eventSearch($page, $pageSize, $type, $q, $input, $start, $end)
+> \Metatavu\LinkedEvents\Model\InlineResponse200 eventSearch($page, $pageSize, $type, $q, $input, $start, $end)
 
 Search through events and places
 
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Metatavu\LinkedEvents\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 

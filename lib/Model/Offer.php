@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model;
+namespace Metatavu\LinkedEvents\Model;
 
 use \ArrayAccess;
 
@@ -55,9 +55,9 @@ class Offer implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'price' => '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\OfferPrice',
-        'infoUrl' => '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\OfferInfoUrl',
-        'description' => '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\OfferDescription',
+        'price' => '\Metatavu\LinkedEvents\Model\OfferPrice',
+        'infoUrl' => '\Metatavu\LinkedEvents\Model\OfferInfoUrl',
+        'description' => '\Metatavu\LinkedEvents\Model\OfferDescription',
         'isFree' => 'bool'
     ];
 
@@ -165,7 +165,7 @@ class Offer implements ArrayAccess
 
     /**
      * Gets price
-     * @return \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\OfferPrice
+     * @return \Metatavu\LinkedEvents\Model\OfferPrice
      */
     public function getPrice()
     {
@@ -174,7 +174,7 @@ class Offer implements ArrayAccess
 
     /**
      * Sets price
-     * @param \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\OfferPrice $price
+     * @param \Metatavu\LinkedEvents\Model\OfferPrice $price
      * @return $this
      */
     public function setPrice($price)
@@ -186,7 +186,7 @@ class Offer implements ArrayAccess
 
     /**
      * Gets infoUrl
-     * @return \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\OfferInfoUrl
+     * @return \Metatavu\LinkedEvents\Model\OfferInfoUrl
      */
     public function getInfoUrl()
     {
@@ -195,7 +195,7 @@ class Offer implements ArrayAccess
 
     /**
      * Sets infoUrl
-     * @param \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\OfferInfoUrl $infoUrl
+     * @param \Metatavu\LinkedEvents\Model\OfferInfoUrl $infoUrl
      * @return $this
      */
     public function setInfoUrl($infoUrl)
@@ -207,7 +207,7 @@ class Offer implements ArrayAccess
 
     /**
      * Gets description
-     * @return \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\OfferDescription
+     * @return \Metatavu\LinkedEvents\Model\OfferDescription
      */
     public function getDescription()
     {
@@ -216,7 +216,7 @@ class Offer implements ArrayAccess
 
     /**
      * Sets description
-     * @param \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\OfferDescription $description
+     * @param \Metatavu\LinkedEvents\Model\OfferDescription $description
      * @return $this
      */
     public function setDescription($description)

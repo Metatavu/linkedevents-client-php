@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model;
+namespace Metatavu\LinkedEvents\Model;
 
 use \ArrayAccess;
 
@@ -54,8 +54,8 @@ class InlineResponse200 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'meta' => '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\MetaDefinition',
-        'data' => '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Event[]'
+        'meta' => '\Metatavu\LinkedEvents\Model\MetaDefinition',
+        'data' => '\Metatavu\LinkedEvents\Model\Event[]'
     ];
 
     public static function swaggerTypes()
@@ -154,7 +154,7 @@ class InlineResponse200 implements ArrayAccess
 
     /**
      * Gets meta
-     * @return \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\MetaDefinition
+     * @return \Metatavu\LinkedEvents\Model\MetaDefinition
      */
     public function getMeta()
     {
@@ -163,7 +163,7 @@ class InlineResponse200 implements ArrayAccess
 
     /**
      * Sets meta
-     * @param \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\MetaDefinition $meta
+     * @param \Metatavu\LinkedEvents\Model\MetaDefinition $meta
      * @return $this
      */
     public function setMeta($meta)
@@ -175,7 +175,7 @@ class InlineResponse200 implements ArrayAccess
 
     /**
      * Gets data
-     * @return \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Event[]
+     * @return \Metatavu\LinkedEvents\Model\Event[]
      */
     public function getData()
     {
@@ -184,7 +184,7 @@ class InlineResponse200 implements ArrayAccess
 
     /**
      * Sets data
-     * @param \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Event[] $data
+     * @param \Metatavu\LinkedEvents\Model\Event[] $data
      * @return $this
      */
     public function setData($data)

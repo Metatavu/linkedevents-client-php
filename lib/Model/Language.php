@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model;
+namespace Metatavu\LinkedEvents\Model;
 
 use \ArrayAccess;
 
@@ -56,7 +56,7 @@ class Language implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'string',
-        'name' => '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\LanguageName'
+        'name' => '\Metatavu\LinkedEvents\Model\LanguageName'
     ];
 
     public static function swaggerTypes()
@@ -182,7 +182,7 @@ class Language implements ArrayAccess
 
     /**
      * Gets name
-     * @return \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\LanguageName
+     * @return \Metatavu\LinkedEvents\Model\LanguageName
      */
     public function getName()
     {
@@ -191,7 +191,7 @@ class Language implements ArrayAccess
 
     /**
      * Sets name
-     * @param \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\LanguageName $name
+     * @param \Metatavu\LinkedEvents\Model\LanguageName $name
      * @return $this
      */
     public function setName($name)

@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model;
+namespace Metatavu\LinkedEvents\Model;
 
 use \ArrayAccess;
 
@@ -55,7 +55,7 @@ class Image implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'name' => '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\ImageName',
+        'name' => '\Metatavu\LinkedEvents\Model\ImageName',
         'publisher' => 'string',
         'createdTime' => '\DateTime',
         'lastModifiedTime' => '\DateTime',
@@ -196,7 +196,7 @@ class Image implements ArrayAccess
 
     /**
      * Gets name
-     * @return \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\ImageName
+     * @return \Metatavu\LinkedEvents\Model\ImageName
      */
     public function getName()
     {
@@ -205,7 +205,7 @@ class Image implements ArrayAccess
 
     /**
      * Sets name
-     * @param \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\ImageName $name
+     * @param \Metatavu\LinkedEvents\Model\ImageName $name
      * @return $this
      */
     public function setName($name)

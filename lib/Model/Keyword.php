@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model;
+namespace Metatavu\LinkedEvents\Model;
 
 use \ArrayAccess;
 
@@ -56,8 +56,8 @@ class Keyword implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'string',
-        'name' => '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\KeywordName',
-        'images' => '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Image[]',
+        'name' => '\Metatavu\LinkedEvents\Model\KeywordName',
+        'images' => '\Metatavu\LinkedEvents\Model\Image[]',
         'originId' => 'string',
         'createdTime' => '\DateTime',
         'lastModifiedTime' => '\DateTime',
@@ -233,7 +233,7 @@ class Keyword implements ArrayAccess
 
     /**
      * Gets name
-     * @return \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\KeywordName
+     * @return \Metatavu\LinkedEvents\Model\KeywordName
      */
     public function getName()
     {
@@ -242,7 +242,7 @@ class Keyword implements ArrayAccess
 
     /**
      * Sets name
-     * @param \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\KeywordName $name
+     * @param \Metatavu\LinkedEvents\Model\KeywordName $name
      * @return $this
      */
     public function setName($name)
@@ -254,7 +254,7 @@ class Keyword implements ArrayAccess
 
     /**
      * Gets images
-     * @return \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Image[]
+     * @return \Metatavu\LinkedEvents\Model\Image[]
      */
     public function getImages()
     {
@@ -263,7 +263,7 @@ class Keyword implements ArrayAccess
 
     /**
      * Sets images
-     * @param \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Image[] $images
+     * @param \Metatavu\LinkedEvents\Model\Image[] $images
      * @return $this
      */
     public function setImages($images)

@@ -58,7 +58,7 @@ Please follow the [installation procedure](#installation--usage) and then run th
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Metatavu\LinkedEvents\Api\EventApi();
-$eventObject = new \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Event(); // \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Event | 
+$eventObject = new \Metatavu\LinkedEvents\Model\Event(); // \Metatavu\LinkedEvents\Model\Event | 
 
 try {
     $result = $api_instance->eventCreate($eventObject);

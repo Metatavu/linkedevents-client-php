@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model;
+namespace Metatavu\LinkedEvents\Model;
 
 use \ArrayAccess;
 
@@ -56,22 +56,22 @@ class Event implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'string',
-        'location' => '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\IdRef',
-        'keywords' => '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\IdRef[]',
-        'inLanguage' => '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Language[]',
+        'location' => '\Metatavu\LinkedEvents\Model\IdRef',
+        'keywords' => '\Metatavu\LinkedEvents\Model\IdRef[]',
+        'inLanguage' => '\Metatavu\LinkedEvents\Model\Language[]',
         'superEvent' => 'string',
         'superEventType' => 'string',
         'eventStatus' => 'string',
         'publicationStatus' => 'string',
-        'externalLinks' => '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Eventlink[]',
-        'offers' => '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Offer[]',
+        'externalLinks' => '\Metatavu\LinkedEvents\Model\Eventlink[]',
+        'offers' => '\Metatavu\LinkedEvents\Model\Offer[]',
         'subEvents' => 'string[]',
         'customData' => 'string',
-        'name' => '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\EventName',
-        'images' => '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Image[]',
+        'name' => '\Metatavu\LinkedEvents\Model\EventName',
+        'images' => '\Metatavu\LinkedEvents\Model\Image[]',
         'createdTime' => '\DateTime',
         'lastModifiedTime' => '\DateTime',
-        'infoUrl' => '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\EventInfoUrl',
+        'infoUrl' => '\Metatavu\LinkedEvents\Model\EventInfoUrl',
         'description' => 'object',
         'shortDescription' => 'object',
         'context' => 'string',
@@ -81,7 +81,7 @@ class Event implements ArrayAccess
         'locationExtraInfo' => 'object',
         'startTime' => '\DateTime',
         'endTime' => '\DateTime',
-        'audience' => '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Keyword[]',
+        'audience' => '\Metatavu\LinkedEvents\Model\Keyword[]',
         'dataSource' => 'string',
         'createdBy' => 'string',
         'lastModifiedBy' => 'string',
@@ -345,7 +345,7 @@ class Event implements ArrayAccess
 
     /**
      * Gets location
-     * @return \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\IdRef
+     * @return \Metatavu\LinkedEvents\Model\IdRef
      */
     public function getLocation()
     {
@@ -354,7 +354,7 @@ class Event implements ArrayAccess
 
     /**
      * Sets location
-     * @param \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\IdRef $location
+     * @param \Metatavu\LinkedEvents\Model\IdRef $location
      * @return $this
      */
     public function setLocation($location)
@@ -366,7 +366,7 @@ class Event implements ArrayAccess
 
     /**
      * Gets keywords
-     * @return \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\IdRef[]
+     * @return \Metatavu\LinkedEvents\Model\IdRef[]
      */
     public function getKeywords()
     {
@@ -375,7 +375,7 @@ class Event implements ArrayAccess
 
     /**
      * Sets keywords
-     * @param \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\IdRef[] $keywords array of keyword uri references
+     * @param \Metatavu\LinkedEvents\Model\IdRef[] $keywords array of keyword uri references
      * @return $this
      */
     public function setKeywords($keywords)
@@ -387,7 +387,7 @@ class Event implements ArrayAccess
 
     /**
      * Gets inLanguage
-     * @return \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Language[]
+     * @return \Metatavu\LinkedEvents\Model\Language[]
      */
     public function getInLanguage()
     {
@@ -396,7 +396,7 @@ class Event implements ArrayAccess
 
     /**
      * Sets inLanguage
-     * @param \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Language[] $inLanguage the languages spoken or supported at the event
+     * @param \Metatavu\LinkedEvents\Model\Language[] $inLanguage the languages spoken or supported at the event
      * @return $this
      */
     public function setInLanguage($inLanguage)
@@ -492,7 +492,7 @@ class Event implements ArrayAccess
 
     /**
      * Gets externalLinks
-     * @return \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Eventlink[]
+     * @return \Metatavu\LinkedEvents\Model\Eventlink[]
      */
     public function getExternalLinks()
     {
@@ -501,7 +501,7 @@ class Event implements ArrayAccess
 
     /**
      * Sets externalLinks
-     * @param \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Eventlink[] $externalLinks See external link definition
+     * @param \Metatavu\LinkedEvents\Model\Eventlink[] $externalLinks See external link definition
      * @return $this
      */
     public function setExternalLinks($externalLinks)
@@ -513,7 +513,7 @@ class Event implements ArrayAccess
 
     /**
      * Gets offers
-     * @return \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Offer[]
+     * @return \Metatavu\LinkedEvents\Model\Offer[]
      */
     public function getOffers()
     {
@@ -522,7 +522,7 @@ class Event implements ArrayAccess
 
     /**
      * Sets offers
-     * @param \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Offer[] $offers See offer definition
+     * @param \Metatavu\LinkedEvents\Model\Offer[] $offers See offer definition
      * @return $this
      */
     public function setOffers($offers)
@@ -576,7 +576,7 @@ class Event implements ArrayAccess
 
     /**
      * Gets name
-     * @return \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\EventName
+     * @return \Metatavu\LinkedEvents\Model\EventName
      */
     public function getName()
     {
@@ -585,7 +585,7 @@ class Event implements ArrayAccess
 
     /**
      * Sets name
-     * @param \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\EventName $name
+     * @param \Metatavu\LinkedEvents\Model\EventName $name
      * @return $this
      */
     public function setName($name)
@@ -597,7 +597,7 @@ class Event implements ArrayAccess
 
     /**
      * Gets images
-     * @return \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Image[]
+     * @return \Metatavu\LinkedEvents\Model\Image[]
      */
     public function getImages()
     {
@@ -606,7 +606,7 @@ class Event implements ArrayAccess
 
     /**
      * Sets images
-     * @param \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Image[] $images
+     * @param \Metatavu\LinkedEvents\Model\Image[] $images
      * @return $this
      */
     public function setImages($images)
@@ -660,7 +660,7 @@ class Event implements ArrayAccess
 
     /**
      * Gets infoUrl
-     * @return \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\EventInfoUrl
+     * @return \Metatavu\LinkedEvents\Model\EventInfoUrl
      */
     public function getInfoUrl()
     {
@@ -669,7 +669,7 @@ class Event implements ArrayAccess
 
     /**
      * Sets infoUrl
-     * @param \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\EventInfoUrl $infoUrl
+     * @param \Metatavu\LinkedEvents\Model\EventInfoUrl $infoUrl
      * @return $this
      */
     public function setInfoUrl($infoUrl)
@@ -870,7 +870,7 @@ class Event implements ArrayAccess
 
     /**
      * Gets audience
-     * @return \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Keyword[]
+     * @return \Metatavu\LinkedEvents\Model\Keyword[]
      */
     public function getAudience()
     {
@@ -879,7 +879,7 @@ class Event implements ArrayAccess
 
     /**
      * Sets audience
-     * @param \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Keyword[] $audience
+     * @param \Metatavu\LinkedEvents\Model\Keyword[] $audience
      * @return $this
      */
     public function setAudience($audience)
