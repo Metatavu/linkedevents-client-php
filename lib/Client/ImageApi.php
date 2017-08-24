@@ -93,12 +93,13 @@ class ImageApi
      * Create a new image
      *
      * @param \SplFileObject $imageFile  (optional)
+     * @param \Metatavu\LinkedEvents\Model\Image $imageObject  (optional)
      * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
      * @return \Metatavu\LinkedEvents\Model\Image
      */
-    public function imageCreate($imageFile = null)
+    public function imageCreate($imageFile = null, $imageObject = null)
     {
-        list($response) = $this->imageCreateWithHttpInfo($imageFile);
+        list($response) = $this->imageCreateWithHttpInfo($imageFile, $imageObject);
         return $response;
     }
 
@@ -108,10 +109,11 @@ class ImageApi
      * Create a new image
      *
      * @param \SplFileObject $imageFile  (optional)
+     * @param \Metatavu\LinkedEvents\Model\Image $imageObject  (optional)
      * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
      * @return array of \Metatavu\LinkedEvents\Model\Image, HTTP status code, HTTP response headers (array of strings)
      */
-    public function imageCreateWithHttpInfo($imageFile = null)
+    public function imageCreateWithHttpInfo($imageFile = null, $imageObject = null)
     {
         // parse inputs
         $resourcePath = "/image/";
@@ -138,7 +140,12 @@ class ImageApi
                 $formParams['image_file'] = '@' . $this->apiClient->getSerializer()->toFormValue($imageFile);
             }
         }
-        
+        // body params
+        $_tempBody = null;
+        if (isset($imageObject)) {
+            $_tempBody = $imageObject;
+        }
+
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present

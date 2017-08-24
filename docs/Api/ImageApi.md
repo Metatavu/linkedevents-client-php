@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **imageCreate**
-> \Metatavu\LinkedEvents\Model\Image imageCreate($imageFile)
+> \Metatavu\LinkedEvents\Model\Image imageCreate($imageFile, $imageObject)
 
 Create a new image
 
@@ -24,9 +24,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Metatavu\LinkedEvents\Api\ImageApi();
 $imageFile = "/path/to/file.txt"; // \SplFileObject | 
+$imageObject = new \Metatavu\LinkedEvents\Model\Image(); // \Metatavu\LinkedEvents\Model\Image | 
 
 try {
-    $result = $api_instance->imageCreate($imageFile);
+    $result = $api_instance->imageCreate($imageFile, $imageObject);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ImageApi->imageCreate: ', $e->getMessage(), PHP_EOL;
@@ -39,6 +40,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **imageFile** | **\SplFileObject**|  | [optional]
+ **imageObject** | [**\Metatavu\LinkedEvents\Model\Image**](../Model/\Metatavu\LinkedEvents\Model\Image.md)|  | [optional]
 
 ### Return type
 
