@@ -24,7 +24,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Metatavu\LinkedEvents\Api\ImageApi();
 $imageFile = "/path/to/file.txt"; // \SplFileObject | 
-$imageObject = new \Metatavu\LinkedEvents\Model\Image(); // \Metatavu\LinkedEvents\Model\Image | 
+$imageObject = new \Metatavu\LinkedEvents\Model\ImageUrl(); // \Metatavu\LinkedEvents\Model\ImageUrl | 
 
 try {
     $result = $api_instance->imageCreate($imageFile, $imageObject);
@@ -40,7 +40,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **imageFile** | **\SplFileObject**|  | [optional]
- **imageObject** | [**\Metatavu\LinkedEvents\Model\Image**](../Model/\Metatavu\LinkedEvents\Model\Image.md)|  | [optional]
+ **imageObject** | [**\Metatavu\LinkedEvents\Model\ImageUrl**](../Model/\Metatavu\LinkedEvents\Model\ImageUrl.md)|  | [optional]
 
 ### Return type
 

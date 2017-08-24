@@ -93,7 +93,7 @@ class ImageApi
      * Create a new image
      *
      * @param \SplFileObject $imageFile  (optional)
-     * @param \Metatavu\LinkedEvents\Model\Image $imageObject  (optional)
+     * @param \Metatavu\LinkedEvents\Model\ImageUrl $imageObject  (optional)
      * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
      * @return \Metatavu\LinkedEvents\Model\Image
      */
@@ -109,7 +109,7 @@ class ImageApi
      * Create a new image
      *
      * @param \SplFileObject $imageFile  (optional)
-     * @param \Metatavu\LinkedEvents\Model\Image $imageObject  (optional)
+     * @param \Metatavu\LinkedEvents\Model\ImageUrl $imageObject  (optional)
      * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
      * @return array of \Metatavu\LinkedEvents\Model\Image, HTTP status code, HTTP response headers (array of strings)
      */

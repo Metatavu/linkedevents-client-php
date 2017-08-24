@@ -105,6 +105,7 @@ Class | Method | HTTP request | Description
  - [IdRef](docs/Model/IdRef.md)
  - [Image](docs/Model/Image.md)
  - [ImageName](docs/Model/ImageName.md)
+ - [ImageUrl](docs/Model/ImageUrl.md)
  - [InlineResponse200](docs/Model/InlineResponse200.md)
  - [InlineResponse2001](docs/Model/InlineResponse2001.md)
  - [InlineResponse2002](docs/Model/InlineResponse2002.md)
