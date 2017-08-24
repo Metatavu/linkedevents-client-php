@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  LinkedEvents
+ * @package  \Metatavu\LinkedEvents
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace LinkedEvents\Model;
+namespace \Metatavu\LinkedEvents\Model;
 
 use \ArrayAccess;
 
@@ -36,7 +36,7 @@ use \ArrayAccess;
  *
  * @category    Class
  * @description Meta record for result pagination. All results from API are paginated, ie. delivered in chunks of X results. This records describes how many results there are in total, and how to access previous and next pages.
- * @package     LinkedEvents
+ * @package     \Metatavu\LinkedEvents
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -272,10 +272,10 @@ class MetaDefinition implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\LinkedEvents\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\\Metatavu\LinkedEvents\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\LinkedEvents\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\\Metatavu\LinkedEvents\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

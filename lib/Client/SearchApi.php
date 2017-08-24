@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  LinkedEvents
+ * @package  \Metatavu\LinkedEvents
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,18 +26,18 @@
  * Do not edit the class manually.
  */
 
-namespace LinkedEvents\Client;
+namespace \Metatavu\LinkedEvents\Client;
 
-use \LinkedEvents\ApiClient;
-use \LinkedEvents\ApiException;
-use \LinkedEvents\Configuration;
-use \LinkedEvents\ObjectSerializer;
+use \\Metatavu\LinkedEvents\ApiClient;
+use \\Metatavu\LinkedEvents\ApiException;
+use \\Metatavu\LinkedEvents\Configuration;
+use \\Metatavu\LinkedEvents\ObjectSerializer;
 
 /**
  * SearchApi Class Doc Comment
  *
  * @category Class
- * @package  LinkedEvents
+ * @package  \Metatavu\LinkedEvents
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -46,16 +46,16 @@ class SearchApi
     /**
      * API Client
      *
-     * @var \LinkedEvents\ApiClient instance of the ApiClient
+     * @var \\Metatavu\LinkedEvents\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \LinkedEvents\ApiClient|null $apiClient The api client to use
+     * @param \\Metatavu\LinkedEvents\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\LinkedEvents\ApiClient $apiClient = null)
+    public function __construct(\\Metatavu\LinkedEvents\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
@@ -67,7 +67,7 @@ class SearchApi
     /**
      * Get API client
      *
-     * @return \LinkedEvents\ApiClient get the API client
+     * @return \\Metatavu\LinkedEvents\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -77,11 +77,11 @@ class SearchApi
     /**
      * Set the API client
      *
-     * @param \LinkedEvents\ApiClient $apiClient set the API client
+     * @param \\Metatavu\LinkedEvents\ApiClient $apiClient set the API client
      *
      * @return SearchApi
      */
-    public function setApiClient(\LinkedEvents\ApiClient $apiClient)
+    public function setApiClient(\\Metatavu\LinkedEvents\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -99,8 +99,8 @@ class SearchApi
      * @param string $input Return autocompletition suggestions for this string. Mutually exclusive with &#x60;q&#x60; full-text search. (optional)
      * @param \DateTime $start Search for events beginning or ending after this time. Dates can be specified using ISO 8601 (\&quot;2016-01-12\&quot;) and additionally \&quot;today\&quot;. (optional)
      * @param \DateTime $end Search for events beginning or ending before this time. Dates can be specified using ISO 8601 (\&quot;2016-01-12\&quot;) and additionally \&quot;today\&quot;. (optional)
-     * @throws \LinkedEvents\ApiException on non-2xx response
-     * @return \LinkedEvents\Model\InlineResponse200
+     * @throws \\Metatavu\LinkedEvents\ApiException on non-2xx response
+     * @return \\Metatavu\LinkedEvents\Model\InlineResponse200
      */
     public function eventSearch($page = null, $pageSize = null, $type = null, $q = null, $input = null, $start = null, $end = null)
     {
@@ -120,8 +120,8 @@ class SearchApi
      * @param string $input Return autocompletition suggestions for this string. Mutually exclusive with &#x60;q&#x60; full-text search. (optional)
      * @param \DateTime $start Search for events beginning or ending after this time. Dates can be specified using ISO 8601 (\&quot;2016-01-12\&quot;) and additionally \&quot;today\&quot;. (optional)
      * @param \DateTime $end Search for events beginning or ending before this time. Dates can be specified using ISO 8601 (\&quot;2016-01-12\&quot;) and additionally \&quot;today\&quot;. (optional)
-     * @throws \LinkedEvents\ApiException on non-2xx response
-     * @return array of \LinkedEvents\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @throws \\Metatavu\LinkedEvents\ApiException on non-2xx response
+     * @return array of \\Metatavu\LinkedEvents\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      */
     public function eventSearchWithHttpInfo($page = null, $pageSize = null, $type = null, $q = null, $input = null, $start = null, $end = null)
     {
@@ -183,15 +183,15 @@ class SearchApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\LinkedEvents\Model\InlineResponse200',
+                '\\Metatavu\LinkedEvents\Model\InlineResponse200',
                 '/search/'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\LinkedEvents\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\\Metatavu\LinkedEvents\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\LinkedEvents\Model\InlineResponse200', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\\Metatavu\LinkedEvents\Model\InlineResponse200', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

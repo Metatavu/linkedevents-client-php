@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  LinkedEvents
+ * @package  \Metatavu\LinkedEvents
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace LinkedEvents\Model;
+namespace \Metatavu\LinkedEvents\Model;
 
 use \ArrayAccess;
 
@@ -36,7 +36,7 @@ use \ArrayAccess;
  *
  * @category    Class
  * @description Primary purpose of this endpoint is to allow users to identify which languages are supported for multilingual fields. It also has translations for the names of the languages.
- * @package     LinkedEvents
+ * @package     \Metatavu\LinkedEvents
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class Language implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'string',
-        'name' => '\LinkedEvents\Model\LanguageName'
+        'name' => '\\Metatavu\LinkedEvents\Model\LanguageName'
     ];
 
     public static function swaggerTypes()
@@ -182,7 +182,7 @@ class Language implements ArrayAccess
 
     /**
      * Gets name
-     * @return \LinkedEvents\Model\LanguageName
+     * @return \\Metatavu\LinkedEvents\Model\LanguageName
      */
     public function getName()
     {
@@ -191,7 +191,7 @@ class Language implements ArrayAccess
 
     /**
      * Sets name
-     * @param \LinkedEvents\Model\LanguageName $name
+     * @param \\Metatavu\LinkedEvents\Model\LanguageName $name
      * @return $this
      */
     public function setName($name)
@@ -252,10 +252,10 @@ class Language implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\LinkedEvents\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\\Metatavu\LinkedEvents\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\LinkedEvents\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\\Metatavu\LinkedEvents\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

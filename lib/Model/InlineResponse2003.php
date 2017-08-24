@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  LinkedEvents
+ * @package  \Metatavu\LinkedEvents
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace LinkedEvents\Model;
+namespace \Metatavu\LinkedEvents\Model;
 
 use \ArrayAccess;
 
@@ -35,7 +35,7 @@ use \ArrayAccess;
  * InlineResponse2003 Class Doc Comment
  *
  * @category    Class
- * @package     LinkedEvents
+ * @package     \Metatavu\LinkedEvents
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -54,8 +54,8 @@ class InlineResponse2003 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'meta' => '\LinkedEvents\Model\Keyword',
-        'data' => '\LinkedEvents\Model\KeywordSet[]'
+        'meta' => '\\Metatavu\LinkedEvents\Model\Keyword',
+        'data' => '\\Metatavu\LinkedEvents\Model\KeywordSet[]'
     ];
 
     public static function swaggerTypes()
@@ -154,7 +154,7 @@ class InlineResponse2003 implements ArrayAccess
 
     /**
      * Gets meta
-     * @return \LinkedEvents\Model\Keyword
+     * @return \\Metatavu\LinkedEvents\Model\Keyword
      */
     public function getMeta()
     {
@@ -163,7 +163,7 @@ class InlineResponse2003 implements ArrayAccess
 
     /**
      * Sets meta
-     * @param \LinkedEvents\Model\Keyword $meta
+     * @param \\Metatavu\LinkedEvents\Model\Keyword $meta
      * @return $this
      */
     public function setMeta($meta)
@@ -175,7 +175,7 @@ class InlineResponse2003 implements ArrayAccess
 
     /**
      * Gets data
-     * @return \LinkedEvents\Model\KeywordSet[]
+     * @return \\Metatavu\LinkedEvents\Model\KeywordSet[]
      */
     public function getData()
     {
@@ -184,7 +184,7 @@ class InlineResponse2003 implements ArrayAccess
 
     /**
      * Sets data
-     * @param \LinkedEvents\Model\KeywordSet[] $data
+     * @param \\Metatavu\LinkedEvents\Model\KeywordSet[] $data
      * @return $this
      */
     public function setData($data)
@@ -245,10 +245,10 @@ class InlineResponse2003 implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\LinkedEvents\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\\Metatavu\LinkedEvents\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\LinkedEvents\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\\Metatavu\LinkedEvents\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

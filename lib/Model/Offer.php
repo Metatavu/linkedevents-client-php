@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  LinkedEvents
+ * @package  \Metatavu\LinkedEvents
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace LinkedEvents\Model;
+namespace \Metatavu\LinkedEvents\Model;
 
 use \ArrayAccess;
 
@@ -36,7 +36,7 @@ use \ArrayAccess;
  *
  * @category    Class
  * @description information record for this event. The prices are not in a structured format and the format depends on information source. An exception to this is the case of free event. These are indicated using is_free flag, which is searchable.
- * @package     LinkedEvents
+ * @package     \Metatavu\LinkedEvents
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -55,9 +55,9 @@ class Offer implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'price' => '\LinkedEvents\Model\OfferPrice',
-        'infoUrl' => '\LinkedEvents\Model\OfferInfoUrl',
-        'description' => '\LinkedEvents\Model\OfferDescription',
+        'price' => '\\Metatavu\LinkedEvents\Model\OfferPrice',
+        'infoUrl' => '\\Metatavu\LinkedEvents\Model\OfferInfoUrl',
+        'description' => '\\Metatavu\LinkedEvents\Model\OfferDescription',
         'isFree' => 'bool'
     ];
 
@@ -165,7 +165,7 @@ class Offer implements ArrayAccess
 
     /**
      * Gets price
-     * @return \LinkedEvents\Model\OfferPrice
+     * @return \\Metatavu\LinkedEvents\Model\OfferPrice
      */
     public function getPrice()
     {
@@ -174,7 +174,7 @@ class Offer implements ArrayAccess
 
     /**
      * Sets price
-     * @param \LinkedEvents\Model\OfferPrice $price
+     * @param \\Metatavu\LinkedEvents\Model\OfferPrice $price
      * @return $this
      */
     public function setPrice($price)
@@ -186,7 +186,7 @@ class Offer implements ArrayAccess
 
     /**
      * Gets infoUrl
-     * @return \LinkedEvents\Model\OfferInfoUrl
+     * @return \\Metatavu\LinkedEvents\Model\OfferInfoUrl
      */
     public function getInfoUrl()
     {
@@ -195,7 +195,7 @@ class Offer implements ArrayAccess
 
     /**
      * Sets infoUrl
-     * @param \LinkedEvents\Model\OfferInfoUrl $infoUrl
+     * @param \\Metatavu\LinkedEvents\Model\OfferInfoUrl $infoUrl
      * @return $this
      */
     public function setInfoUrl($infoUrl)
@@ -207,7 +207,7 @@ class Offer implements ArrayAccess
 
     /**
      * Gets description
-     * @return \LinkedEvents\Model\OfferDescription
+     * @return \\Metatavu\LinkedEvents\Model\OfferDescription
      */
     public function getDescription()
     {
@@ -216,7 +216,7 @@ class Offer implements ArrayAccess
 
     /**
      * Sets description
-     * @param \LinkedEvents\Model\OfferDescription $description
+     * @param \\Metatavu\LinkedEvents\Model\OfferDescription $description
      * @return $this
      */
     public function setDescription($description)
@@ -298,10 +298,10 @@ class Offer implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\LinkedEvents\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\\Metatavu\LinkedEvents\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\LinkedEvents\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\\Metatavu\LinkedEvents\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 
