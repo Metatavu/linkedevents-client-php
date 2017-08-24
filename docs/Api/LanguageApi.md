@@ -1,4 +1,4 @@
-# \Metatavu\LinkedEvents\LanguageApi
+# Metatavu\LinkedEvents\LanguageApi
 
 All URIs are relative to *https://api.hel.fi/linkedevents/v1*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **languageList**
-> \\Metatavu\LinkedEvents\Model\InlineResponse2005 languageList()
+> \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\InlineResponse2005 languageList()
 
 Return a list of languages used for describing events
 
@@ -20,7 +20,7 @@ The returned list describes languages used for describing events in this Linked 
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new \Metatavu\LinkedEvents\Api\LanguageApi();
+$api_instance = new Metatavu\LinkedEvents\Api\LanguageApi();
 
 try {
     $result = $api_instance->languageList();
@@ -36,7 +36,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\\Metatavu\LinkedEvents\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
+[**\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
 
 ### Authorization
 
@@ -50,7 +50,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **languageRetrieve**
-> \\Metatavu\LinkedEvents\Model\Language languageRetrieve($id)
+> \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Language languageRetrieve($id)
 
 Return information for single language
 
@@ -61,7 +61,7 @@ Can be used to retrieve translations for a single language
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new \Metatavu\LinkedEvents\Api\LanguageApi();
+$api_instance = new Metatavu\LinkedEvents\Api\LanguageApi();
 $id = "id_example"; // string | 
 
 try {
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\\Metatavu\LinkedEvents\Model\Language**](../Model/Language.md)
+[**\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Language**](../Model/Language.md)
 
 ### Authorization
 

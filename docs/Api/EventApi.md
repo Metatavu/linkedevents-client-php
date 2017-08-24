@@ -1,4 +1,4 @@
-# \Metatavu\LinkedEvents\EventApi
+# Metatavu\LinkedEvents\EventApi
 
 All URIs are relative to *https://api.hel.fi/linkedevents/v1*
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **eventCreate**
-> \\Metatavu\LinkedEvents\Model\Event eventCreate($eventObject)
+> \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Event eventCreate($eventObject)
 
 Create a new event
 
@@ -20,8 +20,8 @@ Create a new event
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new \Metatavu\LinkedEvents\Api\EventApi();
-$eventObject = new \\Metatavu\LinkedEvents\Model\Event(); // \\Metatavu\LinkedEvents\Model\Event | 
+$api_instance = new Metatavu\LinkedEvents\Api\EventApi();
+$eventObject = new \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Event(); // \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Event | 
 
 try {
     $result = $api_instance->eventCreate($eventObject);
@@ -36,11 +36,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **eventObject** | [**\\Metatavu\LinkedEvents\Model\Event**](../Model/\\Metatavu\LinkedEvents\Model\Event.md)|  | [optional]
+ **eventObject** | [**\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Event**](../Model/\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Event.md)|  | [optional]
 
 ### Return type
 
-[**\\Metatavu\LinkedEvents\Model\Event**](../Model/Event.md)
+[**\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Event**](../Model/Event.md)
 
 ### Authorization
 
@@ -54,7 +54,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **eventList**
-> \\Metatavu\LinkedEvents\Model\InlineResponse200 eventList($include, $text, $lastModifiedSince, $start, $end, $bbox, $dataSource, $location, $division, $keyword, $recurring, $minDuration, $maxDuration, $publisher, $sort, $page, $pageSize)
+> \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\InlineResponse200 eventList($include, $text, $lastModifiedSince, $start, $end, $bbox, $dataSource, $location, $division, $keyword, $recurring, $minDuration, $maxDuration, $publisher, $sort, $page, $pageSize)
 
 Return a list of events
 
@@ -65,7 +65,7 @@ Return a list of events
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new \Metatavu\LinkedEvents\Api\EventApi();
+$api_instance = new Metatavu\LinkedEvents\Api\EventApi();
 $include = array("include_example"); // string[] | Embed given reference-type fields directly into the response, otherwise they are returned as URI references.
 $text = "text_example"; // string | Search (case insensitive) through all multilingual text fields (name, description, short_description, info_url) of an event (every language). Multilingual fields contain the text that users are expected to care about, thus multilinguality is useful discriminator.
 $lastModifiedSince = "lastModifiedSince_example"; // string | Search for events that have been modified since or at this time.
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\\Metatavu\LinkedEvents\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 
@@ -131,7 +131,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **eventRetrieve**
-> \\Metatavu\LinkedEvents\Model\Event eventRetrieve($id)
+> \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Event eventRetrieve($id)
 
 Retrieve single event by id
 
@@ -140,7 +140,7 @@ Retrieve single event by id
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new \Metatavu\LinkedEvents\Api\EventApi();
+$api_instance = new Metatavu\LinkedEvents\Api\EventApi();
 $id = "id_example"; // string | Event identifier as defined in event schema
 
 try {
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\\Metatavu\LinkedEvents\Model\Event**](../Model/Event.md)
+[**\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Event**](../Model/Event.md)
 
 ### Authorization
 
@@ -174,7 +174,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **eventUpdate**
-> \\Metatavu\LinkedEvents\Model\Event eventUpdate($id, $eventObject)
+> \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Event eventUpdate($id, $eventObject)
 
 Update an event
 
@@ -185,9 +185,9 @@ Events can be updated if the user has appropriate access permissions. The origin
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new \Metatavu\LinkedEvents\Api\EventApi();
+$api_instance = new Metatavu\LinkedEvents\Api\EventApi();
 $id = "id_example"; // string | Identifier for the event to be updated
-$eventObject = new \\Metatavu\LinkedEvents\Model\Event(); // \\Metatavu\LinkedEvents\Model\Event | Event object that should replace the existing event, note that some implementations may retain unspecified fields at their original values.
+$eventObject = new \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Event(); // \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Event | Event object that should replace the existing event, note that some implementations may retain unspecified fields at their original values.
 
 try {
     $result = $api_instance->eventUpdate($id, $eventObject);
@@ -203,11 +203,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| Identifier for the event to be updated |
- **eventObject** | [**\\Metatavu\LinkedEvents\Model\Event**](../Model/\\Metatavu\LinkedEvents\Model\Event.md)| Event object that should replace the existing event, note that some implementations may retain unspecified fields at their original values. | [optional]
+ **eventObject** | [**\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Event**](../Model/\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Event.md)| Event object that should replace the existing event, note that some implementations may retain unspecified fields at their original values. | [optional]
 
 ### Return type
 
-[**\\Metatavu\LinkedEvents\Model\Event**](../Model/Event.md)
+[**\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Event**](../Model/Event.md)
 
 ### Authorization
 

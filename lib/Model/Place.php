@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  \Metatavu\LinkedEvents
+ * @package  Metatavu\LinkedEvents
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace \Metatavu\LinkedEvents\Model;
+namespace Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model;
 
 use \ArrayAccess;
 
@@ -36,7 +36,7 @@ use \ArrayAccess;
  *
  * @category    Class
  * @description Places describe physical locations for events and means for contacting people responsible for these locations. Place definitions come from organizations publishing events (field \&quot;publisher\&quot;) and can thus have slightly different semantics between places sourced from different organizations.
- * @package     \Metatavu\LinkedEvents
+ * @package     Metatavu\LinkedEvents
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -56,20 +56,20 @@ class Place implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'string',
-        'customData' => '\\Metatavu\LinkedEvents\Model\PlaceCustomData[]',
-        'name' => '\\Metatavu\LinkedEvents\Model\PlaceName',
-        'images' => '\\Metatavu\LinkedEvents\Model\Image[]',
+        'customData' => '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\PlaceCustomData[]',
+        'name' => '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\PlaceName',
+        'images' => '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Image[]',
         'originId' => 'string',
         'createdTime' => '\DateTime',
         'lastModifiedTime' => '\DateTime',
-        'infoUrl' => '\\Metatavu\LinkedEvents\Model\PlaceInfoUrl',
-        'description' => '\\Metatavu\LinkedEvents\Model\PlaceDescription',
-        'position' => '\\Metatavu\LinkedEvents\Model\PlacePosition',
+        'infoUrl' => '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\PlaceInfoUrl',
+        'description' => '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\PlaceDescription',
+        'position' => '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\PlacePosition',
         'email' => 'string',
-        'telephone' => '\\Metatavu\LinkedEvents\Model\PlaceTelephone',
+        'telephone' => '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\PlaceTelephone',
         'contactType' => 'string',
-        'streetAddress' => '\\Metatavu\LinkedEvents\Model\PlaceStreetAddress',
-        'addressLocality' => '\\Metatavu\LinkedEvents\Model\PlaceAddressLocality',
+        'streetAddress' => '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\PlaceStreetAddress',
+        'addressLocality' => '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\PlaceAddressLocality',
         'addressRegion' => 'string',
         'postalCode' => 'string',
         'postOfficeBoxNum' => 'string',
@@ -276,7 +276,7 @@ class Place implements ArrayAccess
 
     /**
      * Gets customData
-     * @return \\Metatavu\LinkedEvents\Model\PlaceCustomData[]
+     * @return \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\PlaceCustomData[]
      */
     public function getCustomData()
     {
@@ -285,7 +285,7 @@ class Place implements ArrayAccess
 
     /**
      * Sets customData
-     * @param \\Metatavu\LinkedEvents\Model\PlaceCustomData[] $customData Key value field for custom data. FIXME: is there 6Aika-wide use case for this?
+     * @param \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\PlaceCustomData[] $customData Key value field for custom data. FIXME: is there 6Aika-wide use case for this?
      * @return $this
      */
     public function setCustomData($customData)
@@ -297,7 +297,7 @@ class Place implements ArrayAccess
 
     /**
      * Gets name
-     * @return \\Metatavu\LinkedEvents\Model\PlaceName
+     * @return \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\PlaceName
      */
     public function getName()
     {
@@ -306,7 +306,7 @@ class Place implements ArrayAccess
 
     /**
      * Sets name
-     * @param \\Metatavu\LinkedEvents\Model\PlaceName $name
+     * @param \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\PlaceName $name
      * @return $this
      */
     public function setName($name)
@@ -318,7 +318,7 @@ class Place implements ArrayAccess
 
     /**
      * Gets images
-     * @return \\Metatavu\LinkedEvents\Model\Image[]
+     * @return \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Image[]
      */
     public function getImages()
     {
@@ -327,7 +327,7 @@ class Place implements ArrayAccess
 
     /**
      * Sets images
-     * @param \\Metatavu\LinkedEvents\Model\Image[] $images
+     * @param \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Image[] $images
      * @return $this
      */
     public function setImages($images)
@@ -402,7 +402,7 @@ class Place implements ArrayAccess
 
     /**
      * Gets infoUrl
-     * @return \\Metatavu\LinkedEvents\Model\PlaceInfoUrl
+     * @return \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\PlaceInfoUrl
      */
     public function getInfoUrl()
     {
@@ -411,7 +411,7 @@ class Place implements ArrayAccess
 
     /**
      * Sets infoUrl
-     * @param \\Metatavu\LinkedEvents\Model\PlaceInfoUrl $infoUrl
+     * @param \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\PlaceInfoUrl $infoUrl
      * @return $this
      */
     public function setInfoUrl($infoUrl)
@@ -423,7 +423,7 @@ class Place implements ArrayAccess
 
     /**
      * Gets description
-     * @return \\Metatavu\LinkedEvents\Model\PlaceDescription
+     * @return \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\PlaceDescription
      */
     public function getDescription()
     {
@@ -432,7 +432,7 @@ class Place implements ArrayAccess
 
     /**
      * Sets description
-     * @param \\Metatavu\LinkedEvents\Model\PlaceDescription $description
+     * @param \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\PlaceDescription $description
      * @return $this
      */
     public function setDescription($description)
@@ -444,7 +444,7 @@ class Place implements ArrayAccess
 
     /**
      * Gets position
-     * @return \\Metatavu\LinkedEvents\Model\PlacePosition
+     * @return \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\PlacePosition
      */
     public function getPosition()
     {
@@ -453,7 +453,7 @@ class Place implements ArrayAccess
 
     /**
      * Sets position
-     * @param \\Metatavu\LinkedEvents\Model\PlacePosition $position
+     * @param \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\PlacePosition $position
      * @return $this
      */
     public function setPosition($position)
@@ -486,7 +486,7 @@ class Place implements ArrayAccess
 
     /**
      * Gets telephone
-     * @return \\Metatavu\LinkedEvents\Model\PlaceTelephone
+     * @return \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\PlaceTelephone
      */
     public function getTelephone()
     {
@@ -495,7 +495,7 @@ class Place implements ArrayAccess
 
     /**
      * Sets telephone
-     * @param \\Metatavu\LinkedEvents\Model\PlaceTelephone $telephone
+     * @param \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\PlaceTelephone $telephone
      * @return $this
      */
     public function setTelephone($telephone)
@@ -528,7 +528,7 @@ class Place implements ArrayAccess
 
     /**
      * Gets streetAddress
-     * @return \\Metatavu\LinkedEvents\Model\PlaceStreetAddress
+     * @return \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\PlaceStreetAddress
      */
     public function getStreetAddress()
     {
@@ -537,7 +537,7 @@ class Place implements ArrayAccess
 
     /**
      * Sets streetAddress
-     * @param \\Metatavu\LinkedEvents\Model\PlaceStreetAddress $streetAddress
+     * @param \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\PlaceStreetAddress $streetAddress
      * @return $this
      */
     public function setStreetAddress($streetAddress)
@@ -549,7 +549,7 @@ class Place implements ArrayAccess
 
     /**
      * Gets addressLocality
-     * @return \\Metatavu\LinkedEvents\Model\PlaceAddressLocality
+     * @return \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\PlaceAddressLocality
      */
     public function getAddressLocality()
     {
@@ -558,7 +558,7 @@ class Place implements ArrayAccess
 
     /**
      * Sets addressLocality
-     * @param \\Metatavu\LinkedEvents\Model\PlaceAddressLocality $addressLocality
+     * @param \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\PlaceAddressLocality $addressLocality
      * @return $this
      */
     public function setAddressLocality($addressLocality)
@@ -766,10 +766,10 @@ class Place implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\\Metatavu\LinkedEvents\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\Metatavu\LinkedEvents\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\\Metatavu\LinkedEvents\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\Metatavu\LinkedEvents\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

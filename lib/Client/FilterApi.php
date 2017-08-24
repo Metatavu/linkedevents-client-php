@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  \Metatavu\LinkedEvents
+ * @package  Metatavu\LinkedEvents
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,18 +26,18 @@
  * Do not edit the class manually.
  */
 
-namespace \Metatavu\LinkedEvents\Client;
+namespace Metatavu\LinkedEvents\Metatavu\LinkedEvents\Client;
 
-use \\Metatavu\LinkedEvents\ApiClient;
-use \\Metatavu\LinkedEvents\ApiException;
-use \\Metatavu\LinkedEvents\Configuration;
-use \\Metatavu\LinkedEvents\ObjectSerializer;
+use \Metatavu\LinkedEvents\ApiClient;
+use \Metatavu\LinkedEvents\ApiException;
+use \Metatavu\LinkedEvents\Configuration;
+use \Metatavu\LinkedEvents\ObjectSerializer;
 
 /**
  * FilterApi Class Doc Comment
  *
  * @category Class
- * @package  \Metatavu\LinkedEvents
+ * @package  Metatavu\LinkedEvents
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -46,16 +46,16 @@ class FilterApi
     /**
      * API Client
      *
-     * @var \\Metatavu\LinkedEvents\ApiClient instance of the ApiClient
+     * @var \Metatavu\LinkedEvents\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \\Metatavu\LinkedEvents\ApiClient|null $apiClient The api client to use
+     * @param \Metatavu\LinkedEvents\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\\Metatavu\LinkedEvents\ApiClient $apiClient = null)
+    public function __construct(\Metatavu\LinkedEvents\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
@@ -67,7 +67,7 @@ class FilterApi
     /**
      * Get API client
      *
-     * @return \\Metatavu\LinkedEvents\ApiClient get the API client
+     * @return \Metatavu\LinkedEvents\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -77,11 +77,11 @@ class FilterApi
     /**
      * Set the API client
      *
-     * @param \\Metatavu\LinkedEvents\ApiClient $apiClient set the API client
+     * @param \Metatavu\LinkedEvents\ApiClient $apiClient set the API client
      *
      * @return FilterApi
      */
-    public function setApiClient(\\Metatavu\LinkedEvents\ApiClient $apiClient)
+    public function setApiClient(\Metatavu\LinkedEvents\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -99,8 +99,8 @@ class FilterApi
      * @param string $dataSource Search for keywords (**note**: NOT events) that come from the specified data source (see data source in keyword definition). (optional)
      * @param string $text Search for keywords (**note**: NOT events) that contain the given string. This applies even when show_all_keywords is specified. (optional)
      * @param string $sort Sort the returned keywords in the given order. Possible sorting criteria are &#39;n_events&#39;, &#39;id&#39;, &#39;name&#39;, &#39;data_source&#39;. The default ordering is &#39;-data_source&#39;, &#39;-n_events&#39;. (optional)
-     * @throws \\Metatavu\LinkedEvents\ApiException on non-2xx response
-     * @return \\Metatavu\LinkedEvents\Model\InlineResponse2002
+     * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
+     * @return \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\InlineResponse2002
      */
     public function keywordList($page = null, $pageSize = null, $include = null, $showAllKeywords = null, $dataSource = null, $text = null, $sort = null)
     {
@@ -120,8 +120,8 @@ class FilterApi
      * @param string $dataSource Search for keywords (**note**: NOT events) that come from the specified data source (see data source in keyword definition). (optional)
      * @param string $text Search for keywords (**note**: NOT events) that contain the given string. This applies even when show_all_keywords is specified. (optional)
      * @param string $sort Sort the returned keywords in the given order. Possible sorting criteria are &#39;n_events&#39;, &#39;id&#39;, &#39;name&#39;, &#39;data_source&#39;. The default ordering is &#39;-data_source&#39;, &#39;-n_events&#39;. (optional)
-     * @throws \\Metatavu\LinkedEvents\ApiException on non-2xx response
-     * @return array of \\Metatavu\LinkedEvents\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
+     * @return array of \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
      */
     public function keywordListWithHttpInfo($page = null, $pageSize = null, $include = null, $showAllKeywords = null, $dataSource = null, $text = null, $sort = null)
     {
@@ -186,15 +186,15 @@ class FilterApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\\Metatavu\LinkedEvents\Model\InlineResponse2002',
+                '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\InlineResponse2002',
                 '/keyword/'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\\Metatavu\LinkedEvents\Model\InlineResponse2002', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\InlineResponse2002', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\\Metatavu\LinkedEvents\Model\InlineResponse2002', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\InlineResponse2002', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -209,8 +209,8 @@ class FilterApi
      * Return information for single keyword
      *
      * @param string $id Same as id in keyword schema (required)
-     * @throws \\Metatavu\LinkedEvents\ApiException on non-2xx response
-     * @return \\Metatavu\LinkedEvents\Model\Keyword
+     * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
+     * @return \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Keyword
      */
     public function keywordRetrieve($id)
     {
@@ -224,8 +224,8 @@ class FilterApi
      * Return information for single keyword
      *
      * @param string $id Same as id in keyword schema (required)
-     * @throws \\Metatavu\LinkedEvents\ApiException on non-2xx response
-     * @return array of \\Metatavu\LinkedEvents\Model\Keyword, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
+     * @return array of \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Keyword, HTTP status code, HTTP response headers (array of strings)
      */
     public function keywordRetrieveWithHttpInfo($id)
     {
@@ -271,15 +271,15 @@ class FilterApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\\Metatavu\LinkedEvents\Model\Keyword',
+                '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Keyword',
                 '/keyword/{id}/'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\\Metatavu\LinkedEvents\Model\Keyword', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Keyword', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\\Metatavu\LinkedEvents\Model\Keyword', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Keyword', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -296,8 +296,8 @@ class FilterApi
      * @param int $page request particular page in paginated results (optional)
      * @param int $pageSize request that server delivers page_size results in response (optional)
      * @param string[] $include Embed given reference-type fields directly into the response, otherwise they are returned as URI references. (optional)
-     * @throws \\Metatavu\LinkedEvents\ApiException on non-2xx response
-     * @return \\Metatavu\LinkedEvents\Model\InlineResponse2003
+     * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
+     * @return \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\InlineResponse2003
      */
     public function keywordSetList($page = null, $pageSize = null, $include = null)
     {
@@ -313,8 +313,8 @@ class FilterApi
      * @param int $page request particular page in paginated results (optional)
      * @param int $pageSize request that server delivers page_size results in response (optional)
      * @param string[] $include Embed given reference-type fields directly into the response, otherwise they are returned as URI references. (optional)
-     * @throws \\Metatavu\LinkedEvents\ApiException on non-2xx response
-     * @return array of \\Metatavu\LinkedEvents\Model\InlineResponse2003, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
+     * @return array of \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\InlineResponse2003, HTTP status code, HTTP response headers (array of strings)
      */
     public function keywordSetListWithHttpInfo($page = null, $pageSize = null, $include = null)
     {
@@ -363,15 +363,15 @@ class FilterApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\\Metatavu\LinkedEvents\Model\InlineResponse2003',
+                '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\InlineResponse2003',
                 '/keyword_set/'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\\Metatavu\LinkedEvents\Model\InlineResponse2003', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\InlineResponse2003', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\\Metatavu\LinkedEvents\Model\InlineResponse2003', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\InlineResponse2003', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -386,8 +386,8 @@ class FilterApi
      * Return information about single keyword_set
      *
      * @param string $id Same as id in keyword_set schema (required)
-     * @throws \\Metatavu\LinkedEvents\ApiException on non-2xx response
-     * @return \\Metatavu\LinkedEvents\Model\KeywordSet
+     * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
+     * @return \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\KeywordSet
      */
     public function keywordSetRetrieve($id)
     {
@@ -401,8 +401,8 @@ class FilterApi
      * Return information about single keyword_set
      *
      * @param string $id Same as id in keyword_set schema (required)
-     * @throws \\Metatavu\LinkedEvents\ApiException on non-2xx response
-     * @return array of \\Metatavu\LinkedEvents\Model\KeywordSet, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
+     * @return array of \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\KeywordSet, HTTP status code, HTTP response headers (array of strings)
      */
     public function keywordSetRetrieveWithHttpInfo($id)
     {
@@ -448,15 +448,15 @@ class FilterApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\\Metatavu\LinkedEvents\Model\KeywordSet',
+                '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\KeywordSet',
                 '/keyword_set/{id}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\\Metatavu\LinkedEvents\Model\KeywordSet', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\KeywordSet', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\\Metatavu\LinkedEvents\Model\KeywordSet', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\KeywordSet', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -476,8 +476,8 @@ class FilterApi
      * @param string $division You may filter places by specific OCD division id, or by division name. The latter query checks all divisions with the name, regardless of division type. (optional)
      * @param string $text  (optional)
      * @param string $sort Sort the returned places in the given order. Possible sorting criteria are &#39;n_events&#39;, &#39;id&#39;, &#39;name&#39;, &#39;street_address&#39; and &#39;postal_code&#39;. The default ordering is &#39;-n_events&#39;. (optional)
-     * @throws \\Metatavu\LinkedEvents\ApiException on non-2xx response
-     * @return \\Metatavu\LinkedEvents\Model\InlineResponse2004
+     * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
+     * @return \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\InlineResponse2004
      */
     public function placeList($page = null, $pageSize = null, $showAllPlaces = null, $division = null, $text = null, $sort = null)
     {
@@ -496,8 +496,8 @@ class FilterApi
      * @param string $division You may filter places by specific OCD division id, or by division name. The latter query checks all divisions with the name, regardless of division type. (optional)
      * @param string $text  (optional)
      * @param string $sort Sort the returned places in the given order. Possible sorting criteria are &#39;n_events&#39;, &#39;id&#39;, &#39;name&#39;, &#39;street_address&#39; and &#39;postal_code&#39;. The default ordering is &#39;-n_events&#39;. (optional)
-     * @throws \\Metatavu\LinkedEvents\ApiException on non-2xx response
-     * @return array of \\Metatavu\LinkedEvents\Model\InlineResponse2004, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
+     * @return array of \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\InlineResponse2004, HTTP status code, HTTP response headers (array of strings)
      */
     public function placeListWithHttpInfo($page = null, $pageSize = null, $showAllPlaces = null, $division = null, $text = null, $sort = null)
     {
@@ -555,15 +555,15 @@ class FilterApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\\Metatavu\LinkedEvents\Model\InlineResponse2004',
+                '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\InlineResponse2004',
                 '/place/'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\\Metatavu\LinkedEvents\Model\InlineResponse2004', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\InlineResponse2004', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\\Metatavu\LinkedEvents\Model\InlineResponse2004', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\InlineResponse2004', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -578,8 +578,8 @@ class FilterApi
      * Return information for single place
      *
      * @param string $id Id as defined in place model (required)
-     * @throws \\Metatavu\LinkedEvents\ApiException on non-2xx response
-     * @return \\Metatavu\LinkedEvents\Model\Place
+     * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
+     * @return \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Place
      */
     public function placeRetrieve($id)
     {
@@ -593,8 +593,8 @@ class FilterApi
      * Return information for single place
      *
      * @param string $id Id as defined in place model (required)
-     * @throws \\Metatavu\LinkedEvents\ApiException on non-2xx response
-     * @return array of \\Metatavu\LinkedEvents\Model\Place, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
+     * @return array of \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Place, HTTP status code, HTTP response headers (array of strings)
      */
     public function placeRetrieveWithHttpInfo($id)
     {
@@ -640,15 +640,15 @@ class FilterApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\\Metatavu\LinkedEvents\Model\Place',
+                '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Place',
                 '/place/{id}/'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\\Metatavu\LinkedEvents\Model\Place', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Place', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\\Metatavu\LinkedEvents\Model\Place', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Place', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

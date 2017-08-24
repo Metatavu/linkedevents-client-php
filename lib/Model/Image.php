@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  \Metatavu\LinkedEvents
+ * @package  Metatavu\LinkedEvents
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace \Metatavu\LinkedEvents\Model;
+namespace Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model;
 
 use \ArrayAccess;
 
@@ -36,7 +36,7 @@ use \ArrayAccess;
  *
  * @category    Class
  * @description Images are used as pictures for events, places and organizers.
- * @package     \Metatavu\LinkedEvents
+ * @package     Metatavu\LinkedEvents
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -55,7 +55,7 @@ class Image implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'name' => '\\Metatavu\LinkedEvents\Model\ImageName',
+        'name' => '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\ImageName',
         'publisher' => 'string',
         'createdTime' => '\DateTime',
         'lastModifiedTime' => '\DateTime',
@@ -196,7 +196,7 @@ class Image implements ArrayAccess
 
     /**
      * Gets name
-     * @return \\Metatavu\LinkedEvents\Model\ImageName
+     * @return \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\ImageName
      */
     public function getName()
     {
@@ -205,7 +205,7 @@ class Image implements ArrayAccess
 
     /**
      * Sets name
-     * @param \\Metatavu\LinkedEvents\Model\ImageName $name
+     * @param \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\ImageName $name
      * @return $this
      */
     public function setName($name)
@@ -434,10 +434,10 @@ class Image implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\\Metatavu\LinkedEvents\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\Metatavu\LinkedEvents\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\\Metatavu\LinkedEvents\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\Metatavu\LinkedEvents\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

@@ -1,4 +1,4 @@
-# \Metatavu\LinkedEvents\SearchApi
+# Metatavu\LinkedEvents\SearchApi
 
 All URIs are relative to *https://api.hel.fi/linkedevents/v1*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **eventSearch**
-> \\Metatavu\LinkedEvents\Model\InlineResponse200 eventSearch($page, $pageSize, $type, $q, $input, $start, $end)
+> \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\InlineResponse200 eventSearch($page, $pageSize, $type, $q, $input, $start, $end)
 
 Search through events and places
 
@@ -19,7 +19,7 @@ Search through events and places
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new \Metatavu\LinkedEvents\Api\SearchApi();
+$api_instance = new Metatavu\LinkedEvents\Api\SearchApi();
 $page = 56; // int | request particular page in paginated results
 $pageSize = 56; // int | request that server delivers page_size results in response
 $type = "type_example"; // string | Comma-delimited list of resource types to search for. Currently allowed values are `event` and `place`. `type=event` must be specified for event date filtering and relevancy sorting.
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\\Metatavu\LinkedEvents\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 

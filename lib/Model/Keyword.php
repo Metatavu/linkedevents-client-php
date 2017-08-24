@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  \Metatavu\LinkedEvents
+ * @package  Metatavu\LinkedEvents
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace \Metatavu\LinkedEvents\Model;
+namespace Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model;
 
 use \ArrayAccess;
 
@@ -36,7 +36,7 @@ use \ArrayAccess;
  *
  * @category    Class
  * @description Keywords are used to describe events. Linked events uses namespaced keywords in order to support having events from different sources. Namespaces are needed because keywords are defined by the organization sourcing the events and can therefore overlap in meaning. Conversely the meaning of same keyword can vary between organizations. Organization sourcing the keyword can be identified by data_source field. Data_source field will later specify standardized namespaces as well.
- * @package     \Metatavu\LinkedEvents
+ * @package     Metatavu\LinkedEvents
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -56,8 +56,8 @@ class Keyword implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'string',
-        'name' => '\\Metatavu\LinkedEvents\Model\KeywordName',
-        'images' => '\\Metatavu\LinkedEvents\Model\Image[]',
+        'name' => '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\KeywordName',
+        'images' => '\Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Image[]',
         'originId' => 'string',
         'createdTime' => '\DateTime',
         'lastModifiedTime' => '\DateTime',
@@ -233,7 +233,7 @@ class Keyword implements ArrayAccess
 
     /**
      * Gets name
-     * @return \\Metatavu\LinkedEvents\Model\KeywordName
+     * @return \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\KeywordName
      */
     public function getName()
     {
@@ -242,7 +242,7 @@ class Keyword implements ArrayAccess
 
     /**
      * Sets name
-     * @param \\Metatavu\LinkedEvents\Model\KeywordName $name
+     * @param \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\KeywordName $name
      * @return $this
      */
     public function setName($name)
@@ -254,7 +254,7 @@ class Keyword implements ArrayAccess
 
     /**
      * Gets images
-     * @return \\Metatavu\LinkedEvents\Model\Image[]
+     * @return \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Image[]
      */
     public function getImages()
     {
@@ -263,7 +263,7 @@ class Keyword implements ArrayAccess
 
     /**
      * Sets images
-     * @param \\Metatavu\LinkedEvents\Model\Image[] $images
+     * @param \Metatavu\LinkedEvents\Metatavu\LinkedEvents\Model\Image[] $images
      * @return $this
      */
     public function setImages($images)
@@ -492,10 +492,10 @@ class Keyword implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\\Metatavu\LinkedEvents\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\Metatavu\LinkedEvents\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\\Metatavu\LinkedEvents\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\Metatavu\LinkedEvents\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 
