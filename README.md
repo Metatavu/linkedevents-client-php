@@ -77,6 +77,7 @@ All URIs are relative to *https://api.hel.fi/linkedevents/v1*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *EventApi* | [**eventCreate**](docs/Api/EventApi.md#eventcreate) | **POST** /event/ | Create a new event
+*EventApi* | [**eventDelete**](docs/Api/EventApi.md#eventdelete) | **DELETE** /event/{id}/ | Delete an event
 *EventApi* | [**eventList**](docs/Api/EventApi.md#eventlist) | **GET** /event/ | Return a list of events
 *EventApi* | [**eventRetrieve**](docs/Api/EventApi.md#eventretrieve) | **GET** /event/{id}/ | Retrieve single event by id
 *EventApi* | [**eventUpdate**](docs/Api/EventApi.md#eventupdate) | **PUT** /event/{id}/ | Update an event

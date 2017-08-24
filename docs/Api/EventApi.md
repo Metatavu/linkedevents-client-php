@@ -5,6 +5,7 @@ All URIs are relative to *https://api.hel.fi/linkedevents/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**eventCreate**](EventApi.md#eventCreate) | **POST** /event/ | Create a new event
+[**eventDelete**](EventApi.md#eventDelete) | **DELETE** /event/{id}/ | Delete an event
 [**eventList**](EventApi.md#eventList) | **GET** /event/ | Return a list of events
 [**eventRetrieve**](EventApi.md#eventRetrieve) | **GET** /event/{id}/ | Retrieve single event by id
 [**eventUpdate**](EventApi.md#eventUpdate) | **PUT** /event/{id}/ | Update an event
@@ -41,6 +42,46 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Metatavu\LinkedEvents\Model\Event**](../Model/Event.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **eventDelete**
+> eventDelete()
+
+Delete an event
+
+Deletes an event
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Metatavu\LinkedEvents\Api\EventApi();
+
+try {
+    $api_instance->eventDelete();
+} catch (Exception $e) {
+    echo 'Exception when calling EventApi->eventDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 

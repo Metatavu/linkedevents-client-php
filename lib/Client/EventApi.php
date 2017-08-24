@@ -166,6 +166,73 @@ class EventApi
     }
 
     /**
+     * Operation eventDelete
+     *
+     * Delete an event
+     *
+     * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
+     * @return void
+     */
+    public function eventDelete()
+    {
+        list($response) = $this->eventDeleteWithHttpInfo();
+        return $response;
+    }
+
+    /**
+     * Operation eventDeleteWithHttpInfo
+     *
+     * Delete an event
+     *
+     * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function eventDeleteWithHttpInfo()
+    {
+        // parse inputs
+        $resourcePath = "/event/{id}/";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/event/{id}/'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation eventList
      *
      * Return a list of events
