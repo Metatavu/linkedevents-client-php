@@ -81,12 +81,15 @@ Class | Method | HTTP request | Description
 *EventApi* | [**eventList**](docs/Api/EventApi.md#eventlist) | **GET** /event/ | Return a list of events
 *EventApi* | [**eventRetrieve**](docs/Api/EventApi.md#eventretrieve) | **GET** /event/{id}/ | Retrieve single event by id
 *EventApi* | [**eventUpdate**](docs/Api/EventApi.md#eventupdate) | **PUT** /event/{id}/ | Update an event
+*EventApi* | [**placeDelete**](docs/Api/EventApi.md#placedelete) | **DELETE** /place/{id}/ | Delete a place
 *FilterApi* | [**keywordList**](docs/Api/FilterApi.md#keywordlist) | **GET** /keyword/ | Returns a list of keywords used for describing events
 *FilterApi* | [**keywordRetrieve**](docs/Api/FilterApi.md#keywordretrieve) | **GET** /keyword/{id}/ | Return information for single keyword
 *FilterApi* | [**keywordSetList**](docs/Api/FilterApi.md#keywordsetlist) | **GET** /keyword_set/ | Return as list of keyword_sets for grouping keywords
 *FilterApi* | [**keywordSetRetrieve**](docs/Api/FilterApi.md#keywordsetretrieve) | **GET** /keyword_set/{id} | Return information about single keyword_set
+*FilterApi* | [**placeCreate**](docs/Api/FilterApi.md#placecreate) | **POST** /place/ | Creates new place
 *FilterApi* | [**placeList**](docs/Api/FilterApi.md#placelist) | **GET** /place/ | Returns list of places used for describing events
 *FilterApi* | [**placeRetrieve**](docs/Api/FilterApi.md#placeretrieve) | **GET** /place/{id}/ | Return information for single place
+*FilterApi* | [**placeUpdate**](docs/Api/FilterApi.md#placeupdate) | **PUT** /place/{id}/ | Update a place
 *ImageApi* | [**imageCreate**](docs/Api/ImageApi.md#imagecreate) | **POST** /image/ | Create a new image
 *ImageApi* | [**imageList**](docs/Api/ImageApi.md#imagelist) | **GET** /image/ | Returns a list of images
 *ImageApi* | [**imageRetrieve**](docs/Api/ImageApi.md#imageretrieve) | **GET** /image/{id}/ | Return information for single image

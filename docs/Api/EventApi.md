@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**eventList**](EventApi.md#eventList) | **GET** /event/ | Return a list of events
 [**eventRetrieve**](EventApi.md#eventRetrieve) | **GET** /event/{id}/ | Retrieve single event by id
 [**eventUpdate**](EventApi.md#eventUpdate) | **PUT** /event/{id}/ | Update an event
+[**placeDelete**](EventApi.md#placeDelete) | **DELETE** /place/{id}/ | Delete a place
 
 
 # **eventCreate**
@@ -253,6 +254,50 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Metatavu\LinkedEvents\Model\Event**](../Model/Event.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **placeDelete**
+> placeDelete($id)
+
+Delete a place
+
+Deletes a place
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Metatavu\LinkedEvents\Api\EventApi();
+$id = "id_example"; // string | Identifier for the place to be deleted
+
+try {
+    $api_instance->placeDelete($id);
+} catch (Exception $e) {
+    echo 'Exception when calling EventApi->placeDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Identifier for the place to be deleted |
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 

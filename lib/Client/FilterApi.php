@@ -466,6 +466,84 @@ class FilterApi
     }
 
     /**
+     * Operation placeCreate
+     *
+     * Creates new place
+     *
+     * @param \Metatavu\LinkedEvents\Model\Place $placeObject  (optional)
+     * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
+     * @return \Metatavu\LinkedEvents\Model\Place
+     */
+    public function placeCreate($placeObject = null)
+    {
+        list($response) = $this->placeCreateWithHttpInfo($placeObject);
+        return $response;
+    }
+
+    /**
+     * Operation placeCreateWithHttpInfo
+     *
+     * Creates new place
+     *
+     * @param \Metatavu\LinkedEvents\Model\Place $placeObject  (optional)
+     * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
+     * @return array of \Metatavu\LinkedEvents\Model\Place, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function placeCreateWithHttpInfo($placeObject = null)
+    {
+        // parse inputs
+        $resourcePath = "/place/";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($placeObject)) {
+            $_tempBody = $placeObject;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Metatavu\LinkedEvents\Model\Place',
+                '/place/'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Metatavu\LinkedEvents\Model\Place', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 201:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Metatavu\LinkedEvents\Model\Place', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation placeList
      *
      * Returns list of places used for describing events
@@ -637,6 +715,98 @@ class FilterApi
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath,
                 'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Metatavu\LinkedEvents\Model\Place',
+                '/place/{id}/'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Metatavu\LinkedEvents\Model\Place', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Metatavu\LinkedEvents\Model\Place', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation placeUpdate
+     *
+     * Update a place
+     *
+     * @param string $id Identifier for the place to be updated (required)
+     * @param \Metatavu\LinkedEvents\Model\Place $placeObject Place object that should replace the existing place. (optional)
+     * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
+     * @return \Metatavu\LinkedEvents\Model\Place
+     */
+    public function placeUpdate($id, $placeObject = null)
+    {
+        list($response) = $this->placeUpdateWithHttpInfo($id, $placeObject);
+        return $response;
+    }
+
+    /**
+     * Operation placeUpdateWithHttpInfo
+     *
+     * Update a place
+     *
+     * @param string $id Identifier for the place to be updated (required)
+     * @param \Metatavu\LinkedEvents\Model\Place $placeObject Place object that should replace the existing place. (optional)
+     * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
+     * @return array of \Metatavu\LinkedEvents\Model\Place, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function placeUpdateWithHttpInfo($id, $placeObject = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling placeUpdate');
+        }
+        // parse inputs
+        $resourcePath = "/place/{id}/";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($placeObject)) {
+            $_tempBody = $placeObject;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
                 $queryParams,
                 $httpBody,
                 $headerParams,

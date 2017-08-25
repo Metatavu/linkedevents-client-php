@@ -8,8 +8,10 @@ Method | HTTP request | Description
 [**keywordRetrieve**](FilterApi.md#keywordRetrieve) | **GET** /keyword/{id}/ | Return information for single keyword
 [**keywordSetList**](FilterApi.md#keywordSetList) | **GET** /keyword_set/ | Return as list of keyword_sets for grouping keywords
 [**keywordSetRetrieve**](FilterApi.md#keywordSetRetrieve) | **GET** /keyword_set/{id} | Return information about single keyword_set
+[**placeCreate**](FilterApi.md#placeCreate) | **POST** /place/ | Creates new place
 [**placeList**](FilterApi.md#placeList) | **GET** /place/ | Returns list of places used for describing events
 [**placeRetrieve**](FilterApi.md#placeRetrieve) | **GET** /place/{id}/ | Return information for single place
+[**placeUpdate**](FilterApi.md#placeUpdate) | **PUT** /place/{id}/ | Update a place
 
 
 # **keywordList**
@@ -204,6 +206,51 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **placeCreate**
+> \Metatavu\LinkedEvents\Model\Place placeCreate($placeObject)
+
+Creates new place
+
+Endpoint for creating new places
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Metatavu\LinkedEvents\Api\FilterApi();
+$placeObject = new \Metatavu\LinkedEvents\Model\Place(); // \Metatavu\LinkedEvents\Model\Place | 
+
+try {
+    $result = $api_instance->placeCreate($placeObject);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling FilterApi->placeCreate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **placeObject** | [**\Metatavu\LinkedEvents\Model\Place**](../Model/\Metatavu\LinkedEvents\Model\Place.md)|  | [optional]
+
+### Return type
+
+[**\Metatavu\LinkedEvents\Model\Place**](../Model/Place.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **placeList**
 > \Metatavu\LinkedEvents\Model\InlineResponse2004 placeList($page, $pageSize, $showAllPlaces, $division, $text, $sort)
 
@@ -286,6 +333,53 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| Id as defined in place model |
+
+### Return type
+
+[**\Metatavu\LinkedEvents\Model\Place**](../Model/Place.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **placeUpdate**
+> \Metatavu\LinkedEvents\Model\Place placeUpdate($id, $placeObject)
+
+Update a place
+
+Place can be updated if the user has appropriate access permissions.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Metatavu\LinkedEvents\Api\FilterApi();
+$id = "id_example"; // string | Identifier for the place to be updated
+$placeObject = new \Metatavu\LinkedEvents\Model\Place(); // \Metatavu\LinkedEvents\Model\Place | Place object that should replace the existing place.
+
+try {
+    $result = $api_instance->placeUpdate($id, $placeObject);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling FilterApi->placeUpdate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Identifier for the place to be updated |
+ **placeObject** | [**\Metatavu\LinkedEvents\Model\Place**](../Model/\Metatavu\LinkedEvents\Model\Place.md)| Place object that should replace the existing place. | [optional]
 
 ### Return type
 
