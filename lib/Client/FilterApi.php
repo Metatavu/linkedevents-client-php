@@ -884,14 +884,15 @@ class FilterApi
      * @param int $pageSize request that server delivers page_size results in response (optional)
      * @param bool $showAllPlaces Show all places, including those that are not hosting any events. Otherwise such places are hidden. When show_all_places is specified, no other filter is applied. (optional)
      * @param string $division You may filter places by specific OCD division id, or by division name. The latter query checks all divisions with the name, regardless of division type. (optional)
+     * @param string $dataSource Search for places that come from specified data source (optional)
      * @param string $text  (optional)
      * @param string $sort Sort the returned places in the given order. Possible sorting criteria are &#39;n_events&#39;, &#39;id&#39;, &#39;name&#39;, &#39;street_address&#39; and &#39;postal_code&#39;. The default ordering is &#39;-n_events&#39;. (optional)
      * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
      * @return \Metatavu\LinkedEvents\Model\InlineResponse2004
      */
-    public function placeList($page = null, $pageSize = null, $showAllPlaces = null, $division = null, $text = null, $sort = null)
+    public function placeList($page = null, $pageSize = null, $showAllPlaces = null, $division = null, $dataSource = null, $text = null, $sort = null)
     {
-        list($response) = $this->placeListWithHttpInfo($page, $pageSize, $showAllPlaces, $division, $text, $sort);
+        list($response) = $this->placeListWithHttpInfo($page, $pageSize, $showAllPlaces, $division, $dataSource, $text, $sort);
         return $response;
     }
 
@@ -904,12 +905,13 @@ class FilterApi
      * @param int $pageSize request that server delivers page_size results in response (optional)
      * @param bool $showAllPlaces Show all places, including those that are not hosting any events. Otherwise such places are hidden. When show_all_places is specified, no other filter is applied. (optional)
      * @param string $division You may filter places by specific OCD division id, or by division name. The latter query checks all divisions with the name, regardless of division type. (optional)
+     * @param string $dataSource Search for places that come from specified data source (optional)
      * @param string $text  (optional)
      * @param string $sort Sort the returned places in the given order. Possible sorting criteria are &#39;n_events&#39;, &#39;id&#39;, &#39;name&#39;, &#39;street_address&#39; and &#39;postal_code&#39;. The default ordering is &#39;-n_events&#39;. (optional)
      * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
      * @return array of \Metatavu\LinkedEvents\Model\InlineResponse2004, HTTP status code, HTTP response headers (array of strings)
      */
-    public function placeListWithHttpInfo($page = null, $pageSize = null, $showAllPlaces = null, $division = null, $text = null, $sort = null)
+    public function placeListWithHttpInfo($page = null, $pageSize = null, $showAllPlaces = null, $division = null, $dataSource = null, $text = null, $sort = null)
     {
         // parse inputs
         $resourcePath = "/place/";
@@ -938,6 +940,10 @@ class FilterApi
         // query params
         if ($division !== null) {
             $queryParams['division'] = $this->apiClient->getSerializer()->toQueryValue($division);
+        }
+        // query params
+        if ($dataSource !== null) {
+            $queryParams['data_source'] = $this->apiClient->getSerializer()->toQueryValue($dataSource);
         }
         // query params
         if ($text !== null) {
