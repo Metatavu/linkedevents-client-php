@@ -56,7 +56,7 @@ class LanguageName implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'fi' => 'string',
-        'se' => 'string',
+        'sv' => 'string',
         'en' => 'string'
     ];
 
@@ -71,7 +71,7 @@ class LanguageName implements ArrayAccess
      */
     protected static $attributeMap = [
         'fi' => 'fi',
-        'se' => 'se',
+        'sv' => 'sv',
         'en' => 'en'
     ];
 
@@ -82,7 +82,7 @@ class LanguageName implements ArrayAccess
      */
     protected static $setters = [
         'fi' => 'setFi',
-        'se' => 'setSe',
+        'sv' => 'setSv',
         'en' => 'setEn'
     ];
 
@@ -93,7 +93,7 @@ class LanguageName implements ArrayAccess
      */
     protected static $getters = [
         'fi' => 'getFi',
-        'se' => 'getSe',
+        'sv' => 'getSv',
         'en' => 'getEn'
     ];
 
@@ -129,7 +129,7 @@ class LanguageName implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['fi'] = isset($data['fi']) ? $data['fi'] : null;
-        $this->container['se'] = isset($data['se']) ? $data['se'] : null;
+        $this->container['sv'] = isset($data['sv']) ? $data['sv'] : null;
         $this->container['en'] = isset($data['en']) ? $data['en'] : null;
     }
 
@@ -180,22 +180,22 @@ class LanguageName implements ArrayAccess
     }
 
     /**
-     * Gets se
+     * Gets sv
      * @return string
      */
-    public function getSe()
+    public function getSv()
     {
-        return $this->container['se'];
+        return $this->container['sv'];
     }
 
     /**
-     * Sets se
-     * @param string $se Name of the language in Swedish
+     * Sets sv
+     * @param string $sv Name of the language in Swedish
      * @return $this
      */
-    public function setSe($se)
+    public function setSv($sv)
     {
-        $this->container['se'] = $se;
+        $this->container['sv'] = $sv;
 
         return $this;
     }
