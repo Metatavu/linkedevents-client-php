@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**keywordSetList**](FilterApi.md#keywordSetList) | **GET** /keyword_set/ | Return as list of keyword_sets for grouping keywords
 [**keywordSetRetrieve**](FilterApi.md#keywordSetRetrieve) | **GET** /keyword_set/{id} | Return information about single keyword_set
 [**placeCreate**](FilterApi.md#placeCreate) | **POST** /place/ | Creates new place
+[**placeDelete**](FilterApi.md#placeDelete) | **DELETE** /place/{id}/ | Delete a place
 [**placeList**](FilterApi.md#placeList) | **GET** /place/ | Returns list of places used for describing events
 [**placeRetrieve**](FilterApi.md#placeRetrieve) | **GET** /place/{id}/ | Return information for single place
 [**placeUpdate**](FilterApi.md#placeUpdate) | **PUT** /place/{id}/ | Update a place
@@ -239,6 +240,50 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Metatavu\LinkedEvents\Model\Place**](../Model/Place.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **placeDelete**
+> placeDelete($id)
+
+Delete a place
+
+Deletes a place
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Metatavu\LinkedEvents\Api\FilterApi();
+$id = "id_example"; // string | Identifier for the place to be deleted
+
+try {
+    $api_instance->placeDelete($id);
+} catch (Exception $e) {
+    echo 'Exception when calling FilterApi->placeDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Identifier for the place to be deleted |
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 
