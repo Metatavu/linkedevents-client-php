@@ -88,6 +88,165 @@ class FilterApi
     }
 
     /**
+     * Operation keywordCreate
+     *
+     * Creates new keyword
+     *
+     * @param \Metatavu\LinkedEvents\Model\Keyword $keywordObject  (optional)
+     * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
+     * @return \Metatavu\LinkedEvents\Model\Place
+     */
+    public function keywordCreate($keywordObject = null)
+    {
+        list($response) = $this->keywordCreateWithHttpInfo($keywordObject);
+        return $response;
+    }
+
+    /**
+     * Operation keywordCreateWithHttpInfo
+     *
+     * Creates new keyword
+     *
+     * @param \Metatavu\LinkedEvents\Model\Keyword $keywordObject  (optional)
+     * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
+     * @return array of \Metatavu\LinkedEvents\Model\Place, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function keywordCreateWithHttpInfo($keywordObject = null)
+    {
+        // parse inputs
+        $resourcePath = "/keyword/";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($keywordObject)) {
+            $_tempBody = $keywordObject;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Metatavu\LinkedEvents\Model\Place',
+                '/keyword/'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Metatavu\LinkedEvents\Model\Place', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 201:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Metatavu\LinkedEvents\Model\Place', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation keywordDelete
+     *
+     * Delete a keyword
+     *
+     * @param string $id Identifier for the keyword to be deleted (required)
+     * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
+     * @return void
+     */
+    public function keywordDelete($id)
+    {
+        list($response) = $this->keywordDeleteWithHttpInfo($id);
+        return $response;
+    }
+
+    /**
+     * Operation keywordDeleteWithHttpInfo
+     *
+     * Delete a keyword
+     *
+     * @param string $id Identifier for the keyword to be deleted (required)
+     * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function keywordDeleteWithHttpInfo($id)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling keywordDelete');
+        }
+        // parse inputs
+        $resourcePath = "/keyword/{id}/";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                null,
+                '/keyword/{id}/'
+            );
+
+            return [null, $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation keywordList
      *
      * Returns a list of keywords used for describing events
@@ -457,6 +616,98 @@ class FilterApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Metatavu\LinkedEvents\Model\KeywordSet', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation keywordUpdate
+     *
+     * Update a keyword
+     *
+     * @param string $id Identifier for the keyword to be updated (required)
+     * @param \Metatavu\LinkedEvents\Model\Keyword $keywordObject Keyword object that should replace the existing keyword (optional)
+     * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
+     * @return \Metatavu\LinkedEvents\Model\Keyword
+     */
+    public function keywordUpdate($id, $keywordObject = null)
+    {
+        list($response) = $this->keywordUpdateWithHttpInfo($id, $keywordObject);
+        return $response;
+    }
+
+    /**
+     * Operation keywordUpdateWithHttpInfo
+     *
+     * Update a keyword
+     *
+     * @param string $id Identifier for the keyword to be updated (required)
+     * @param \Metatavu\LinkedEvents\Model\Keyword $keywordObject Keyword object that should replace the existing keyword (optional)
+     * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
+     * @return array of \Metatavu\LinkedEvents\Model\Keyword, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function keywordUpdateWithHttpInfo($id, $keywordObject = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling keywordUpdate');
+        }
+        // parse inputs
+        $resourcePath = "/keyword/{id}/";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($keywordObject)) {
+            $_tempBody = $keywordObject;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Metatavu\LinkedEvents\Model\Keyword',
+                '/keyword/{id}/'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Metatavu\LinkedEvents\Model\Keyword', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Metatavu\LinkedEvents\Model\Keyword', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

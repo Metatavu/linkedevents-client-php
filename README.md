@@ -81,10 +81,13 @@ Class | Method | HTTP request | Description
 *EventApi* | [**eventList**](docs/Api/EventApi.md#eventlist) | **GET** /event/ | Return a list of events
 *EventApi* | [**eventRetrieve**](docs/Api/EventApi.md#eventretrieve) | **GET** /event/{id}/ | Retrieve single event by id
 *EventApi* | [**eventUpdate**](docs/Api/EventApi.md#eventupdate) | **PUT** /event/{id}/ | Update an event
+*FilterApi* | [**keywordCreate**](docs/Api/FilterApi.md#keywordcreate) | **POST** /keyword/ | Creates new keyword
+*FilterApi* | [**keywordDelete**](docs/Api/FilterApi.md#keyworddelete) | **DELETE** /keyword/{id}/ | Delete a keyword
 *FilterApi* | [**keywordList**](docs/Api/FilterApi.md#keywordlist) | **GET** /keyword/ | Returns a list of keywords used for describing events
 *FilterApi* | [**keywordRetrieve**](docs/Api/FilterApi.md#keywordretrieve) | **GET** /keyword/{id}/ | Return information for single keyword
 *FilterApi* | [**keywordSetList**](docs/Api/FilterApi.md#keywordsetlist) | **GET** /keyword_set/ | Return as list of keyword_sets for grouping keywords
 *FilterApi* | [**keywordSetRetrieve**](docs/Api/FilterApi.md#keywordsetretrieve) | **GET** /keyword_set/{id} | Return information about single keyword_set
+*FilterApi* | [**keywordUpdate**](docs/Api/FilterApi.md#keywordupdate) | **PUT** /keyword/{id}/ | Update a keyword
 *FilterApi* | [**placeCreate**](docs/Api/FilterApi.md#placecreate) | **POST** /place/ | Creates new place
 *FilterApi* | [**placeDelete**](docs/Api/FilterApi.md#placedelete) | **DELETE** /place/{id}/ | Delete a place
 *FilterApi* | [**placeList**](docs/Api/FilterApi.md#placelist) | **GET** /place/ | Returns list of places used for describing events

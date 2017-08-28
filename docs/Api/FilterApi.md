@@ -4,16 +4,108 @@ All URIs are relative to *https://api.hel.fi/linkedevents/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**keywordCreate**](FilterApi.md#keywordCreate) | **POST** /keyword/ | Creates new keyword
+[**keywordDelete**](FilterApi.md#keywordDelete) | **DELETE** /keyword/{id}/ | Delete a keyword
 [**keywordList**](FilterApi.md#keywordList) | **GET** /keyword/ | Returns a list of keywords used for describing events
 [**keywordRetrieve**](FilterApi.md#keywordRetrieve) | **GET** /keyword/{id}/ | Return information for single keyword
 [**keywordSetList**](FilterApi.md#keywordSetList) | **GET** /keyword_set/ | Return as list of keyword_sets for grouping keywords
 [**keywordSetRetrieve**](FilterApi.md#keywordSetRetrieve) | **GET** /keyword_set/{id} | Return information about single keyword_set
+[**keywordUpdate**](FilterApi.md#keywordUpdate) | **PUT** /keyword/{id}/ | Update a keyword
 [**placeCreate**](FilterApi.md#placeCreate) | **POST** /place/ | Creates new place
 [**placeDelete**](FilterApi.md#placeDelete) | **DELETE** /place/{id}/ | Delete a place
 [**placeList**](FilterApi.md#placeList) | **GET** /place/ | Returns list of places used for describing events
 [**placeRetrieve**](FilterApi.md#placeRetrieve) | **GET** /place/{id}/ | Return information for single place
 [**placeUpdate**](FilterApi.md#placeUpdate) | **PUT** /place/{id}/ | Update a place
 
+
+# **keywordCreate**
+> \Metatavu\LinkedEvents\Model\Place keywordCreate($keywordObject)
+
+Creates new keyword
+
+Endpoint for creating new keywords
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Metatavu\LinkedEvents\Api\FilterApi();
+$keywordObject = new \Metatavu\LinkedEvents\Model\Keyword(); // \Metatavu\LinkedEvents\Model\Keyword | 
+
+try {
+    $result = $api_instance->keywordCreate($keywordObject);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling FilterApi->keywordCreate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **keywordObject** | [**\Metatavu\LinkedEvents\Model\Keyword**](../Model/\Metatavu\LinkedEvents\Model\Keyword.md)|  | [optional]
+
+### Return type
+
+[**\Metatavu\LinkedEvents\Model\Place**](../Model/Place.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **keywordDelete**
+> keywordDelete($id)
+
+Delete a keyword
+
+Deletes a keyword
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Metatavu\LinkedEvents\Api\FilterApi();
+$id = "id_example"; // string | Identifier for the keyword to be deleted
+
+try {
+    $api_instance->keywordDelete($id);
+} catch (Exception $e) {
+    echo 'Exception when calling FilterApi->keywordDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Identifier for the keyword to be deleted |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **keywordList**
 > \Metatavu\LinkedEvents\Model\InlineResponse2002 keywordList($page, $pageSize, $include, $showAllKeywords, $dataSource, $text, $sort)
@@ -195,6 +287,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Metatavu\LinkedEvents\Model\KeywordSet**](../Model/KeywordSet.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **keywordUpdate**
+> \Metatavu\LinkedEvents\Model\Keyword keywordUpdate($id, $keywordObject)
+
+Update a keyword
+
+Keywords can be updated if the user has appropriate access permissions.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Metatavu\LinkedEvents\Api\FilterApi();
+$id = "id_example"; // string | Identifier for the keyword to be updated
+$keywordObject = new \Metatavu\LinkedEvents\Model\Keyword(); // \Metatavu\LinkedEvents\Model\Keyword | Keyword object that should replace the existing keyword
+
+try {
+    $result = $api_instance->keywordUpdate($id, $keywordObject);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling FilterApi->keywordUpdate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Identifier for the keyword to be updated |
+ **keywordObject** | [**\Metatavu\LinkedEvents\Model\Keyword**](../Model/\Metatavu\LinkedEvents\Model\Keyword.md)| Keyword object that should replace the existing keyword | [optional]
+
+### Return type
+
+[**\Metatavu\LinkedEvents\Model\Keyword**](../Model/Keyword.md)
 
 ### Authorization
 
