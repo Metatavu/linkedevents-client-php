@@ -88,9 +88,52 @@ class Event implements ArrayAccess
         'publisher' => 'string'
     ];
 
+    /**
+      * Array of property to format mappings. Used for (de)serialization
+      * @var string[]
+      */
+    protected static $swaggerFormats = [
+        'id' => null,
+        'location' => null,
+        'keywords' => null,
+        'inLanguage' => null,
+        'superEvent' => null,
+        'superEventType' => null,
+        'eventStatus' => null,
+        'publicationStatus' => null,
+        'externalLinks' => null,
+        'offers' => null,
+        'subEvents' => null,
+        'customData' => null,
+        'name' => null,
+        'images' => null,
+        'createdTime' => 'date-time',
+        'lastModifiedTime' => 'date-time',
+        'infoUrl' => null,
+        'description' => null,
+        'shortDescription' => null,
+        'context' => null,
+        'type' => null,
+        'datePublished' => 'date-time',
+        'provider' => null,
+        'locationExtraInfo' => null,
+        'startTime' => 'date-time',
+        'endTime' => 'date-time',
+        'audience' => null,
+        'dataSource' => null,
+        'createdBy' => null,
+        'lastModifiedBy' => null,
+        'publisher' => null
+    ];
+
     public static function swaggerTypes()
     {
         return self::$swaggerTypes;
+    }
+
+    public static function swaggerFormats()
+    {
+        return self::$swaggerFormats;
     }
 
     /**
