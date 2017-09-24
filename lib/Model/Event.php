@@ -59,13 +59,13 @@ class Event implements ArrayAccess
         'location' => '\Metatavu\LinkedEvents\Model\IdRef',
         'keywords' => '\Metatavu\LinkedEvents\Model\IdRef[]',
         'inLanguage' => '\Metatavu\LinkedEvents\Model\Language[]',
-        'superEvent' => 'string',
+        'superEvent' => '\Metatavu\LinkedEvents\Model\IdRef',
         'superEventType' => 'string',
         'eventStatus' => 'string',
         'publicationStatus' => 'string',
         'externalLinks' => '\Metatavu\LinkedEvents\Model\Eventlink[]',
         'offers' => '\Metatavu\LinkedEvents\Model\Offer[]',
-        'subEvents' => 'string[]',
+        'subEvents' => '\Metatavu\LinkedEvents\Model\IdRef[]',
         'customData' => 'string',
         'name' => '\Metatavu\LinkedEvents\Model\EventName',
         'images' => '\Metatavu\LinkedEvents\Model\Image[]',
@@ -451,7 +451,7 @@ class Event implements ArrayAccess
 
     /**
      * Gets superEvent
-     * @return string
+     * @return \Metatavu\LinkedEvents\Model\IdRef
      */
     public function getSuperEvent()
     {
@@ -460,7 +460,7 @@ class Event implements ArrayAccess
 
     /**
      * Sets superEvent
-     * @param string $superEvent references the aggregate event containing this event
+     * @param \Metatavu\LinkedEvents\Model\IdRef $superEvent references the aggregate event containing this event
      * @return $this
      */
     public function setSuperEvent($superEvent)
@@ -577,7 +577,7 @@ class Event implements ArrayAccess
 
     /**
      * Gets subEvents
-     * @return string[]
+     * @return \Metatavu\LinkedEvents\Model\IdRef[]
      */
     public function getSubEvents()
     {
@@ -586,7 +586,7 @@ class Event implements ArrayAccess
 
     /**
      * Sets subEvents
-     * @param string[] $subEvents for aggregate events this contains references to all sub events. Usually this means that the sub events are part of series. The field 'super_event_type' tells the type of the aggregate event.
+     * @param \Metatavu\LinkedEvents\Model\IdRef[] $subEvents for aggregate events this contains references to all sub events. Usually this means that the sub events are part of series. The field 'super_event_type' tells the type of the aggregate event.
      * @return $this
      */
     public function setSubEvents($subEvents)
