@@ -29,6 +29,8 @@ Name | Type | Description | Notes
 **locationExtraInfo** | **object** | Unstructured extra info about location (like \&quot;eastern door of railway station\&quot;) | [optional] 
 **startTime** | [**\DateTime**](\DateTime.md) | Time the event will start | 
 **endTime** | [**\DateTime**](\DateTime.md) | Time the event will end | [optional] 
+**hasStartTime** | **bool** |  | [optional] 
+**hasEndTime** | **bool** |  | [optional] 
 **audience** | [**\Metatavu\LinkedEvents\Model\Keyword[]**](Keyword.md) |  | [optional] 
 **dataSource** | **string** | Unique identifier (URI)for the system from which this event came from, preferably URL with more information about the system and its policies | [optional] 
 **createdBy** | **string** | FIXME(verify) Which API user created this keyword | [optional] 

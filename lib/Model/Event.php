@@ -81,6 +81,8 @@ class Event implements ArrayAccess
         'locationExtraInfo' => 'object',
         'startTime' => '\DateTime',
         'endTime' => '\DateTime',
+        'hasStartTime' => 'bool',
+        'hasEndTime' => 'bool',
         'audience' => '\Metatavu\LinkedEvents\Model\Keyword[]',
         'dataSource' => 'string',
         'createdBy' => 'string',
@@ -119,6 +121,8 @@ class Event implements ArrayAccess
         'locationExtraInfo' => null,
         'startTime' => 'date-time',
         'endTime' => 'date-time',
+        'hasStartTime' => null,
+        'hasEndTime' => null,
         'audience' => null,
         'dataSource' => null,
         'createdBy' => null,
@@ -167,6 +171,8 @@ class Event implements ArrayAccess
         'locationExtraInfo' => 'location_extra_info',
         'startTime' => 'start_time',
         'endTime' => 'end_time',
+        'hasStartTime' => 'has_start_time',
+        'hasEndTime' => 'has_end_time',
         'audience' => 'audience',
         'dataSource' => 'data_source',
         'createdBy' => 'created_by',
@@ -206,6 +212,8 @@ class Event implements ArrayAccess
         'locationExtraInfo' => 'setLocationExtraInfo',
         'startTime' => 'setStartTime',
         'endTime' => 'setEndTime',
+        'hasStartTime' => 'setHasStartTime',
+        'hasEndTime' => 'setHasEndTime',
         'audience' => 'setAudience',
         'dataSource' => 'setDataSource',
         'createdBy' => 'setCreatedBy',
@@ -245,6 +253,8 @@ class Event implements ArrayAccess
         'locationExtraInfo' => 'getLocationExtraInfo',
         'startTime' => 'getStartTime',
         'endTime' => 'getEndTime',
+        'hasStartTime' => 'getHasStartTime',
+        'hasEndTime' => 'getHasEndTime',
         'audience' => 'getAudience',
         'dataSource' => 'getDataSource',
         'createdBy' => 'getCreatedBy',
@@ -309,6 +319,8 @@ class Event implements ArrayAccess
         $this->container['locationExtraInfo'] = isset($data['locationExtraInfo']) ? $data['locationExtraInfo'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
+        $this->container['hasStartTime'] = isset($data['hasStartTime']) ? $data['hasStartTime'] : null;
+        $this->container['hasEndTime'] = isset($data['hasEndTime']) ? $data['hasEndTime'] : null;
         $this->container['audience'] = isset($data['audience']) ? $data['audience'] : null;
         $this->container['dataSource'] = isset($data['dataSource']) ? $data['dataSource'] : null;
         $this->container['createdBy'] = isset($data['createdBy']) ? $data['createdBy'] : null;
@@ -907,6 +919,48 @@ class Event implements ArrayAccess
     public function setEndTime($endTime)
     {
         $this->container['endTime'] = $endTime;
+
+        return $this;
+    }
+
+    /**
+     * Gets hasStartTime
+     * @return bool
+     */
+    public function getHasStartTime()
+    {
+        return $this->container['hasStartTime'];
+    }
+
+    /**
+     * Sets hasStartTime
+     * @param bool $hasStartTime
+     * @return $this
+     */
+    public function setHasStartTime($hasStartTime)
+    {
+        $this->container['hasStartTime'] = $hasStartTime;
+
+        return $this;
+    }
+
+    /**
+     * Gets hasEndTime
+     * @return bool
+     */
+    public function getHasEndTime()
+    {
+        return $this->container['hasEndTime'];
+    }
+
+    /**
+     * Sets hasEndTime
+     * @param bool $hasEndTime
+     * @return $this
+     */
+    public function setHasEndTime($hasEndTime)
+    {
+        $this->container['hasEndTime'] = $hasEndTime;
 
         return $this;
     }
