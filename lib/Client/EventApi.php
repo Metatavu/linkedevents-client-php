@@ -265,12 +265,13 @@ class EventApi
      * @param string $addressLocalityFi Search for events in given address localities (fi). Multiple localities can be entered by separating them by a comma (optional)
      * @param string $addressLocalitySv Search for events in given address localities (sv). Multiple localities can be entered by separating them by a comma (optional)
      * @param string $addressLocalityEn Search for events in given address localities (en). Multiple localities can be entered by separating them by a comma (optional)
+     * @param string $publicationStatus Filter events by publication status (either draft or public) (optional)
      * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
      * @return \Metatavu\LinkedEvents\Model\InlineResponse200
      */
-    public function eventList($include = null, $text = null, $lastModifiedSince = null, $start = null, $end = null, $bbox = null, $dataSource = null, $location = null, $division = null, $keyword = null, $recurring = null, $minDuration = null, $maxDuration = null, $publisher = null, $sort = null, $page = null, $pageSize = null, $addressLocalityFi = null, $addressLocalitySv = null, $addressLocalityEn = null)
+    public function eventList($include = null, $text = null, $lastModifiedSince = null, $start = null, $end = null, $bbox = null, $dataSource = null, $location = null, $division = null, $keyword = null, $recurring = null, $minDuration = null, $maxDuration = null, $publisher = null, $sort = null, $page = null, $pageSize = null, $addressLocalityFi = null, $addressLocalitySv = null, $addressLocalityEn = null, $publicationStatus = null)
     {
-        list($response) = $this->eventListWithHttpInfo($include, $text, $lastModifiedSince, $start, $end, $bbox, $dataSource, $location, $division, $keyword, $recurring, $minDuration, $maxDuration, $publisher, $sort, $page, $pageSize, $addressLocalityFi, $addressLocalitySv, $addressLocalityEn);
+        list($response) = $this->eventListWithHttpInfo($include, $text, $lastModifiedSince, $start, $end, $bbox, $dataSource, $location, $division, $keyword, $recurring, $minDuration, $maxDuration, $publisher, $sort, $page, $pageSize, $addressLocalityFi, $addressLocalitySv, $addressLocalityEn, $publicationStatus);
         return $response;
     }
 
@@ -299,10 +300,11 @@ class EventApi
      * @param string $addressLocalityFi Search for events in given address localities (fi). Multiple localities can be entered by separating them by a comma (optional)
      * @param string $addressLocalitySv Search for events in given address localities (sv). Multiple localities can be entered by separating them by a comma (optional)
      * @param string $addressLocalityEn Search for events in given address localities (en). Multiple localities can be entered by separating them by a comma (optional)
+     * @param string $publicationStatus Filter events by publication status (either draft or public) (optional)
      * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
      * @return array of \Metatavu\LinkedEvents\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      */
-    public function eventListWithHttpInfo($include = null, $text = null, $lastModifiedSince = null, $start = null, $end = null, $bbox = null, $dataSource = null, $location = null, $division = null, $keyword = null, $recurring = null, $minDuration = null, $maxDuration = null, $publisher = null, $sort = null, $page = null, $pageSize = null, $addressLocalityFi = null, $addressLocalitySv = null, $addressLocalityEn = null)
+    public function eventListWithHttpInfo($include = null, $text = null, $lastModifiedSince = null, $start = null, $end = null, $bbox = null, $dataSource = null, $location = null, $division = null, $keyword = null, $recurring = null, $minDuration = null, $maxDuration = null, $publisher = null, $sort = null, $page = null, $pageSize = null, $addressLocalityFi = null, $addressLocalitySv = null, $addressLocalityEn = null, $publicationStatus = null)
     {
         if (!is_null($bbox) && (count($bbox) > 4)) {
             throw new \InvalidArgumentException('invalid value for "$bbox" when calling EventApi.eventList, number of items must be less than or equal to 4.');
@@ -411,6 +413,10 @@ class EventApi
         // query params
         if ($addressLocalityEn !== null) {
             $queryParams['address_locality_en'] = $this->apiClient->getSerializer()->toQueryValue($addressLocalityEn);
+        }
+        // query params
+        if ($publicationStatus !== null) {
+            $queryParams['publication_status'] = $this->apiClient->getSerializer()->toQueryValue($publicationStatus);
         }
 
         // for model (json/xml)
