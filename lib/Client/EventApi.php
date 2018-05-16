@@ -370,7 +370,7 @@ class EventApi
         }
         // query params
         if ($showAll !== null) {
-            $queryParams['showAll'] = $this->apiClient->getSerializer()->toQueryValue($showAll);
+            $queryParams['show_all'] = $this->apiClient->getSerializer()->toQueryValue($showAll);
         }
         // query params
         if ($division !== null) {
