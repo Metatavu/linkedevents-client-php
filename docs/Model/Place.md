@@ -25,6 +25,7 @@ Name | Type | Description | Notes
 **deleted** | **bool** | This place entry is not used anymore, but old events still reference it. This might be because of duplicate removal. | [optional] 
 **dataSource** | **string** | Identifies the source for data, this is specific to API provider. This is useful for API users, as any data quality issues are likely to be specific to data source and workarounds can be applied as such. | [optional] 
 **publisher** | **string** | Organization that provided the event that this place is associated with | [optional] 
+**id** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

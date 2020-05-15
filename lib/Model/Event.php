@@ -56,7 +56,7 @@ class Event implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'string',
-        'location' => '\Metatavu\LinkedEvents\Model\IdRef',
+        'location' => '\Metatavu\LinkedEvents\Model\Place',
         'keywords' => '\Metatavu\LinkedEvents\Model\IdRef[]',
         'inLanguage' => '\Metatavu\LinkedEvents\Model\Language[]',
         'superEvent' => '\Metatavu\LinkedEvents\Model\IdRef',
@@ -400,7 +400,7 @@ class Event implements ArrayAccess
 
     /**
      * Gets location
-     * @return \Metatavu\LinkedEvents\Model\IdRef
+     * @return \Metatavu\LinkedEvents\Model\Place
      */
     public function getLocation()
     {
@@ -409,7 +409,7 @@ class Event implements ArrayAccess
 
     /**
      * Sets location
-     * @param \Metatavu\LinkedEvents\Model\IdRef $location
+     * @param \Metatavu\LinkedEvents\Model\Place $location
      * @return $this
      */
     public function setLocation($location)

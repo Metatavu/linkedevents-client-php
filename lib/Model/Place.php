@@ -76,7 +76,8 @@ class Place implements ArrayAccess
         'addressCountry' => 'string',
         'deleted' => 'bool',
         'dataSource' => 'string',
-        'publisher' => 'string'
+        'publisher' => 'string',
+        'id' => 'string'
     ];
 
     /**
@@ -105,7 +106,8 @@ class Place implements ArrayAccess
         'addressCountry' => null,
         'deleted' => null,
         'dataSource' => null,
-        'publisher' => null
+        'publisher' => null,
+        'id' => null
     ];
 
     public static function swaggerTypes()
@@ -144,7 +146,8 @@ class Place implements ArrayAccess
         'addressCountry' => 'address_country',
         'deleted' => 'deleted',
         'dataSource' => 'data_source',
-        'publisher' => 'publisher'
+        'publisher' => 'publisher',
+        'id' => '@id'
     ];
 
 
@@ -174,7 +177,8 @@ class Place implements ArrayAccess
         'addressCountry' => 'setAddressCountry',
         'deleted' => 'setDeleted',
         'dataSource' => 'setDataSource',
-        'publisher' => 'setPublisher'
+        'publisher' => 'setPublisher',
+        'id' => 'setId'
     ];
 
 
@@ -204,7 +208,8 @@ class Place implements ArrayAccess
         'addressCountry' => 'getAddressCountry',
         'deleted' => 'getDeleted',
         'dataSource' => 'getDataSource',
-        'publisher' => 'getPublisher'
+        'publisher' => 'getPublisher',
+        'id' => 'getId'
     ];
 
     public static function attributeMap()
@@ -260,6 +265,7 @@ class Place implements ArrayAccess
         $this->container['deleted'] = isset($data['deleted']) ? $data['deleted'] : null;
         $this->container['dataSource'] = isset($data['dataSource']) ? $data['dataSource'] : null;
         $this->container['publisher'] = isset($data['publisher']) ? $data['publisher'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
     }
 
     /**
@@ -745,6 +751,27 @@ class Place implements ArrayAccess
     public function setPublisher($publisher)
     {
         $this->container['publisher'] = $publisher;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     * @return string
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     * @param string $id
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
 
         return $this;
     }

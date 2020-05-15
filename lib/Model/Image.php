@@ -64,7 +64,8 @@ class Image implements ArrayAccess
         'lastModifiedBy' => 'string',
         'url' => 'string',
         'cropping' => 'string',
-        'license' => 'string'
+        'license' => 'string',
+        'id' => 'string'
     ];
 
     /**
@@ -81,7 +82,8 @@ class Image implements ArrayAccess
         'lastModifiedBy' => null,
         'url' => null,
         'cropping' => null,
-        'license' => null
+        'license' => null,
+        'id' => null
     ];
 
     public static function swaggerTypes()
@@ -108,7 +110,8 @@ class Image implements ArrayAccess
         'lastModifiedBy' => 'last_modified_by',
         'url' => 'url',
         'cropping' => 'cropping',
-        'license' => 'license'
+        'license' => 'license',
+        'id' => '@id'
     ];
 
 
@@ -126,7 +129,8 @@ class Image implements ArrayAccess
         'lastModifiedBy' => 'setLastModifiedBy',
         'url' => 'setUrl',
         'cropping' => 'setCropping',
-        'license' => 'setLicense'
+        'license' => 'setLicense',
+        'id' => 'setId'
     ];
 
 
@@ -144,7 +148,8 @@ class Image implements ArrayAccess
         'lastModifiedBy' => 'getLastModifiedBy',
         'url' => 'getUrl',
         'cropping' => 'getCropping',
-        'license' => 'getLicense'
+        'license' => 'getLicense',
+        'id' => 'getId'
     ];
 
     public static function attributeMap()
@@ -188,6 +193,7 @@ class Image implements ArrayAccess
         $this->container['url'] = isset($data['url']) ? $data['url'] : null;
         $this->container['cropping'] = isset($data['cropping']) ? $data['cropping'] : null;
         $this->container['license'] = isset($data['license']) ? $data['license'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
     }
 
     /**
@@ -427,6 +433,27 @@ class Image implements ArrayAccess
     public function setLicense($license)
     {
         $this->container['license'] = $license;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     * @return string
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     * @param string $id
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
 
         return $this;
     }

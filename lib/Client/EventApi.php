@@ -462,12 +462,13 @@ class EventApi
      * Retrieve single event by id
      *
      * @param string $id Event identifier as defined in event schema (required)
+     * @param string[] $include Embed given reference-type fields directly into the response, otherwise they are returned as URI references. (optional)
      * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
      * @return \Metatavu\LinkedEvents\Model\Event
      */
-    public function eventRetrieve($id)
+    public function eventRetrieve($id, $include = null)
     {
-        list($response) = $this->eventRetrieveWithHttpInfo($id);
+        list($response) = $this->eventRetrieveWithHttpInfo($id, $include);
         return $response;
     }
 
@@ -477,10 +478,11 @@ class EventApi
      * Retrieve single event by id
      *
      * @param string $id Event identifier as defined in event schema (required)
+     * @param string[] $include Embed given reference-type fields directly into the response, otherwise they are returned as URI references. (optional)
      * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
      * @return array of \Metatavu\LinkedEvents\Model\Event, HTTP status code, HTTP response headers (array of strings)
      */
-    public function eventRetrieveWithHttpInfo($id)
+    public function eventRetrieveWithHttpInfo($id, $include = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
@@ -498,6 +500,13 @@ class EventApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType([]);
 
+        // query params
+        if (is_array($include)) {
+            $include = $this->apiClient->getSerializer()->serializeCollection($include, 'csv', true);
+        }
+        if ($include !== null) {
+            $queryParams['include'] = $this->apiClient->getSerializer()->toQueryValue($include);
+        }
         // path params
         if ($id !== null) {
             $resourcePath = str_replace(

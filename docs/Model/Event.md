@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | consists of source prefix and source specific identifier. These should be URIs uniquely identifying the event, and preferably also well formed http-URLs pointing to more information about the event. | [optional] 
-**location** | [**\Metatavu\LinkedEvents\Model\IdRef**](IdRef.md) |  | 
+**location** | [**\Metatavu\LinkedEvents\Model\Place**](Place.md) |  | 
 **keywords** | [**\Metatavu\LinkedEvents\Model\IdRef[]**](IdRef.md) | array of keyword uri references | 
 **inLanguage** | [**\Metatavu\LinkedEvents\Model\Language[]**](Language.md) | the languages spoken or supported at the event | [optional] 
 **superEvent** | [**\Metatavu\LinkedEvents\Model\IdRef**](IdRef.md) | references the aggregate event containing this event | [optional] 

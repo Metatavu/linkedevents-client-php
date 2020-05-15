@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **url** | **string** | The image file URL. | 
 **cropping** | **string** | Cropping data for the image. | [optional] 
 **license** | **string** | License data for the image. May be \&quot;cc_by\&quot; (default) or \&quot;event_only\&quot;. The latter license restricts use of the image and is specified on the API front page. | [optional] 
+**id** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

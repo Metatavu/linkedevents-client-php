@@ -186,7 +186,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **eventRetrieve**
-> \Metatavu\LinkedEvents\Model\Event eventRetrieve($id)
+> \Metatavu\LinkedEvents\Model\Event eventRetrieve($id, $include)
 
 Retrieve single event by id
 
@@ -197,9 +197,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Metatavu\LinkedEvents\Api\EventApi();
 $id = "id_example"; // string | Event identifier as defined in event schema
+$include = array("include_example"); // string[] | Embed given reference-type fields directly into the response, otherwise they are returned as URI references.
 
 try {
-    $result = $api_instance->eventRetrieve($id);
+    $result = $api_instance->eventRetrieve($id, $include);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EventApi->eventRetrieve: ', $e->getMessage(), PHP_EOL;
@@ -212,6 +213,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| Event identifier as defined in event schema |
+ **include** | [**string[]**](../Model/string.md)| Embed given reference-type fields directly into the response, otherwise they are returned as URI references. | [optional]
 
 ### Return type
 
