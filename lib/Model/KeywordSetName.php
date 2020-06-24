@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineResponse2003
+ * KeywordSetName
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Metatavu\LinkedEvents\Model;
 use \ArrayAccess;
 
 /**
- * InlineResponse2003 Class Doc Comment
+ * KeywordSetName Class Doc Comment
  *
  * @category    Class
  * @package     Metatavu\LinkedEvents
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse2003 implements ArrayAccess
+class KeywordSetName implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,15 +47,16 @@ class InlineResponse2003 implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'inline_response_200_3';
+    protected static $swaggerModelName = 'keyword_set_name';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'meta' => '\Metatavu\LinkedEvents\Model\MetaDefinition',
-        'data' => '\Metatavu\LinkedEvents\Model\KeywordSet[]'
+        'fi' => 'string',
+        'sv' => 'string',
+        'en' => 'string'
     ];
 
     /**
@@ -63,8 +64,9 @@ class InlineResponse2003 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'meta' => null,
-        'data' => null
+        'fi' => null,
+        'sv' => null,
+        'en' => null
     ];
 
     public static function swaggerTypes()
@@ -82,8 +84,9 @@ class InlineResponse2003 implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'meta' => 'meta',
-        'data' => 'data'
+        'fi' => 'fi',
+        'sv' => 'sv',
+        'en' => 'en'
     ];
 
 
@@ -92,8 +95,9 @@ class InlineResponse2003 implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'meta' => 'setMeta',
-        'data' => 'setData'
+        'fi' => 'setFi',
+        'sv' => 'setSv',
+        'en' => 'setEn'
     ];
 
 
@@ -102,8 +106,9 @@ class InlineResponse2003 implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'meta' => 'getMeta',
-        'data' => 'getData'
+        'fi' => 'getFi',
+        'sv' => 'getSv',
+        'en' => 'getEn'
     ];
 
     public static function attributeMap()
@@ -137,8 +142,9 @@ class InlineResponse2003 implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['meta'] = isset($data['meta']) ? $data['meta'] : null;
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['fi'] = isset($data['fi']) ? $data['fi'] : null;
+        $this->container['sv'] = isset($data['sv']) ? $data['sv'] : null;
+        $this->container['en'] = isset($data['en']) ? $data['en'] : null;
     }
 
     /**
@@ -167,43 +173,64 @@ class InlineResponse2003 implements ArrayAccess
 
 
     /**
-     * Gets meta
-     * @return \Metatavu\LinkedEvents\Model\MetaDefinition
+     * Gets fi
+     * @return string
      */
-    public function getMeta()
+    public function getFi()
     {
-        return $this->container['meta'];
+        return $this->container['fi'];
     }
 
     /**
-     * Sets meta
-     * @param \Metatavu\LinkedEvents\Model\MetaDefinition $meta
+     * Sets fi
+     * @param string $fi Keyword set name in Finnish
      * @return $this
      */
-    public function setMeta($meta)
+    public function setFi($fi)
     {
-        $this->container['meta'] = $meta;
+        $this->container['fi'] = $fi;
 
         return $this;
     }
 
     /**
-     * Gets data
-     * @return \Metatavu\LinkedEvents\Model\KeywordSet[]
+     * Gets sv
+     * @return string
      */
-    public function getData()
+    public function getSv()
     {
-        return $this->container['data'];
+        return $this->container['sv'];
     }
 
     /**
-     * Sets data
-     * @param \Metatavu\LinkedEvents\Model\KeywordSet[] $data
+     * Sets sv
+     * @param string $sv Keyword set name in Swedish
      * @return $this
      */
-    public function setData($data)
+    public function setSv($sv)
     {
-        $this->container['data'] = $data;
+        $this->container['sv'] = $sv;
+
+        return $this;
+    }
+
+    /**
+     * Gets en
+     * @return string
+     */
+    public function getEn()
+    {
+        return $this->container['en'];
+    }
+
+    /**
+     * Sets en
+     * @param string $en Keyword set name in English
+     * @return $this
+     */
+    public function setEn($en)
+    {
+        $this->container['en'] = $en;
 
         return $this;
     }

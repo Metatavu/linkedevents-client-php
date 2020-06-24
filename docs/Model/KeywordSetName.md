@@ -1,10 +1,11 @@
-# InlineResponse2003
+# KeywordSetName
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**meta** | [**\Metatavu\LinkedEvents\Model\MetaDefinition**](MetaDefinition.md) |  | [optional] 
-**data** | [**\Metatavu\LinkedEvents\Model\KeywordSet[]**](KeywordSet.md) |  | [optional] 
+**fi** | **string** | Keyword set name in Finnish | [optional] 
+**sv** | **string** | Keyword set name in Swedish | [optional] 
+**en** | **string** | Keyword set name in English | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

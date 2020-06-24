@@ -56,7 +56,7 @@ class KeywordSet implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'string',
-        'name' => 'string',
+        'name' => '\Metatavu\LinkedEvents\Model\KeywordSetName',
         'originId' => 'string',
         'createdTime' => '\DateTime',
         'lastModifiedTime' => '\DateTime',
@@ -218,9 +218,6 @@ class KeywordSet implements ArrayAccess
         if ($this->container['id'] === null) {
             $invalid_properties[] = "'id' can't be null";
         }
-        if ($this->container['name'] === null) {
-            $invalid_properties[] = "'name' can't be null";
-        }
         $allowed_values = $this->getUsageAllowableValues();
         if (!in_array($this->container['usage'], $allowed_values)) {
             $invalid_properties[] = sprintf(
@@ -245,9 +242,6 @@ class KeywordSet implements ArrayAccess
     {
 
         if ($this->container['id'] === null) {
-            return false;
-        }
-        if ($this->container['name'] === null) {
             return false;
         }
         $allowed_values = $this->getUsageAllowableValues();
@@ -284,7 +278,7 @@ class KeywordSet implements ArrayAccess
 
     /**
      * Gets name
-     * @return string
+     * @return \Metatavu\LinkedEvents\Model\KeywordSetName
      */
     public function getName()
     {
@@ -293,7 +287,7 @@ class KeywordSet implements ArrayAccess
 
     /**
      * Sets name
-     * @param string $name Name for this keyword_set. This should be human readable, such that it could be shown as label in UI
+     * @param \Metatavu\LinkedEvents\Model\KeywordSetName $name
      * @return $this
      */
     public function setName($name)
