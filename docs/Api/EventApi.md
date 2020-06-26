@@ -99,7 +99,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **eventList**
-> \Metatavu\LinkedEvents\Model\InlineResponse200 eventList($include, $text, $lastModifiedSince, $start, $end, $bbox, $dataSource, $location, $showAll, $division, $keyword, $recurring, $minDuration, $maxDuration, $publisher, $sort, $page, $pageSize, $addressLocalityFi, $addressLocalitySv, $addressLocalityEn, $publicationStatus)
+> \Metatavu\LinkedEvents\Model\InlineResponse200 eventList($include, $text, $lastModifiedSince, $start, $end, $bbox, $dataSource, $location, $showAll, $division, $keyword, $recurring, $minDuration, $maxDuration, $publisher, $sort, $page, $pageSize, $addressLocalityFi, $addressLocalitySv, $addressLocalityEn, $language, $publicationStatus)
 
 Return a list of events
 
@@ -132,10 +132,11 @@ $pageSize = 56; // int | request that server delivers page_size results in respo
 $addressLocalityFi = "addressLocalityFi_example"; // string | Search for events in given address localities (fi). Multiple localities can be entered by separating them by a comma
 $addressLocalitySv = "addressLocalitySv_example"; // string | Search for events in given address localities (sv). Multiple localities can be entered by separating them by a comma
 $addressLocalityEn = "addressLocalityEn_example"; // string | Search for events in given address localities (en). Multiple localities can be entered by separating them by a comma
+$language = "language_example"; // string | Search for events in given language
 $publicationStatus = "publicationStatus_example"; // string | Filter events by publication status (either draft or public)
 
 try {
-    $result = $api_instance->eventList($include, $text, $lastModifiedSince, $start, $end, $bbox, $dataSource, $location, $showAll, $division, $keyword, $recurring, $minDuration, $maxDuration, $publisher, $sort, $page, $pageSize, $addressLocalityFi, $addressLocalitySv, $addressLocalityEn, $publicationStatus);
+    $result = $api_instance->eventList($include, $text, $lastModifiedSince, $start, $end, $bbox, $dataSource, $location, $showAll, $division, $keyword, $recurring, $minDuration, $maxDuration, $publisher, $sort, $page, $pageSize, $addressLocalityFi, $addressLocalitySv, $addressLocalityEn, $language, $publicationStatus);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EventApi->eventList: ', $e->getMessage(), PHP_EOL;
@@ -168,6 +169,7 @@ Name | Type | Description  | Notes
  **addressLocalityFi** | **string**| Search for events in given address localities (fi). Multiple localities can be entered by separating them by a comma | [optional]
  **addressLocalitySv** | **string**| Search for events in given address localities (sv). Multiple localities can be entered by separating them by a comma | [optional]
  **addressLocalityEn** | **string**| Search for events in given address localities (en). Multiple localities can be entered by separating them by a comma | [optional]
+ **language** | **string**| Search for events in given language | [optional]
  **publicationStatus** | **string**| Filter events by publication status (either draft or public) | [optional]
 
 ### Return type
